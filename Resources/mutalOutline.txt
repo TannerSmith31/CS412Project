@@ -1,0 +1,120 @@
+
+general lamport neccicary garenties
+
+
+C1. if a and b and events in process P_i, and a comes befor b, then C_i<a> < C_i<b>
+
+C2. if a is the sending of a message by process P_i and b is the receipt of the message by process P_j, then C_i<a> < C_j<b>.
+
+
+IR1.each process P_i increments C_i between any two successive events 
+
+IR2. 
+    a. if event a is sending of message m by process P_i, then the message m contains a timestamp T_m = c_i<a>.
+
+    b. upon recieving a message m, process P_j sets C_j = MAX(C_j,T_m)+1
+
+break ties with arbitrary total ordering. if C_i = C_j the C_i has higher priority iff i < j.(and two processes cna't have same index)
+
+
+
+possible points of failure 
+multiple processes in the critical section
+must be in the proper order
+    specifically in the order they are made but I need a definition of what they mean by MADE
+not every recource is granted
+
+
+
+
+system definition
+
+fixed collection of processes
+
+shre single recource
+
+Only one process can use the resource at a time must synchronize to avoide conflict
+
+award a process to use recource if it meats conditions
+    if a process that has been granted must release it befor being granted to another
+
+    Different request must be granted in the order they are MADE 
+
+    if every process which is granted a resource releases it, every request is eventually granted
+
+assume that a process already has the recource at the beggining
+
+implement rules IR1, and IR2(though not for the failed on)
+
+each process maintains it's own que(no other process can see the other's ques)
+
+inial configureation of the que T_0:P_0 requests recource
+    so at timestamp 0 P_0 requested acess.
+
+T_0 must be less than the inital value of ay clock so set all inital clocks to 1
+
+
+use a global variable as the shared recource
+
+
+events that can happen
+    request
+        P_i send "T_m:P_i request" to all Processes(including to self/puts own request on que)
+
+    recieve request
+        P_j recieves the message "T_m:P_i request" puts it on it's request que and sends a timestamped 
+        acknowledgment to P_i(may be unceccicary if P_j already sent P_i a message with time stampt greater than T_m)
+
+    release recource
+        P_i release. remove T_0:P_i from queue and sends a timestamped message "T_m(after):P_i release"  to all processes
+
+    recieve release
+        P_j recieves P_i release recource message, remove any T_mLP_i requests resource message from it's request que
+
+    P_i granted resource if the following is satisfied
+        i. T_m:P_i requests resource message in head of it's request que
+        and
+        ii. recieve acknowledge from all others greater than the activity
+
+
+
+algorithm steps(each rule is considered single event (implemented as automic and incrementing clcok))
+
+    1. To request resource, P_i sends the message T_m:P_i requests resource to every other process, and puts that message 
+    on it's request queue where T_m is the timestamp of the message(isn't it possible for two timestap requests to be the same number?)
+
+
+
+assumptions 
+
+any two processes P_i, P_j the message sent from P_i to P_j is received in the same order sent from P_i(assume fifo que) 
+
+assume every message is eventually recieved (assume reliable message chanel)
+
+assume complete graph so each process can send messages to every other process
+
+assumtion I added
+at least for now, say that a process can't have multiple requests pending
+
+each can only request once
+
+
+
+
+interesting other inquaries
+have centeral scheduling process which grants requests won't work without other assumptions being made
+
+try with out the fifo que 
+
+try without reliable message channel
+
+above two can be avoided by introducing message numbers and messsage acknowledgment protocols.
+
+try without complete graph(though I'd have to redefine the problem or allow for message forwarding I think)
+
+
+
+
+
+
+

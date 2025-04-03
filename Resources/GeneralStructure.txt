@@ -1,0 +1,24 @@
+Find lamport algorithm of use of lamport time
+show failings of lamport time with getting rid of fifo que and adding broadcast. (see multicast from class example which is after vector clock) if needed
+
+show failing of the befor lamport
+show failing of lamport
+talk about issue of running out of values
+talk about how this could be fixed by making certain garentees on message delay.
+
+ Time, clocks, and the ordering of events in a distributed system
+double check that this is the mutal exclution algorithm otherrwisefind it in this paper
+
+	o simplify the problem, we make some assumptions. They are not essential, but they are introduced to avoid distracting implementation details. We assume first of all that for any two processes P i and Pj, the messages sent from Pi to Pj are received in the same order as they are sent. Moreover, we assume that every message is eventually received. (These assumptions can be avoided by introducing message numbers and message acknowledgment protocols.) We also assume that a process can send messages directly to every other process.
+
+Each process maintains its own request queue which is never seen by any other process. We assume that the request queues initially contain the single message To:Po requests resource, where Po is the process initially granted the resource and To is less than the initial value of any clock.
+
+The algorithm is then defined by the following five rules. For convenience, the actions defined by each rule are assumed to form a single event. 
+1. To request the resource, process P, sends the mes¬ sage Tm:P, requests resource to every other process, and puts that message on its request queue, where Tm is the timestamp of the message. 
+2. When process Py receives the message Tm:P, re¬ quests resource, it places it on its request queue and sends a (timestamped) acknowledgment message to P,.r> 
+3. To release the resource, process P, removes any T,„:P, requests resource message from its request queue and sends a (timestamped) P, releases resource message to every other process. 
+4. When process Py receives a P, releases resource message, it removes any T,„:P, requests resource message from its request queue. 
+5. Process P, is granted the resource when the follow¬ ing two conditions are satisfied: (i) There is a T„,:P, requests resource message in its request queue which is ordered before any other request in its queue by the relation =>. (To define the relation “=»” for messages, we identify a message with the event of sending it.) (ii) P, has received a message from every other process timestamped later than T„,.6 Note that conditions (i) and (ii) of rule 5 are tested locally by P„
+
+
+For some applications (like mutual exclusion as described by Lamport himself in [9]) this defect is not noticeable. For other purposes (e.g., distributed debugging), however, this is an important defect.

@@ -1,0 +1,43 @@
+[1]Main Lamport paper
+https://dl.acm.org/doi/10.1145/359545.359563
+
+
+
+[2]Main vector clock paper
+https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rIdxtXsAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rIdxtXsAAAAJ:MXK_kJrjxJIC
+
+
+
+[3]Spin model checker paper
+https://ieeexplore.ieee.org/abstract/document/588521?casa_token=fzIJjrzQHeMAAAAA:i9MwvOXJiU-OaGkevVndo4lb50JOURxkp-js_PEgnHCV44Voaq2T08iBGTIyqKOfWvN0CeAO-A
+
+
+
+[4]Spin homework
+https://github.com/IowaStateAerospaceCourses-Rozier/homework-3-spin-Migs657.git
+
+
+
+[5]for ltl info
+https://albertnetymk.github.io/2020/07/18/ltl/ 
+
+
+
+[6]spin manual
+https://spinroot.com/spin/Man/Manual.html
+
+
+
+[7]Distributed Algorithms Nacy
+(see in zotoro bibtex)
+
+
+
+[8]Distributed computing : fundamentals, simulations, and advanced topics
+(see in zotoro bibtex)
+
+
+
+work with professor soma
+
+
