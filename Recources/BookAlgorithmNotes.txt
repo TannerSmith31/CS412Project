@@ -1,0 +1,45 @@
+Going from book
+
+Chapter 21 pg 669(694)
+BenOr Algorithm pg 673(698)
+
+Assume communication reliable
+
+It doesn’t matter whether send/revieve or broadcast
+
+Chapter 12 Impossibility: no purly asyncronous algorithm can work correctly
+
+Pulls a lot from chapters 7, 12, 17
+
+Models and proof methods The material on formal models and proof methods is presented in separate chapters--Chapters 
+2, 8, 9, 14, and 23 heading the major subdivisions of the book (synchronous network algorithms, asynchronous shared memory algorithms, 
+asynchronous network algorithms, and partially synchronous algorithms).
+  Ch 2: Synchronous Network Model: pg 17(42)
+  Ch 8: Asynchronous System Model: pg 199 (224)
+			example 8.1.2 for process I/O automaton
+  Ch 9: Asynchronous Shared Memory Model: pg 235(262)
+  Ch 14: Modelling IV: Asynchronous Network Model: pg 455(482)
+
+
+Chapter 21 general assumptions
+
+Assume communication reliable
+
+It doesn’t matter whether send/revieve or broadcast for computability
+
+
+
+More specific
+Model assume 
+	• asynchronous 
+	• broadcast system (does broadcast have FIFO)
+	• reliable broadcast channels
+	• process stopping failures (modeled wit stop events).
+
+Could have done send/receive instead of broadcast with FIFO. what about broadcast without FIFO
+Same for computability
+
+Definition of asynchronous
+		example 8.1.2 for process I/O automaton
+
+
