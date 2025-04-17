@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="AutomicPassValue" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="5" name="P0" x="3.0" y="7.0"/>
+      <place name="P1" x="13.0" y="7.0"/>
+      <place name="P2" x="23.0" y="7.0"/>
+      <transition label-y="2.0" name="T0" nservers-x="0.5" type="EXP" x="8.55" y="7.0"/>
+      <transition label-y="2.0" name="T1" nservers-x="0.5" type="EXP" x="17.55" y="7.0"/>
+      <place label-x="2.0" label-y="-0.5" name="P3" x="13.0" y="1.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="T2" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="13.55" y="4.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="9.55" y="1.0"/>
+      <place marking="1" name="P4" x="5.0" y="1.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T1"/>
+      <arc head="T1" kind="INPUT" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="T1">
+        <point x="16.5" y="3.5"/>
+      </arc>
+      <arc head="T2" kind="INHIBITOR" tail="P1"/>
+      <arc head="T2" kind="INPUT" tail="P3"/>
+      <arc head="T0" kind="INHIBITOR" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INPUT" tail="P4"/>
+      <arc head="T0" kind="INPUT" tail="P4"/>
+      <arc head="P4" kind="OUTPUT" tail="T0">
+        <point x="8.5" y="3.5"/>
+      </arc>
+    </edges>
+  </gspn>
+  <dta name="DTA">
+    <nodes>
+      <clock name="x" x="2.0" y="2.0"/>
+    </nodes>
+    <edges/>
+  </dta>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>

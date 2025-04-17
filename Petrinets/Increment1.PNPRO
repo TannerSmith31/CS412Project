@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Increment1" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="P0" x="9.0" y="13.0"/>
+      <place name="P1" x="20.0" y="13.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="14.55" y="13.0"/>
+      <place marking="1" name="P2" x="14.0" y="7.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="17.55" y="10.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P2"/>
+      <arc head="P1" kind="OUTPUT" tail="T1"/>
+    </edges>
+  </gspn>
+  <dta name="DTA">
+    <nodes>
+      <clock name="x" x="2.0" y="2.0"/>
+    </nodes>
+    <edges/>
+  </dta>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>
