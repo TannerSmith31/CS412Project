@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="FindGreaterThenInc" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="8" name="P0" x="5.0" y="11.0"/>
+      <place marking="3" name="P1" x="6.0" y="19.0"/>
+      <place name="P2" x="29.0" y="17.0"/>
+      <transition label-y="2.0" name="T0" nservers-x="0.5" type="EXP" x="13.55" y="15.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="17.55" y="23.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="10.55" y="4.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="23.55" y="3.0"/>
+      <place label-x="-1.5" label-y="-1.0" marking="1" name="P5" x="18.0" y="2.0"/>
+      <place label-x="1.5" label-y="-0.5" name="P6" x="28.0" y="5.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T5" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="29.55" y="12.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="P0"/>
+      <arc head="T0" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INHIBITOR" tail="P0"/>
+      <arc head="T2" kind="INHIBITOR" tail="P1"/>
+      <arc head="T2" kind="INPUT" tail="P0"/>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T2"/>
+      <arc head="P2" kind="OUTPUT" tail="T1"/>
+      <arc head="T4" kind="INHIBITOR" tail="P0"/>
+      <arc head="T4" kind="INHIBITOR" tail="P1"/>
+      <arc head="T4" kind="INPUT" tail="P5"/>
+      <arc head="P6" kind="OUTPUT" tail="T4"/>
+      <arc head="T2" kind="INHIBITOR" tail="P6"/>
+      <arc head="T0" kind="INHIBITOR" tail="P6"/>
+      <arc head="T1" kind="INHIBITOR" tail="P6"/>
+      <arc head="T5" kind="INPUT" tail="P6"/>
+      <arc head="P2" kind="OUTPUT" tail="T5"/>
+      <arc head="T2" kind="INPUT" tail="P5"/>
+      <arc head="P5" kind="OUTPUT" tail="T2"/>
+      <arc head="T0" kind="INPUT" tail="P5"/>
+      <arc head="P5" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P5"/>
+      <arc head="P5" kind="OUTPUT" tail="T1"/>
+    </edges>
+  </gspn>
+  <dta name="DTA">
+    <nodes>
+      <clock name="x" x="2.0" y="2.0"/>
+    </nodes>
+    <edges/>
+  </dta>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>

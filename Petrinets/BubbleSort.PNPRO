@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="BubbleSort1" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="Ka" x="16.0" y="3.0"/>
+      <place name="La" x="16.0" y="9.0"/>
+      <place name="twa" x="26.0" y="6.0"/>
+      <transition name="TT" nservers-x="0.5" type="EXP" x="21.55" y="6.0"/>
+      <transition name="T" nservers-x="0.5" type="EXP" x="21.55" y="11.0"/>
+      <transition name="" nservers-x="0.5" type="EXP" x="21.55" y="1.0"/>
+      <place name="copy_P0" x="50.0" y="62.0"/>
+      <place name="copy_P1" x="60.0" y="62.0"/>
+      <place name="copy_P2" x="70.0" y="62.0"/>
+      <transition label-y="2.0" name="copy_T0" nservers-x="0.5" type="EXP" x="55.55" y="62.0"/>
+      <transition label-y="2.0" name="copy_T1" nservers-x="0.5" type="EXP" x="64.55" y="62.0"/>
+      <place label-x="2.0" label-y="-0.5" name="PT" x="60.0" y="56.0"/>
+      <transition label-x="-2.0" label-y="0.0" name="copy_T2" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="60.55" y="59.0"/>
+      <transition name="t" nservers-x="0.5" type="EXP" x="56.55" y="56.0"/>
+      <place marking="1" name="P" x="52.0" y="56.0"/>
+      <place marking="3" name="P0" x="1.0" y="26.0"/>
+      <place marking="17" name="P2" x="35.0" y="26.0"/>
+      <place marking="3" name="P7" x="40.0" y="9.0"/>
+      <place marking="2" name="P8" x="58.0" y="9.0"/>
+      <transition label-x="2.5" label-y="0.5" name="T1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="24.55" y="25.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="T0" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="7.55" y="26.0"/>
+      <place label-y="-1.5" name="P1" x="7.0" y="19.0"/>
+      <place label-x="2.0" label-y="-1.5" name="P3" x="30.0" y="21.0"/>
+      <transition label-y="-2.5" name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="12.55" y="33.0"/>
+      <place name="P4" x="7.0" y="41.0"/>
+      <place name="P5" x="28.0" y="40.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="16.55" y="27.0"/>
+      <place name="P6" x="19.0" y="37.0"/>
+      <transition name="T4" nservers-x="0.5" rotation="-0.0" type="EXP" x="9.55" y="28.0"/>
+      <transition label-y="2.0" name="T5" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="14.55" y="41.0"/>
+      <place label-y="-1.5" name="P9" x="14.0" y="30.0"/>
+      <transition name="T6" nservers-x="0.5" rotation="2.0943951023931957" type="EXP" x="9.55" y="34.0"/>
+      <place label-x="-2.0" label-y="0.0" marking="1" name="P10" x="15.0" y="23.0"/>
+      <transition label-x="2.0" label-y="-2.0" name="T7" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="17.0"/>
+      <transition label-x="-1.0" label-y="1.0" name="T8" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="23.55" y="35.0"/>
+      <transition name="T9" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="21.55" y="39.0"/>
+      <place name="P11" x="19.0" y="30.0"/>
+      <transition name="T10" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="33.55" y="23.0"/>
+      <transition label-x="-0.5" label-y="1.0" name="T11" nservers-x="0.5" rotation="1.8325957145940464" type="EXP" x="14.55" y="39.0"/>
+      <transition name="T12" nservers-x="0.5" rotation="2.6179938779914944" type="EXP" x="3.55" y="23.0"/>
+      <transition name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="20.55" y="20.0"/>
+      <place marking="9" name="copy_copy_P2" x="73.0" y="26.0"/>
+      <transition label-x="2.5" label-y="0.5" name="copy_copy_T1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="62.55" y="25.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="copy_copy_T0" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="45.55" y="26.0"/>
+      <place label-y="-1.5" name="copy_copy_P1" x="45.0" y="19.0"/>
+      <place label-x="2.0" label-y="-1.5" name="copy_P3" x="68.0" y="21.0"/>
+      <transition label-y="-2.5" name="copy_T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="50.55" y="33.0"/>
+      <place name="copy_P4" x="45.0" y="41.0"/>
+      <place name="copy_P5" x="66.0" y="40.0"/>
+      <transition name="copy_copy_T2" nservers-x="0.5" type="EXP" x="54.55" y="27.0"/>
+      <place name="copy_P6" x="57.0" y="37.0"/>
+      <transition name="copy_T4" nservers-x="0.5" rotation="-0.0" type="EXP" x="47.55" y="28.0"/>
+      <transition label-y="2.0" name="copy_T5" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="52.55" y="41.0"/>
+      <place label-y="-1.5" name="copy_P9" x="52.0" y="30.0"/>
+      <transition name="copy_T6" nservers-x="0.5" rotation="2.0943951023931957" type="EXP" x="47.55" y="34.0"/>
+      <place label-x="-2.0" label-y="0.0" name="copy_P10" x="52.0" y="22.0"/>
+      <transition label-x="2.0" label-y="-2.0" name="copy_T7" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="65.55" y="17.0"/>
+      <transition label-x="-1.0" label-y="1.0" name="copy_T8" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="61.55" y="35.0"/>
+      <transition name="copy_T9" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="59.55" y="39.0"/>
+      <place name="copy_P11" x="57.0" y="30.0"/>
+      <transition name="copy_T10" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="71.55" y="23.0"/>
+      <transition label-x="-0.5" label-y="1.0" name="copy_T11" nservers-x="0.5" rotation="1.8325957145940464" type="EXP" x="52.55" y="39.0"/>
+      <transition name="copy_T12" nservers-x="0.5" rotation="2.6179938779914944" type="EXP" x="41.55" y="23.0"/>
+      <transition name="copy_T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="58.55" y="20.0"/>
+      <place marking="8" name="copy_copy_copy_P2" x="110.0" y="26.0"/>
+      <transition label-x="2.5" label-y="0.5" name="copy_copy_copy_T1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="99.55" y="25.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="copy_copy_copy_T0" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="82.55" y="26.0"/>
+      <place label-y="-1.5" name="copy_copy_copy_P1" x="82.0" y="19.0"/>
+      <place label-x="2.0" label-y="-1.5" name="copy_copy_P3" x="105.0" y="21.0"/>
+      <transition label-y="-2.5" name="copy_copy_T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="87.55" y="33.0"/>
+      <place name="copy_copy_P4" x="82.0" y="41.0"/>
+      <place name="copy_copy_P5" x="103.0" y="40.0"/>
+      <transition name="copy_copy_copy_T2" nservers-x="0.5" type="EXP" x="91.55" y="27.0"/>
+      <place name="copy_copy_P6" x="94.0" y="37.0"/>
+      <transition name="copy_copy_T4" nservers-x="0.5" rotation="-0.0" type="EXP" x="84.55" y="28.0"/>
+      <transition label-y="2.0" name="copy_copy_T5" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="89.55" y="41.0"/>
+      <place label-y="-1.5" name="copy_copy_P9" x="89.0" y="30.0"/>
+      <transition name="copy_copy_T6" nservers-x="0.5" rotation="2.0943951023931957" type="EXP" x="84.55" y="34.0"/>
+      <place label-x="-2.0" label-y="0.0" name="copy_copy_P10" x="90.0" y="23.0"/>
+      <transition label-x="2.0" label-y="-2.0" name="copy_copy_T7" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="102.55" y="17.0"/>
+      <transition label-x="-1.0" label-y="1.0" name="copy_copy_T8" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="98.55" y="35.0"/>
+      <transition name="copy_copy_T9" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="96.55" y="39.0"/>
+      <place name="copy_copy_P11" x="94.0" y="30.0"/>
+      <transition name="copy_copy_T10" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="108.55" y="23.0"/>
+      <transition label-x="-0.5" label-y="1.0" name="copy_copy_T11" nservers-x="0.5" rotation="1.8325957145940464" type="EXP" x="89.55" y="39.0"/>
+      <transition name="copy_copy_T12" nservers-x="0.5" rotation="2.6179938779914944" type="EXP" x="78.55" y="23.0"/>
+      <transition name="copy_copy_T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="95.55" y="20.0"/>
+      <place marking="7" name="copy_copy_copy_copy_P2" x="148.0" y="26.0"/>
+      <transition label-x="2.5" label-y="0.5" name="copy_copy_copy_copy_T1" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="137.55" y="25.0"/>
+      <transition label-x="-2.5" label-y="0.0" name="copy_copy_copy_copy_T0" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="120.55" y="26.0"/>
+      <place label-y="-1.5" name="copy_copy_copy_copy_P1" x="120.0" y="19.0"/>
+      <place label-x="2.0" label-y="-1.5" name="copy_copy_copy_P3" x="143.0" y="21.0"/>
+      <transition label-y="-2.5" name="copy_copy_copy_T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="125.55" y="33.0"/>
+      <place name="copy_copy_copy_P4" x="120.0" y="41.0"/>
+      <place name="copy_copy_copy_P5" x="141.0" y="40.0"/>
+      <transition name="copy_copy_copy_copy_T2" nservers-x="0.5" type="EXP" x="129.55" y="27.0"/>
+      <place name="copy_copy_copy_P6" x="132.0" y="37.0"/>
+      <transition name="copy_copy_copy_T4" nservers-x="0.5" rotation="-0.0" type="EXP" x="122.55" y="28.0"/>
+      <transition label-y="2.0" name="copy_copy_copy_T5" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="127.55" y="41.0"/>
+      <place label-y="-1.5" name="copy_copy_copy_P9" x="127.0" y="30.0"/>
+      <transition name="copy_copy_copy_T6" nservers-x="0.5" rotation="2.0943951023931957" type="EXP" x="122.55" y="34.0"/>
+      <place label-x="-2.0" label-y="0.0" name="copy_copy_copy_P10" x="127.0" y="22.0"/>
+      <transition label-x="2.0" label-y="-2.0" name="copy_copy_copy_T7" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="140.55" y="17.0"/>
+      <transition label-x="-1.0" label-y="1.0" name="copy_copy_copy_T8" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="136.55" y="35.0"/>
+      <transition name="copy_copy_copy_T9" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="134.55" y="39.0"/>
+      <place name="copy_copy_copy_P11" x="132.0" y="30.0"/>
+      <transition name="copy_copy_copy_T10" nservers-x="0.5" rotation="0.7853981633974483" type="EXP" x="146.55" y="23.0"/>
+      <transition label-x="-0.5" label-y="1.0" name="copy_copy_copy_T11" nservers-x="0.5" rotation="1.8325957145940464" type="EXP" x="127.55" y="39.0"/>
+      <transition name="copy_copy_copy_T12" nservers-x="0.5" rotation="2.6179938779914944" type="EXP" x="116.55" y="23.0"/>
+      <transition name="copy_copy_copy_T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="133.55" y="20.0"/>
+    </nodes>
+    <edges>
+      <arc head="TT" kind="INPUT" tail="Ka"/>
+      <arc head="TT" kind="INPUT" tail="La"/>
+      <arc head="twa" kind="OUTPUT" tail="TT"/>
+      <arc head="T" kind="INHIBITOR" tail="Ka"/>
+      <arc head="" kind="INHIBITOR" tail="La"/>
+      <arc head="" kind="INPUT" tail="Ka"/>
+      <arc head="T" kind="INPUT" tail="La"/>
+      <arc head="twa" kind="OUTPUT" tail=""/>
+      <arc head="twa" kind="OUTPUT" tail="T"/>
+      <arc head="copy_T0" kind="INPUT" tail="copy_P0"/>
+      <arc head="copy_P1" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="copy_T1" kind="INPUT" tail="copy_P1"/>
+      <arc head="copy_P2" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="copy_T1" kind="INPUT" tail="PT"/>
+      <arc head="PT" kind="OUTPUT" tail="copy_T1">
+        <point x="63.5" y="58.5"/>
+      </arc>
+      <arc head="copy_T2" kind="INHIBITOR" tail="copy_P1"/>
+      <arc head="copy_T2" kind="INPUT" tail="PT"/>
+      <arc head="copy_T0" kind="INHIBITOR" tail="PT"/>
+      <arc head="PT" kind="OUTPUT" tail="t"/>
+      <arc head="t" kind="INPUT" tail="P"/>
+      <arc head="copy_T0" kind="INPUT" tail="P"/>
+      <arc head="P" kind="OUTPUT" tail="copy_T0">
+        <point x="55.5" y="58.5"/>
+      </arc>
+      <arc head="T0" kind="INPUT" tail="P0"/>
+      <arc head="T1" kind="INPUT" tail="P2"/>
+      <arc head="P1" kind="OUTPUT" tail="T0"/>
+      <arc head="P3" kind="OUTPUT" tail="T1"/>
+      <arc head="T3" kind="INHIBITOR" tail="P0"/>
+      <arc head="T3" kind="INHIBITOR" mult-k="0.47138671874999993" tail="P2"/>
+      <arc head="P4" kind="OUTPUT" tail="T0"/>
+      <arc head="P5" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="P1"/>
+      <arc head="P2" kind="OUTPUT" tail="T2"/>
+      <arc head="T4" kind="INPUT" tail="P3"/>
+      <arc head="P0" kind="OUTPUT" tail="T4"/>
+      <arc head="P6" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INHIBITOR" tail="P6"/>
+      <arc head="T5" kind="INPUT" tail="P4"/>
+      <arc head="T5" kind="INPUT" tail="P5"/>
+      <arc head="T5" kind="INPUT" tail="P6"/>
+      <arc head="P6" kind="OUTPUT" tail="T5"/>
+      <arc head="T2" kind="INPUT" tail="P9"/>
+      <arc head="T4" kind="INPUT" tail="P9"/>
+      <arc head="P9" kind="OUTPUT" tail="T2"/>
+      <arc head="P9" kind="OUTPUT" tail="T4"/>
+      <arc head="P9" kind="OUTPUT" tail="T6"/>
+      <arc head="T6" kind="INPUT" tail="P6"/>
+      <arc head="T6" kind="INHIBITOR" tail="P4"/>
+      <arc head="T3" kind="INHIBITOR" tail="P9"/>
+      <arc head="T7" kind="INPUT" tail="P9"/>
+      <arc head="T7" kind="INHIBITOR" tail="P1"/>
+      <arc head="T7" kind="INHIBITOR" tail="P3"/>
+      <arc head="T0" kind="INPUT" tail="P10"/>
+      <arc head="P10" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="P10"/>
+      <arc head="P10" kind="OUTPUT" tail="T1"/>
+      <arc head="T3" kind="INPUT" tail="P10">
+        <point x="19.5" y="25.0"/>
+        <point x="17.0" y="35.5"/>
+      </arc>
+      <arc head="T8" kind="INPUT" tail="P5"/>
+      <arc head="T8" kind="INPUT" tail="P9"/>
+      <arc head="P9" kind="OUTPUT" tail="T8"/>
+      <arc head="T9" kind="INPUT" tail="P6"/>
+      <arc head="T9" kind="INHIBITOR" tail="P5"/>
+      <arc head="T4" kind="INHIBITOR" tail="P4"/>
+      <arc head="P11" kind="OUTPUT" tail="T9"/>
+      <arc head="T10" kind="INPUT" tail="P11"/>
+      <arc head="P11" kind="OUTPUT" tail="T10"/>
+      <arc head="T11" kind="INPUT" tail="P4"/>
+      <arc head="T10" kind="INPUT" tail="P3"/>
+      <arc head="P2" kind="OUTPUT" tail="T10"/>
+      <arc head="T12" kind="INPUT" tail="P1"/>
+      <arc head="P0" kind="OUTPUT" tail="T12"/>
+      <arc head="T12" kind="INPUT" tail="P11"/>
+      <arc head="P11" kind="OUTPUT" tail="T12"/>
+      <arc head="T13" kind="INPUT" tail="P11"/>
+      <arc head="T13" kind="INHIBITOR" tail="P1"/>
+      <arc head="T13" kind="INHIBITOR" tail="P3"/>
+      <arc head="T7" kind="INHIBITOR" tail="P5"/>
+      <arc head="P11" kind="OUTPUT" tail="T11"/>
+      <arc head="T11" kind="INPUT" tail="P11"/>
+      <arc head="T13" kind="INHIBITOR" tail="P4"/>
+      <arc head="copy_copy_T1" kind="INPUT" tail="copy_copy_P2"/>
+      <arc head="copy_copy_P1" kind="OUTPUT" tail="copy_copy_T0"/>
+      <arc head="copy_P3" kind="OUTPUT" tail="copy_copy_T1"/>
+      <arc head="copy_T3" kind="INHIBITOR" mult-k="0.47138671874999993" tail="copy_copy_P2"/>
+      <arc head="copy_P4" kind="OUTPUT" tail="copy_copy_T0"/>
+      <arc head="copy_P5" kind="OUTPUT" tail="copy_copy_T1"/>
+      <arc head="copy_copy_T2" kind="INPUT" tail="copy_copy_P1"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_copy_T2"/>
+      <arc head="copy_T4" kind="INPUT" tail="copy_P3"/>
+      <arc head="copy_P6" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_T3" kind="INHIBITOR" tail="copy_P6"/>
+      <arc head="copy_T5" kind="INPUT" tail="copy_P4"/>
+      <arc head="copy_T5" kind="INPUT" tail="copy_P5"/>
+      <arc head="copy_T5" kind="INPUT" tail="copy_P6"/>
+      <arc head="copy_P6" kind="OUTPUT" tail="copy_T5"/>
+      <arc head="copy_copy_T2" kind="INPUT" tail="copy_P9"/>
+      <arc head="copy_T4" kind="INPUT" tail="copy_P9"/>
+      <arc head="copy_P9" kind="OUTPUT" tail="copy_copy_T2"/>
+      <arc head="copy_P9" kind="OUTPUT" tail="copy_T4"/>
+      <arc head="copy_P9" kind="OUTPUT" tail="copy_T6"/>
+      <arc head="copy_T6" kind="INPUT" tail="copy_P6"/>
+      <arc head="copy_T6" kind="INHIBITOR" tail="copy_P4"/>
+      <arc head="copy_T3" kind="INHIBITOR" tail="copy_P9"/>
+      <arc head="copy_T7" kind="INPUT" tail="copy_P9"/>
+      <arc head="copy_T7" kind="INHIBITOR" tail="copy_copy_P1"/>
+      <arc head="copy_T7" kind="INHIBITOR" tail="copy_P3"/>
+      <arc head="copy_copy_T0" kind="INPUT" tail="copy_P10"/>
+      <arc head="copy_P10" kind="OUTPUT" tail="copy_copy_T0"/>
+      <arc head="copy_copy_T1" kind="INPUT" tail="copy_P10"/>
+      <arc head="copy_P10" kind="OUTPUT" tail="copy_copy_T1"/>
+      <arc head="copy_T3" kind="INPUT" tail="copy_P10">
+        <point x="57.5" y="25.0"/>
+        <point x="55.0" y="35.5"/>
+      </arc>
+      <arc head="copy_T8" kind="INPUT" tail="copy_P5"/>
+      <arc head="copy_T8" kind="INPUT" tail="copy_P9"/>
+      <arc head="copy_P9" kind="OUTPUT" tail="copy_T8"/>
+      <arc head="copy_T9" kind="INPUT" tail="copy_P6"/>
+      <arc head="copy_T9" kind="INHIBITOR" tail="copy_P5"/>
+      <arc head="copy_T4" kind="INHIBITOR" tail="copy_P4"/>
+      <arc head="copy_P11" kind="OUTPUT" tail="copy_T9"/>
+      <arc head="copy_T10" kind="INPUT" tail="copy_P11"/>
+      <arc head="copy_P11" kind="OUTPUT" tail="copy_T10"/>
+      <arc head="copy_T11" kind="INPUT" tail="copy_P4"/>
+      <arc head="copy_T10" kind="INPUT" tail="copy_P3"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_T10"/>
+      <arc head="copy_T12" kind="INPUT" tail="copy_copy_P1"/>
+      <arc head="copy_T12" kind="INPUT" tail="copy_P11"/>
+      <arc head="copy_P11" kind="OUTPUT" tail="copy_T12"/>
+      <arc head="copy_T13" kind="INPUT" tail="copy_P11"/>
+      <arc head="copy_T13" kind="INHIBITOR" tail="copy_copy_P1"/>
+      <arc head="copy_T13" kind="INHIBITOR" tail="copy_P3"/>
+      <arc head="copy_T7" kind="INHIBITOR" tail="copy_P5"/>
+      <arc head="copy_P11" kind="OUTPUT" tail="copy_T11"/>
+      <arc head="copy_T11" kind="INPUT" tail="copy_P11"/>
+      <arc head="copy_T13" kind="INHIBITOR" tail="copy_P4"/>
+      <arc head="P2" kind="OUTPUT" tail="copy_T12"/>
+      <arc head="copy_copy_T0" kind="INPUT" tail="P2"/>
+      <arc head="P2" kind="OUTPUT" tail="copy_T4"/>
+      <arc head="copy_T3" kind="INHIBITOR" tail="P2"/>
+      <arc head="copy_P10" kind="OUTPUT" tail="T7"/>
+      <arc head="copy_copy_copy_T1" kind="INPUT" tail="copy_copy_copy_P2"/>
+      <arc head="copy_copy_copy_P1" kind="OUTPUT" tail="copy_copy_copy_T0"/>
+      <arc head="copy_copy_P3" kind="OUTPUT" tail="copy_copy_copy_T1"/>
+      <arc head="copy_copy_T3" kind="INHIBITOR" mult-k="0.47138671874999993" tail="copy_copy_copy_P2"/>
+      <arc head="copy_copy_P4" kind="OUTPUT" tail="copy_copy_copy_T0"/>
+      <arc head="copy_copy_P5" kind="OUTPUT" tail="copy_copy_copy_T1"/>
+      <arc head="copy_copy_copy_T2" kind="INPUT" tail="copy_copy_copy_P1"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T2"/>
+      <arc head="copy_copy_T4" kind="INPUT" tail="copy_copy_P3"/>
+      <arc head="copy_copy_P6" kind="OUTPUT" tail="copy_copy_T3"/>
+      <arc head="copy_copy_T3" kind="INHIBITOR" tail="copy_copy_P6"/>
+      <arc head="copy_copy_T5" kind="INPUT" tail="copy_copy_P4"/>
+      <arc head="copy_copy_T5" kind="INPUT" tail="copy_copy_P5"/>
+      <arc head="copy_copy_T5" kind="INPUT" tail="copy_copy_P6"/>
+      <arc head="copy_copy_P6" kind="OUTPUT" tail="copy_copy_T5"/>
+      <arc head="copy_copy_copy_T2" kind="INPUT" tail="copy_copy_P9"/>
+      <arc head="copy_copy_T4" kind="INPUT" tail="copy_copy_P9"/>
+      <arc head="copy_copy_P9" kind="OUTPUT" tail="copy_copy_copy_T2"/>
+      <arc head="copy_copy_P9" kind="OUTPUT" tail="copy_copy_T4"/>
+      <arc head="copy_copy_P9" kind="OUTPUT" tail="copy_copy_T6"/>
+      <arc head="copy_copy_T6" kind="INPUT" tail="copy_copy_P6"/>
+      <arc head="copy_copy_T6" kind="INHIBITOR" tail="copy_copy_P4"/>
+      <arc head="copy_copy_T3" kind="INHIBITOR" tail="copy_copy_P9"/>
+      <arc head="copy_copy_T7" kind="INPUT" tail="copy_copy_P9"/>
+      <arc head="copy_copy_T7" kind="INHIBITOR" tail="copy_copy_copy_P1"/>
+      <arc head="copy_copy_T7" kind="INHIBITOR" tail="copy_copy_P3"/>
+      <arc head="copy_copy_copy_T0" kind="INPUT" tail="copy_copy_P10"/>
+      <arc head="copy_copy_P10" kind="OUTPUT" tail="copy_copy_copy_T0"/>
+      <arc head="copy_copy_copy_T1" kind="INPUT" tail="copy_copy_P10"/>
+      <arc head="copy_copy_P10" kind="OUTPUT" tail="copy_copy_copy_T1"/>
+      <arc head="copy_copy_T3" kind="INPUT" tail="copy_copy_P10">
+        <point x="94.5" y="25.0"/>
+        <point x="92.0" y="35.5"/>
+      </arc>
+      <arc head="copy_copy_T8" kind="INPUT" tail="copy_copy_P5"/>
+      <arc head="copy_copy_T8" kind="INPUT" tail="copy_copy_P9"/>
+      <arc head="copy_copy_P9" kind="OUTPUT" tail="copy_copy_T8"/>
+      <arc head="copy_copy_T9" kind="INPUT" tail="copy_copy_P6"/>
+      <arc head="copy_copy_T9" kind="INHIBITOR" tail="copy_copy_P5"/>
+      <arc head="copy_copy_T4" kind="INHIBITOR" tail="copy_copy_P4"/>
+      <arc head="copy_copy_P11" kind="OUTPUT" tail="copy_copy_T9"/>
+      <arc head="copy_copy_T10" kind="INPUT" tail="copy_copy_P11"/>
+      <arc head="copy_copy_P11" kind="OUTPUT" tail="copy_copy_T10"/>
+      <arc head="copy_copy_T11" kind="INPUT" tail="copy_copy_P4"/>
+      <arc head="copy_copy_T10" kind="INPUT" tail="copy_copy_P3"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_T10"/>
+      <arc head="copy_copy_T12" kind="INPUT" tail="copy_copy_copy_P1"/>
+      <arc head="copy_copy_T12" kind="INPUT" tail="copy_copy_P11"/>
+      <arc head="copy_copy_P11" kind="OUTPUT" tail="copy_copy_T12"/>
+      <arc head="copy_copy_T13" kind="INPUT" tail="copy_copy_P11"/>
+      <arc head="copy_copy_T13" kind="INHIBITOR" tail="copy_copy_copy_P1"/>
+      <arc head="copy_copy_T13" kind="INHIBITOR" tail="copy_copy_P3"/>
+      <arc head="copy_copy_T7" kind="INHIBITOR" tail="copy_copy_P5"/>
+      <arc head="copy_copy_P11" kind="OUTPUT" tail="copy_copy_T11"/>
+      <arc head="copy_copy_T11" kind="INPUT" tail="copy_copy_P11"/>
+      <arc head="copy_copy_T13" kind="INHIBITOR" tail="copy_copy_P4"/>
+      <arc head="copy_copy_copy_copy_T1" kind="INPUT" tail="copy_copy_copy_copy_P2"/>
+      <arc head="copy_copy_copy_copy_P1" kind="OUTPUT" tail="copy_copy_copy_copy_T0"/>
+      <arc head="copy_copy_copy_P3" kind="OUTPUT" tail="copy_copy_copy_copy_T1"/>
+      <arc head="copy_copy_copy_T3" kind="INHIBITOR" mult-k="0.47138671874999993" tail="copy_copy_copy_copy_P2"/>
+      <arc head="copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_copy_copy_T0"/>
+      <arc head="copy_copy_copy_P5" kind="OUTPUT" tail="copy_copy_copy_copy_T1"/>
+      <arc head="copy_copy_copy_copy_T2" kind="INPUT" tail="copy_copy_copy_copy_P1"/>
+      <arc head="copy_copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_copy_T2"/>
+      <arc head="copy_copy_copy_T4" kind="INPUT" tail="copy_copy_copy_P3"/>
+      <arc head="copy_copy_copy_P6" kind="OUTPUT" tail="copy_copy_copy_T3"/>
+      <arc head="copy_copy_copy_T3" kind="INHIBITOR" tail="copy_copy_copy_P6"/>
+      <arc head="copy_copy_copy_T5" kind="INPUT" tail="copy_copy_copy_P4"/>
+      <arc head="copy_copy_copy_T5" kind="INPUT" tail="copy_copy_copy_P5"/>
+      <arc head="copy_copy_copy_T5" kind="INPUT" tail="copy_copy_copy_P6"/>
+      <arc head="copy_copy_copy_P6" kind="OUTPUT" tail="copy_copy_copy_T5"/>
+      <arc head="copy_copy_copy_copy_T2" kind="INPUT" tail="copy_copy_copy_P9"/>
+      <arc head="copy_copy_copy_T4" kind="INPUT" tail="copy_copy_copy_P9"/>
+      <arc head="copy_copy_copy_P9" kind="OUTPUT" tail="copy_copy_copy_copy_T2"/>
+      <arc head="copy_copy_copy_P9" kind="OUTPUT" tail="copy_copy_copy_T4"/>
+      <arc head="copy_copy_copy_P9" kind="OUTPUT" tail="copy_copy_copy_T6"/>
+      <arc head="copy_copy_copy_T6" kind="INPUT" tail="copy_copy_copy_P6"/>
+      <arc head="copy_copy_copy_T6" kind="INHIBITOR" tail="copy_copy_copy_P4"/>
+      <arc head="copy_copy_copy_T3" kind="INHIBITOR" tail="copy_copy_copy_P9"/>
+      <arc head="copy_copy_copy_T7" kind="INPUT" tail="copy_copy_copy_P9"/>
+      <arc head="copy_copy_copy_T7" kind="INHIBITOR" tail="copy_copy_copy_copy_P1"/>
+      <arc head="copy_copy_copy_T7" kind="INHIBITOR" tail="copy_copy_copy_P3"/>
+      <arc head="copy_copy_copy_copy_T0" kind="INPUT" tail="copy_copy_copy_P10"/>
+      <arc head="copy_copy_copy_P10" kind="OUTPUT" tail="copy_copy_copy_copy_T0"/>
+      <arc head="copy_copy_copy_copy_T1" kind="INPUT" tail="copy_copy_copy_P10"/>
+      <arc head="copy_copy_copy_P10" kind="OUTPUT" tail="copy_copy_copy_copy_T1"/>
+      <arc head="copy_copy_copy_T3" kind="INPUT" tail="copy_copy_copy_P10">
+        <point x="132.5" y="25.0"/>
+        <point x="130.0" y="35.5"/>
+      </arc>
+      <arc head="copy_copy_copy_T8" kind="INPUT" tail="copy_copy_copy_P5"/>
+      <arc head="copy_copy_copy_T8" kind="INPUT" tail="copy_copy_copy_P9"/>
+      <arc head="copy_copy_copy_P9" kind="OUTPUT" tail="copy_copy_copy_T8"/>
+      <arc head="copy_copy_copy_T9" kind="INPUT" tail="copy_copy_copy_P6"/>
+      <arc head="copy_copy_copy_T9" kind="INHIBITOR" tail="copy_copy_copy_P5"/>
+      <arc head="copy_copy_copy_T4" kind="INHIBITOR" tail="copy_copy_copy_P4"/>
+      <arc head="copy_copy_copy_P11" kind="OUTPUT" tail="copy_copy_copy_T9"/>
+      <arc head="copy_copy_copy_T10" kind="INPUT" tail="copy_copy_copy_P11"/>
+      <arc head="copy_copy_copy_P11" kind="OUTPUT" tail="copy_copy_copy_T10"/>
+      <arc head="copy_copy_copy_T11" kind="INPUT" tail="copy_copy_copy_P4"/>
+      <arc head="copy_copy_copy_T10" kind="INPUT" tail="copy_copy_copy_P3"/>
+      <arc head="copy_copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T10"/>
+      <arc head="copy_copy_copy_T12" kind="INPUT" tail="copy_copy_copy_copy_P1"/>
+      <arc head="copy_copy_copy_T12" kind="INPUT" tail="copy_copy_copy_P11"/>
+      <arc head="copy_copy_copy_P11" kind="OUTPUT" tail="copy_copy_copy_T12"/>
+      <arc head="copy_copy_copy_T13" kind="INPUT" tail="copy_copy_copy_P11"/>
+      <arc head="copy_copy_copy_T13" kind="INHIBITOR" tail="copy_copy_copy_copy_P1"/>
+      <arc head="copy_copy_copy_T13" kind="INHIBITOR" tail="copy_copy_copy_P3"/>
+      <arc head="copy_copy_copy_T7" kind="INHIBITOR" tail="copy_copy_copy_P5"/>
+      <arc head="copy_copy_copy_P11" kind="OUTPUT" tail="copy_copy_copy_T11"/>
+      <arc head="copy_copy_copy_T11" kind="INPUT" tail="copy_copy_copy_P11"/>
+      <arc head="copy_copy_copy_T13" kind="INHIBITOR" tail="copy_copy_copy_P4"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T12"/>
+      <arc head="copy_copy_copy_copy_T0" kind="INPUT" tail="copy_copy_copy_P2"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T4"/>
+      <arc head="copy_copy_copy_T3" kind="INHIBITOR" tail="copy_copy_copy_P2"/>
+      <arc head="copy_copy_copy_P10" kind="OUTPUT" tail="copy_copy_T7"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_copy_T12"/>
+      <arc head="copy_copy_copy_T0" kind="INPUT" tail="copy_copy_P2"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_copy_T4"/>
+      <arc head="copy_copy_T3" kind="INHIBITOR" tail="copy_copy_P2"/>
+      <arc head="copy_copy_P10" kind="OUTPUT" tail="copy_T7"/>
+    </edges>
+  </gspn>
+  <dta name="DTA">
+    <nodes>
+      <clock name="x" x="2.0" y="2.0"/>
+    </nodes>
+    <edges/>
+  </dta>
+  <measures gspn-name="PT" log-uuid="8998fde3-ae0f-42c5-aef3-bcc570055c78" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="ALL">
+        <result-table>
+          <stat-result name="STAT">
+            <bindings/>
+            <stat key="build_time" value="1 seconds"/>
+            <stat key="home_state" value="False"/>
+            <stat key="num_dead_markings" value="1"/>
+            <stat key="num_tangible_markings" value="5798"/>
+            <stat key="num_vanishing_markings" value="0"/>
+          </stat-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <resource-list>
+    <document-log uuid="8998fde3-ae0f-42c5-aef3-bcc570055c78">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAB10AJsbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxXTlJHLmV4ZSIgIkQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xCdWJibGVTb3J0LU1lYXN1cmVzLnNvbHV0aW9uXFBUIiAtZ3VpLXN0YXQgCnQAYy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQAHFVTRSA6IFdOUkcgbmV0bmFtZSBbLW9dWy1tXQp0AAEKdAAtVG8gcGxvdCB0aGUgZ2VuZXJhdGVkIFJHIGluIEdyYXBodml6IGZvcm1hdDoKdAA0ICAgICAgWy1kb3QtRiBmaWxlbmFtZS5kb3RdIFstbWF4LWRvdC1tYXJraW5ncyBtYXhdCnQANFBhcmFtZXRyaWMgbWFya2luZy9yYXRlIHBhcmFtZXRlcnMgY2FuIGJlIHNldCB3aXRoOgp0ADkgICAgICBbLW1wYXIgcGFyYW1fbmFtZSB2YWx1ZV0gIFstcnBhciBwYXJhbV9uYW1lIHZhbHVlXQp0AGMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0AC9TZW5kIGZpbGVzIG5ldG5hbWUubmV0LCAuZGVmIHRvIGUtbWFpbCBhZGRyZXNzCnQAKmdyZWF0c3BuQGRpLnVuaXRvLml0IGlmIHlvdSBmaW5kIGFueSBidWcuCnQAYy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQAAQp0AAEKdAAhICoqKioqIFJlYWNoYWJpbGl0eSBHcmFwaCAqKioqKiAKdAABCnQAGlRBTkdJQkxFIE1BUktJTkdTICA6IDU3OTgKdAAXVkFOSVNISU5HIE1BUktJTkdTIDogMAp0ABdERUFEIE1BUktJTkdTICAgICAgOiAxCnQAAQp0ABpUT1RBTCBNQVJLSU5HUyAgICAgOiA1Nzk5CnQAAQp0ACogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIAp0AAEKdAAcVGltZSByZXF1aXJlZCAtLS0tLS0tLS0tPiAxCnQAAQp0ACogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIAp0AC1SZWFjaGFiaWxpdHkgZ3JhcGggY29udGFpbnMgZGVhZCBtYXJraW5ncyAhIQp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp4c3EAfgAAdwQAAAAdc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAheA</document-log>
+  </resource-list>
+</project>
