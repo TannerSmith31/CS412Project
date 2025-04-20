@@ -6,35 +6,45 @@
       <place name="isReady" x="38.0" y="25.0"/>
       <place marking="1" name="isBooting" x="38.0" y="4.0"/>
       <transition label-x="-2.5" label-y="0.0" name="T1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="8.0"/>
-      <transition name="make_request1" nservers-x="0.5" type="EXP" x="47.55" y="25.0"/>
-      <place marking="1" name="req1" x="45.0" y="17.0"/>
-      <place name="tsReq1" x="51.0" y="25.0"/>
-      <transition name="T2" nservers-x="0.5" type="EXP" x="55.55" y="25.0"/>
-      <place name="DecReq1" x="59.0" y="25.0"/>
-      <place name="sendReq" x="66.0" y="25.0"/>
-      <transition name="T0" nservers-x="0.5" type="EXP" x="63.55" y="25.0"/>
-      <place name="AddQue" x="74.0" y="25.0"/>
-      <transition name="T3" nservers-x="0.5" type="EXP" x="69.55" y="25.0"/>
-      <transition name="T4" nservers-x="0.5" type="EXP" x="53.55" y="2.0"/>
-      <place name="getReq" x="44.0" y="33.0"/>
-      <transition name="T5" nservers-x="0.5" type="EXP" x="41.55" y="29.0"/>
-      <place name="sendAck" x="60.0" y="35.0"/>
-      <transition name="T6" nservers-x="0.5" type="EXP" x="68.55" y="34.0"/>
-      <transition name="T7" nservers-x="0.5" type="EXP" x="48.55" y="35.0"/>
-      <place name="RecRel" x="30.0" y="21.0"/>
-      <transition name="T8" nservers-x="0.5" type="EXP" x="35.55" y="25.0"/>
-      <transition name="T9" nservers-x="0.5" type="EXP" x="25.55" y="18.0"/>
-      <place name="remQ" x="20.0" y="16.0"/>
-      <transition name="T10" nservers-x="0.5" type="EXP" x="31.55" y="14.0"/>
-      <transition name="T11" nservers-x="0.5" type="EXP" x="35.55" y="30.0"/>
-      <place name="HasRec" x="31.0" y="32.0"/>
-      <transition name="T12" nservers-x="0.5" type="EXP" x="27.55" y="34.0"/>
-      <place name="SendRel" x="18.0" y="34.0"/>
-      <transition name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="16.55" y="28.0"/>
-      <place name="updatClock" x="52.0" y="35.0"/>
-      <transition name="T14" nservers-x="0.5" type="EXP" x="55.55" y="35.0"/>
-      <place name="atHeadQ" x="34.0" y="35.0"/>
-      <place name="AllAckn" x="38.0" y="35.0"/>
+      <transition name="make_request1" nservers-x="0.5" type="EXP" x="46.55" y="25.0"/>
+      <place marking="1" name="req1" x="50.0" y="21.0"/>
+      <place name="tsReq1" x="49.0" y="25.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="52.55" y="25.0"/>
+      <place name="sendReqAddQ" x="62.0" y="25.0"/>
+      <place name="resetVar" x="72.0" y="25.0"/>
+      <transition name="trigerQSafty" nservers-x="0.5" type="EXP" x="67.55" y="25.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="64.55" y="18.0"/>
+      <place name="SetUpTSandPid" x="47.0" y="37.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="44.55" y="37.0"/>
+      <place name="updateClock" x="59.0" y="37.0"/>
+      <transition name="T6" nservers-x="0.5" type="EXP" x="62.55" y="37.0"/>
+      <transition name="LockQ" nservers-x="0.5" type="EXP" x="50.55" y="37.0"/>
+      <place name="RecRel" x="29.0" y="34.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="35.55" y="35.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="23.55" y="33.0"/>
+      <place name="remQ" x="20.0" y="30.0"/>
+      <transition name="T10" nservers-x="0.5" type="EXP" x="29.55" y="26.0"/>
+      <transition name="T11" nservers-x="0.5" type="EXP" x="31.55" y="14.0"/>
+      <place name="HasRec" x="26.0" y="13.0"/>
+      <transition name="T12" nservers-x="0.5" type="EXP" x="21.55" y="13.0"/>
+      <place name="SendRel" x="17.0" y="14.0"/>
+      <transition name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="26.55" y="18.0"/>
+      <place name="findNewCLock" x="53.0" y="37.0"/>
+      <transition name="T14" nservers-x="0.5" type="EXP" x="56.55" y="37.0"/>
+      <place name="atHeadQ" x="35.0" y="10.0"/>
+      <place name="AllAckn" x="32.0" y="9.0"/>
+      <place name="refilClock" x="56.0" y="25.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="59.55" y="25.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="28.0"/>
+      <place name="ChooseMessageToRout" x="38.0" y="31.0"/>
+      <transition name="T15" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="34.0"/>
+      <place name="roughtOnMesType" x="38.0" y="36.0"/>
+      <transition name="T16" nservers-x="0.5" type="EXP" x="33.55" y="39.0"/>
+      <place name="RecAcn" x="28.0" y="39.0"/>
+      <place name="WhoToSend" x="65.0" y="37.0"/>
+      <place name="sendTo" x="65.0" y="31.0"/>
+      <transition label-x="2.5" label-y="0.0" name="T17" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="65.55" y="34.0"/>
+      <transition name="T18" nservers-x="0.5" type="EXP" x="54.55" y="30.0"/>
     </nodes>
     <edges>
       <arc head="T1" kind="INPUT" tail="isBooting"/>
@@ -43,47 +53,55 @@
       <arc head="make_request1" kind="INPUT" tail="req1"/>
       <arc head="tsReq1" kind="OUTPUT" tail="make_request1"/>
       <arc head="T2" kind="INPUT" tail="tsReq1"/>
-      <arc head="DecReq1" kind="OUTPUT" tail="T2"/>
-      <arc head="T0" kind="INPUT" tail="DecReq1"/>
-      <arc head="sendReq" kind="OUTPUT" tail="T0"/>
-      <arc head="T3" kind="INPUT" tail="sendReq"/>
-      <arc head="AddQue" kind="OUTPUT" tail="T3"/>
-      <arc head="T4" kind="INPUT" tail="AddQue">
-        <point x="74.5" y="5.0"/>
+      <arc head="trigerQSafty" kind="INPUT" tail="sendReqAddQ"/>
+      <arc head="resetVar" kind="OUTPUT" tail="trigerQSafty"/>
+      <arc head="T4" kind="INPUT" tail="resetVar">
+        <point x="74.0" y="20.0"/>
       </arc>
       <arc head="isReady" kind="OUTPUT" tail="T4">
-        <point x="43.0" y="4.5"/>
+        <point x="47.5" y="20.0"/>
       </arc>
-      <arc head="T5" kind="INPUT" tail="isReady"/>
-      <arc head="getReq" kind="OUTPUT" tail="T5"/>
-      <arc head="T6" kind="INPUT" tail="sendAck"/>
-      <arc head="T7" kind="INPUT" tail="getReq"/>
-      <arc head="AddQue" kind="OUTPUT" tail="T6">
-        <point x="75.0" y="34.0"/>
-      </arc>
-      <arc head="T8" kind="INPUT" tail="isReady"/>
+      <arc head="SetUpTSandPid" kind="OUTPUT" tail="T5"/>
+      <arc head="T6" kind="INPUT" tail="updateClock"/>
+      <arc head="LockQ" kind="INPUT" tail="SetUpTSandPid"/>
       <arc head="RecRel" kind="OUTPUT" tail="T8"/>
       <arc head="T9" kind="INPUT" tail="RecRel"/>
       <arc head="remQ" kind="OUTPUT" tail="T9"/>
       <arc head="T10" kind="INPUT" tail="remQ">
-        <point x="25.0" y="13.5"/>
+        <point x="26.0" y="27.5"/>
       </arc>
       <arc head="isReady" kind="OUTPUT" tail="T10">
-        <point x="37.5" y="24.5"/>
+        <point x="36.5" y="26.0"/>
       </arc>
-      <arc head="T11" kind="INPUT" tail="isReady"/>
       <arc head="HasRec" kind="OUTPUT" tail="T11"/>
       <arc head="T12" kind="INPUT" tail="HasRec"/>
       <arc head="SendRel" kind="OUTPUT" tail="T12"/>
       <arc head="T13" kind="INPUT" tail="SendRel"/>
-      <arc head="remQ" kind="OUTPUT" tail="T13"/>
-      <arc head="updatClock" kind="OUTPUT" tail="T7"/>
-      <arc head="T14" kind="INPUT" tail="updatClock"/>
-      <arc head="sendAck" kind="OUTPUT" tail="T14"/>
+      <arc head="findNewCLock" kind="OUTPUT" tail="LockQ"/>
+      <arc head="T14" kind="INPUT" tail="findNewCLock"/>
+      <arc head="updateClock" kind="OUTPUT" tail="T14"/>
       <arc head="T11" kind="INPUT" tail="atHeadQ"/>
       <arc head="T11" kind="INPUT" tail="AllAckn">
-        <point x="37.0" y="31.5"/>
+        <point x="32.0" y="13.0"/>
       </arc>
+      <arc head="refilClock" kind="OUTPUT" tail="T2"/>
+      <arc head="T0" kind="INPUT" tail="refilClock"/>
+      <arc head="sendReqAddQ" kind="OUTPUT" tail="T0"/>
+      <arc head="T3" kind="INPUT" tail="isReady"/>
+      <arc head="ChooseMessageToRout" kind="OUTPUT" tail="T3"/>
+      <arc head="T15" kind="INPUT" tail="ChooseMessageToRout"/>
+      <arc head="roughtOnMesType" kind="OUTPUT" tail="T15"/>
+      <arc head="T5" kind="INPUT" tail="roughtOnMesType"/>
+      <arc head="T8" kind="INPUT" tail="roughtOnMesType"/>
+      <arc head="T16" kind="INPUT" tail="roughtOnMesType"/>
+      <arc head="RecAcn" kind="OUTPUT" tail="T16"/>
+      <arc head="T11" kind="INPUT" tail="isReady"/>
+      <arc head="isReady" kind="OUTPUT" tail="T13"/>
+      <arc head="WhoToSend" kind="OUTPUT" tail="T6"/>
+      <arc head="T17" kind="INPUT" tail="WhoToSend"/>
+      <arc head="sendTo" kind="OUTPUT" tail="T17"/>
+      <arc head="T18" kind="INPUT" tail="sendTo"/>
+      <arc head="isReady" kind="OUTPUT" tail="T18"/>
     </edges>
   </gspn>
   <dta name="DTA">
@@ -92,50 +110,58 @@
     </nodes>
     <edges/>
   </dta>
-  <measures gspn-name="MainStructure" name="Measures" simplified-UI="false">
+  <measures gspn-name="MakeReq" log-uuid="c0521366-9f91-476d-87df-68eb6e288fb9" name="Measures" simplified-UI="false">
     <assignments/>
     <greatspn/>
     <formulas>
-      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT">
+        <result-table>
+          <stat-result name="STAT">
+            <bindings/>
+            <stat key="build_time" value="0 seconds"/>
+            <stat key="home_state" value="False"/>
+            <stat key="num_dead_markings" value="1"/>
+            <stat key="num_tangible_markings" value="17"/>
+            <stat key="num_vanishing_markings" value="0"/>
+          </stat-result>
+        </result-table>
+      </formula>
     </formulas>
   </measures>
   <gspn name="MakeReq" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
     <nodes>
-      <place marking="5" name="clock" x="14.0" y="7.0"/>
-      <place marking="2" name="pid" x="37.0" y="3.0"/>
-      <place marking="1" name="isReady" x="3.0" y="15.0"/>
-      <place marking="1" name="req" x="3.0" y="10.0"/>
-      <transition name="T0" nservers-x="0.5" type="EXP" x="7.55" y="15.0"/>
-      <place name="tsReq" x="11.0" y="15.0"/>
-      <place name="tsR1" x="16.0" y="21.0"/>
-      <transition name="T1" nservers-x="0.5" type="EXP" x="16.55" y="11.0"/>
-      <place name="CoCLock" x="22.0" y="7.0"/>
-      <place name="refilClock" x="20.0" y="15.0"/>
-      <transition name="T2" nservers-x="0.5" type="EXP" x="14.55" y="15.0"/>
-      <transition name="T3" nservers-x="0.5" type="EXP" x="18.55" y="5.0"/>
-      <transition name="T4" nservers-x="0.5" type="EXP" x="23.55" y="15.0"/>
-      <place name="prepForsendQ" x="27.0" y="15.0"/>
-      <place label-x="0.5" label-y="2.0" name="isSending0" x="49.0" y="16.0"/>
-      <place name="pidSend0" x="49.0" y="4.0"/>
-      <place name="TS0" x="49.0" y="8.0"/>
-      <place name="MsgType0" x="49.0" y="12.0"/>
-      <place name="CoPid" x="26.0" y="6.0"/>
-      <place name="CoTsR1" x="38.0" y="25.0"/>
-      <transition name="T5" nservers-x="0.5" type="EXP" x="31.55" y="27.0"/>
-      <transition name="T6" nservers-x="0.5" type="EXP" x="31.55" y="12.0"/>
-      <transition name="T7" nservers-x="0.5" type="EXP" x="29.55" y="1.0"/>
-      <transition name="T8" nservers-x="0.5" type="EXP" x="31.55" y="7.0"/>
-      <transition name="T9" nservers-x="0.5" type="EXP" x="31.55" y="15.0"/>
-      <place name="refilVars" x="34.0" y="9.0"/>
-      <transition name="T10" nservers-x="0.5" type="EXP" x="34.55" y="23.0"/>
-      <place name="pidSend1" x="49.0" y="21.0"/>
-      <place name="TS1" x="49.0" y="25.0"/>
-      <place name="MsgType1" x="49.0" y="29.0"/>
-      <place name="isSend1" x="49.0" y="33.0"/>
-      <place name="QIsCurPid" x="8.0" y="36.0"/>
-      <place name="Qpid" x="13.0" y="36.0"/>
-      <place name="QTS" x="18.0" y="36.0"/>
-      <place name="isInQ" x="23.0" y="36.0"/>
+      <place marking="5" name="clock" x="12.0" y="7.0"/>
+      <place marking="2" name="pid" x="46.0" y="10.0"/>
+      <place marking="1" name="isReady" x="12.0" y="22.0"/>
+      <place marking="1" name="req" x="12.0" y="17.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="16.55" y="22.0"/>
+      <place name="tsReq" x="20.0" y="22.0"/>
+      <place name="tsR1" x="23.0" y="28.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="26.55" y="16.0"/>
+      <place name="CoCLock" x="33.0" y="5.0"/>
+      <place name="refilClock" x="29.0" y="22.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="23.55" y="22.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="25.55" y="3.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="32.55" y="22.0"/>
+      <place name="prepForsendQ" x="36.0" y="22.0"/>
+      <place label-x="0.5" label-y="2.0" name="isSending0" x="58.0" y="23.0"/>
+      <place name="pidSend0" x="58.0" y="11.0"/>
+      <place name="TS0" x="58.0" y="15.0"/>
+      <place name="MsgType0" x="58.0" y="19.0"/>
+      <place name="CoPid" x="35.0" y="13.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="38.55" y="9.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="39.55" y="15.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="42.55" y="22.0"/>
+      <place name="refilVars" x="43.0" y="16.0"/>
+      <transition name="T10" nservers-x="0.5" type="EXP" x="43.55" y="30.0"/>
+      <place name="pidSend1" x="58.0" y="28.0"/>
+      <place name="TS1" x="58.0" y="32.0"/>
+      <place name="MsgType1" x="58.0" y="36.0"/>
+      <place name="isSend1" x="58.0" y="40.0"/>
+      <place name="QIsCurPid" x="17.0" y="43.0"/>
+      <place name="Qpid" x="22.0" y="43.0"/>
+      <place name="QTS" x="27.0" y="43.0"/>
+      <place name="isInQ" x="32.0" y="43.0"/>
     </nodes>
     <edges>
       <arc head="T0" kind="INPUT" tail="req"/>
@@ -156,53 +182,220 @@
       <arc head="T4" kind="INHIBITOR" tail="CoCLock"/>
       <arc head="T4" kind="INPUT" tail="refilClock"/>
       <arc head="prepForsendQ" kind="OUTPUT" tail="T4"/>
-      <arc head="T5" kind="INPUT" tail="CoTsR1"/>
-      <arc head="tsR1" kind="OUTPUT" tail="T5"/>
-      <arc head="T6" kind="INPUT" tail="prepForsendQ"/>
-      <arc head="prepForsendQ" kind="OUTPUT" tail="T6"/>
-      <arc head="T6" kind="INPUT" tail="tsR1"/>
-      <arc head="CoTsR1" kind="OUTPUT" tail="T6"/>
-      <arc head="TS0" kind="OUTPUT" tail="T6"/>
       <arc head="T8" kind="INPUT" tail="prepForsendQ"/>
       <arc head="prepForsendQ" kind="OUTPUT" tail="T8"/>
-      <arc head="pidSend0" kind="OUTPUT" tail="T8"/>
-      <arc head="T8" kind="INPUT" tail="pid"/>
-      <arc head="T7" kind="INPUT" tail="CoPid"/>
-      <arc head="pid" kind="OUTPUT" tail="T7"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" mult-k="0.87353515625" tail="T8">
+        <point x="50.84150390625" y="13.717578125"/>
+      </arc>
+      <arc head="T8" kind="INPUT" mult="2" tail="pid"/>
+      <arc head="T7" kind="INPUT" mult="2" tail="CoPid"/>
+      <arc head="pid" kind="OUTPUT" mult="2" mult-k="1.03720703125" tail="T7">
+        <point x="42.92265625" y="10.49033203125"/>
+      </arc>
       <arc head="T9" kind="INPUT" tail="prepForsendQ"/>
       <arc head="refilVars" kind="OUTPUT" tail="T9"/>
-      <arc head="CoPid" kind="OUTPUT" tail="T8"/>
-      <arc head="T9" kind="INHIBITOR" tail="tsR1"/>
+      <arc head="CoPid" kind="OUTPUT" mult="2" mult-k="1.2879882812499996" tail="T8">
+        <point x="38.475390625" y="15.2376953125"/>
+      </arc>
       <arc head="T10" kind="INPUT" tail="refilVars"/>
-      <arc head="T6" kind="INHIBITOR" tail="isSending0"/>
       <arc head="T8" kind="INHIBITOR" tail="isSending0"/>
       <arc head="isSending0" kind="OUTPUT" tail="T9">
-        <point x="36.5" y="20.5"/>
+        <point x="45.5" y="27.5"/>
       </arc>
       <arc head="T9" kind="INHIBITOR" tail="isSending0">
-        <point x="36.5" y="20.5"/>
+        <point x="45.5" y="27.5"/>
       </arc>
-      <arc head="refilVars" kind="OUTPUT" tail="T5"/>
-      <arc head="T5" kind="INPUT" tail="refilVars"/>
       <arc head="refilVars" kind="OUTPUT" tail="T7"/>
       <arc head="T7" kind="INPUT" tail="refilVars"/>
       <arc head="T10" kind="INHIBITOR" tail="CoPid"/>
-      <arc head="T10" kind="INHIBITOR" tail="CoTsR1"/>
       <arc head="T9" kind="INHIBITOR" tail="pid"/>
-      <arc head="pidSend1" kind="OUTPUT" tail="T8"/>
-      <arc head="TS1" kind="OUTPUT" tail="T6"/>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T8"/>
       <arc head="T9" kind="INHIBITOR" tail="isSend1"/>
       <arc head="T8" kind="INHIBITOR" tail="isSend1"/>
       <arc head="isSend1" kind="OUTPUT" tail="T9"/>
-      <arc head="Qpid" kind="OUTPUT" tail="T8"/>
-      <arc head="QTS" kind="OUTPUT" tail="T6"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T8"/>
       <arc head="isInQ" kind="OUTPUT" tail="T9"/>
       <arc head="T9" kind="INHIBITOR" tail="isInQ"/>
       <arc head="QIsCurPid" kind="OUTPUT" tail="T9"/>
       <arc head="T9" kind="INHIBITOR" tail="QIsCurPid"/>
       <arc head="isReady" kind="OUTPUT" tail="T10">
-        <point x="13.0" y="26.0"/>
+        <point x="22.0" y="33.0"/>
       </arc>
+      <arc head="TS0" kind="OUTPUT" tail="T1"/>
+      <arc head="TS1" kind="OUTPUT" tail="T1"/>
+      <arc head="QTS" kind="OUTPUT" tail="T1"/>
+    </edges>
+  </gspn>
+  <gspn name="ProofOfexactMakeReq" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="5" name="clock" x="18.0" y="12.0"/>
+      <place marking="2" name="pid" x="46.0" y="2.0"/>
+      <place marking="1" name="isReady" x="12.0" y="22.0"/>
+      <place marking="1" name="req" x="12.0" y="17.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="16.55" y="22.0"/>
+      <place name="tsReq" x="20.0" y="22.0"/>
+      <place name="tsR1" x="39.0" y="2.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="26.55" y="27.0"/>
+      <place label-x="0.5" label-y="2.0" name="isSending0" x="58.0" y="23.0"/>
+      <place name="pidSend0" x="58.0" y="11.0"/>
+      <place name="TS0" x="58.0" y="15.0"/>
+      <place name="MsgType0" x="58.0" y="19.0"/>
+      <place name="pidSend1" x="58.0" y="28.0"/>
+      <place name="TS1" x="58.0" y="32.0"/>
+      <place name="MsgType1" x="58.0" y="36.0"/>
+      <place name="isSend1" x="58.0" y="40.0"/>
+      <place name="QIsCurPid" x="17.0" y="43.0"/>
+      <place name="Qpid" x="22.0" y="43.0"/>
+      <place name="QTS" x="27.0" y="43.0"/>
+      <place name="isInQ" x="32.0" y="43.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="26.55" y="22.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="26.55" y="18.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="26.55" y="14.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="26.55" y="10.0"/>
+      <transition name="T6" nservers-x="0.5" type="EXP" x="26.55" y="6.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="15.55" y="11.0"/>
+      <place name="P0" x="12.0" y="10.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="req"/>
+      <arc head="T0" kind="INPUT" tail="isReady"/>
+      <arc head="tsReq" kind="OUTPUT" tail="T0"/>
+      <arc head="T2" kind="INPUT" tail="tsReq"/>
+      <arc head="T2" kind="INHIBITOR" tail="clock"/>
+      <arc head="T1" kind="INPUT" tail="tsReq"/>
+      <arc head="T1" kind="INPUT" tail="clock"/>
+      <arc head="tsR1" kind="OUTPUT" tail="T1"/>
+      <arc head="QTS" kind="OUTPUT" tail="T1"/>
+      <arc head="TS0" kind="OUTPUT" tail="T1"/>
+      <arc head="TS1" kind="OUTPUT" tail="T1"/>
+      <arc head="T1" kind="INHIBITOR" mult="2" tail="clock"/>
+      <arc head="T3" kind="INPUT" mult="2" tail="clock"/>
+      <arc head="tsR1" kind="OUTPUT" mult="2" mult-k="1.3004882812499998" tail="T3">
+        <point x="25.2076171875" y="21.38984375"/>
+      </arc>
+      <arc head="QTS" kind="OUTPUT" mult="2" mult-k="1.47451171875" tail="T3">
+        <point x="27.04990234375" y="20.24755859375"/>
+      </arc>
+      <arc head="TS0" kind="OUTPUT" mult="2" mult-k="1.4606445312499998" tail="T3">
+        <point x="29.365625" y="18.77822265625"/>
+      </arc>
+      <arc head="TS1" kind="OUTPUT" mult="2" tail="T3"/>
+      <arc head="T3" kind="INHIBITOR" mult="3" tail="clock"/>
+      <arc head="TS0" kind="OUTPUT" mult="3" mult-k="1.29013671875" tail="T4">
+        <point x="36.496875" y="15.29677734375"/>
+      </arc>
+      <arc head="TS1" kind="OUTPUT" mult="3" tail="T4"/>
+      <arc head="QTS" kind="OUTPUT" mult="3" tail="T4"/>
+      <arc head="T3" kind="INPUT" tail="tsReq"/>
+      <arc head="T4" kind="INPUT" tail="tsReq"/>
+      <arc head="clock" kind="OUTPUT" mult="2" tail="T3"/>
+      <arc head="clock" kind="OUTPUT" tail="T1"/>
+      <arc head="T5" kind="INPUT" mult="4" mult-k="0.77392578125" tail="clock">
+        <point x="23.95546875" y="11.7611328125"/>
+      </arc>
+      <arc head="clock" kind="OUTPUT" mult="4" tail="T5"/>
+      <arc head="TS0" kind="OUTPUT" mult="4" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="tsReq"/>
+      <arc head="tsR1" kind="OUTPUT" mult="4" tail="T5"/>
+      <arc head="TS1" kind="OUTPUT" mult="4" mult-k="2.3231445312499996" tail="T5">
+        <point x="34.57925987627478" y="16.210741164938913"/>
+        <point x="35.384375" y="16.7642578125"/>
+      </arc>
+      <arc head="QTS" kind="OUTPUT" mult="4" tail="T5"/>
+      <arc head="T6" kind="INPUT" mult="5" mult-k="0.70673828125" tail="clock">
+        <point x="24.54921875" y="8.8380859375"/>
+      </arc>
+      <arc head="clock" kind="OUTPUT" mult="5" tail="T6"/>
+      <arc head="TS0" kind="OUTPUT" mult="5" mult-k="1.3180664062499998" tail="T6">
+        <point x="35.565625" y="9.40908203125"/>
+      </arc>
+      <arc head="TS1" kind="OUTPUT" mult="5" mult-k="1.44541015625" tail="T6">
+        <point x="30.165625" y="9.5720703125"/>
+      </arc>
+      <arc head="QTS" kind="OUTPUT" mult="5" tail="T6"/>
+      <arc head="T6" kind="INPUT" tail="tsReq"/>
+      <arc head="T5" kind="INHIBITOR" mult="5" tail="clock"/>
+      <arc head="T2" kind="INHIBITOR" tail="isSending0"/>
+      <arc head="T1" kind="INHIBITOR" tail="isSending0"/>
+      <arc head="T3" kind="INHIBITOR" tail="isSending0"/>
+      <arc head="T4" kind="INHIBITOR" tail="isSending0"/>
+      <arc head="T5" kind="INHIBITOR" tail="isSending0"/>
+      <arc head="T6" kind="INHIBITOR" tail="isSending0"/>
+      <arc head="T2" kind="INHIBITOR" tail="isSend1"/>
+      <arc head="T1" kind="INHIBITOR" tail="isSend1"/>
+      <arc head="T3" kind="INHIBITOR" tail="isSend1"/>
+      <arc head="T4" kind="INHIBITOR" tail="isSend1"/>
+      <arc head="T5" kind="INHIBITOR" tail="isSend1"/>
+      <arc head="T6" kind="INHIBITOR" tail="isSend1"/>
+      <arc head="T2" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T1" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T3" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T4" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T5" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T6" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" mult-k="0.90634765625" tail="T6">
+        <point x="44.634375000000006" y="9.75537109375"/>
+      </arc>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T5"/>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T6"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T6"/>
+      <arc head="isSending0" kind="OUTPUT" tail="T6"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T6"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T6"/>
+      <arc head="QIsCurPid" kind="OUTPUT" tail="T6"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" mult-k="0.7614257812499999" tail="T5">
+        <point x="47.996875" y="11.65615234375"/>
+      </arc>
+      <arc head="isSending0" kind="OUTPUT" tail="T5"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T5"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T5"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T5"/>
+      <arc head="QIsCurPid" kind="OUTPUT" tail="T5"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" tail="T4"/>
+      <arc head="isSending0" kind="OUTPUT" tail="T4"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T4"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T4"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T4"/>
+      <arc head="QIsCurPid" kind="OUTPUT" tail="T4"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" tail="T3"/>
+      <arc head="isSending0" kind="OUTPUT" tail="T3"/>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T3"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T1"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T3"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T3"/>
+      <arc head="QIsCurPid" kind="OUTPUT" tail="T3"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" tail="T1"/>
+      <arc head="isSending0" kind="OUTPUT" tail="T1"/>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T1"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T1"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T1"/>
+      <arc head="QIsCurPid" kind="OUTPUT" tail="T1"/>
+      <arc head="pidSend0" kind="OUTPUT" mult="2" tail="T2"/>
+      <arc head="isSending0" kind="OUTPUT" tail="T2"/>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T2"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T2"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T2"/>
+      <arc head="Qpid" kind="OUTPUT" mult="2" tail="T2"/>
+      <arc head="QIsCurPid" kind="OUTPUT" tail="T2"/>
+      <arc head="isReady" kind="OUTPUT" tail="T6"/>
+      <arc head="isReady" kind="OUTPUT" tail="T5"/>
+      <arc head="isReady" kind="OUTPUT" tail="T4"/>
+      <arc head="isReady" kind="OUTPUT" tail="T3"/>
+      <arc head="isReady" kind="OUTPUT" tail="T1"/>
+      <arc head="isReady" kind="OUTPUT" tail="T2"/>
+      <arc head="tsR1" kind="OUTPUT" mult="5" mult-k="0.93310546875" tail="T6">
+        <point x="33.97099609375" y="4.855078125"/>
+      </arc>
+      <arc head="T7" kind="INPUT" tail="P0"/>
+      <arc head="clock" kind="OUTPUT" tail="T7"/>
+      <arc head="T7" kind="INPUT" tail="req"/>
+      <arc head="req" kind="OUTPUT" tail="T7"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T3"/>
+      <arc head="T4" kind="INPUT" mult="3" tail="clock"/>
+      <arc head="T4" kind="INHIBITOR" mult="4" tail="clock"/>
+      <arc head="clock" kind="OUTPUT" mult="3" tail="T4"/>
+      <arc head="tsR1" kind="OUTPUT" mult="3" tail="T4"/>
+      <arc head="pidSend1" kind="OUTPUT" mult="2" tail="T4"/>
     </edges>
   </gspn>
   <gspn name="Que" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
@@ -219,6 +412,16 @@
       <transition name="T5" nservers-x="0.5" type="EXP" x="9.55" y="9.0"/>
       <place name="P3" x="37.0" y="3.0"/>
       <place name="P4" x="37.0" y="9.0"/>
+      <place name="ind4" x="7.0" y="27.0"/>
+      <place name="ind3" x="14.0" y="27.0"/>
+      <place name="ind2" x="23.0" y="27.0"/>
+      <place name="ind1" x="31.0" y="27.0"/>
+      <place name="in0" x="37.0" y="27.0"/>
+      <place name="2" x="14.0" y="16.0"/>
+      <place name="1" x="22.0" y="16.0"/>
+      <place name="3" x="29.0" y="16.0"/>
+      <transition label-y="-2.5" name="T6" nservers-x="0.5" type="EXP" x="37.55" y="23.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="31.55" y="23.0"/>
     </nodes>
     <edges>
       <arc head="T0" kind="INPUT" tail="P0"/>
@@ -241,6 +444,11 @@
       <arc head="T2" kind="INHIBITOR" tail="P3"/>
       <arc head="T3" kind="INHIBITOR" tail="P3"/>
       <arc head="T0" kind="INHIBITOR" tail="P1"/>
+      <arc head="in0" kind="OUTPUT" tail="T6"/>
+      <arc head="ind1" kind="OUTPUT" tail="T7"/>
+      <arc head="2" kind="OUTPUT" tail="T7"/>
+      <arc head="1" kind="OUTPUT" tail="T7"/>
+      <arc head="3" kind="OUTPUT" tail="T7"/>
     </edges>
   </gspn>
   <gspn name="MessageQue" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
@@ -323,4 +531,252 @@
       <arc head="T3" kind="INHIBITOR" tail="new"/>
     </edges>
   </gspn>
+  <gspn name="RoutMessage" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="PidRec0" x="4.0" y="8.0"/>
+      <place marking="6" name="TS0" x="8.0" y="8.0"/>
+      <place marking="2" name="MsgTyp0" x="12.0" y="8.0"/>
+      <place marking="1" name="isReciev" x="15.0" y="8.0"/>
+      <place marking="1" name="PidRec1" x="29.0" y="8.0"/>
+      <place marking="3" name="TS1" x="33.0" y="8.0"/>
+      <place marking="1" name="MsgType1" x="37.0" y="8.0"/>
+      <place marking="1" name="isRec" x="26.0" y="8.0"/>
+      <transition name="T0" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="17.55" y="13.0"/>
+      <place marking="1" name="isReady" x="20.0" y="8.0"/>
+      <place name="prepmessage0" x="17.0" y="16.0"/>
+      <place name="pid" x="17.0" y="31.0"/>
+      <place name="TS" x="20.0" y="31.0"/>
+      <place name="MsgType" x="23.0" y="31.0"/>
+      <transition name="T1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="20.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="11.55" y="20.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="15.55" y="20.0"/>
+      <transition name="copy_T1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="25.55" y="20.0"/>
+      <transition name="copy_T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="29.55" y="20.0"/>
+      <transition name="copy_T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="33.55" y="20.0"/>
+      <transition name="T4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="23.55" y="13.0"/>
+      <place name="P0" x="23.0" y="16.0"/>
+      <transition name="T5" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="18.55" y="20.0"/>
+      <transition name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="22.55" y="20.0"/>
+      <place name="roughtOnType" x="20.0" y="23.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="31.55" y="31.0"/>
+      <place name="getReq0" x="34.0" y="31.0"/>
+      <place name="atleast1" x="30.0" y="36.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="27.55" y="36.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="33.55" y="36.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T10" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="28.55" y="40.0"/>
+      <place name="AckReq1" x="28.0" y="43.0"/>
+      <place name="RecRel2" x="37.0" y="36.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="isReady"/>
+      <arc head="T0" kind="INPUT" tail="isReciev"/>
+      <arc head="isReciev" kind="OUTPUT" tail="T0"/>
+      <arc head="prepmessage0" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="PidRec0"/>
+      <arc head="pid" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="TS0"/>
+      <arc head="TS" kind="OUTPUT" tail="T2"/>
+      <arc head="MsgType" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INPUT" tail="MsgTyp0"/>
+      <arc head="T3" kind="INPUT" tail="prepmessage0"/>
+      <arc head="prepmessage0" kind="OUTPUT" tail="T3"/>
+      <arc head="T2" kind="INPUT" tail="prepmessage0"/>
+      <arc head="prepmessage0" kind="OUTPUT" tail="T2"/>
+      <arc head="T1" kind="INPUT" tail="prepmessage0"/>
+      <arc head="prepmessage0" kind="OUTPUT" tail="T1"/>
+      <arc head="T4" kind="INPUT" tail="isRec"/>
+      <arc head="isRec" kind="OUTPUT" tail="T4"/>
+      <arc head="T4" kind="INPUT" tail="isReady"/>
+      <arc head="P0" kind="OUTPUT" tail="T4"/>
+      <arc head="P0" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="copy_T1" kind="INPUT" tail="P0"/>
+      <arc head="copy_T2" kind="INPUT" tail="P0"/>
+      <arc head="P0" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="copy_T3" kind="INPUT" tail="P0"/>
+      <arc head="P0" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_T1" kind="INPUT" tail="PidRec1"/>
+      <arc head="pid" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="copy_T2" kind="INPUT" tail="TS1"/>
+      <arc head="TS" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="MsgType" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_T3" kind="INPUT" tail="MsgType1"/>
+      <arc head="T5" kind="INPUT" tail="prepmessage0"/>
+      <arc head="T5" kind="INPUT" tail="isReciev"/>
+      <arc head="T6" kind="INPUT" tail="P0"/>
+      <arc head="T6" kind="INPUT" tail="isRec"/>
+      <arc head="T5" kind="INHIBITOR" tail="MsgTyp0"/>
+      <arc head="T5" kind="INHIBITOR" tail="TS0"/>
+      <arc head="T5" kind="INHIBITOR" tail="PidRec0"/>
+      <arc head="T6" kind="INHIBITOR" tail="PidRec1"/>
+      <arc head="T6" kind="INHIBITOR" tail="TS1"/>
+      <arc head="T6" kind="INHIBITOR" tail="MsgType1"/>
+      <arc head="roughtOnType" kind="OUTPUT" tail="T5"/>
+      <arc head="roughtOnType" kind="OUTPUT" tail="T6"/>
+      <arc head="T7" kind="INPUT" tail="roughtOnType"/>
+      <arc head="T7" kind="INHIBITOR" tail="MsgType"/>
+      <arc head="getReq0" kind="OUTPUT" tail="T7"/>
+      <arc head="T8" kind="INPUT" tail="MsgType"/>
+      <arc head="atleast1" kind="OUTPUT" tail="T8"/>
+      <arc head="T9" kind="INPUT" tail="atleast1"/>
+      <arc head="T10" kind="INPUT" tail="atleast1"/>
+      <arc head="T8" kind="INHIBITOR" tail="atleast1"/>
+      <arc head="T10" kind="INHIBITOR" tail="MsgType"/>
+      <arc head="T9" kind="INPUT" tail="MsgType"/>
+      <arc head="AckReq1" kind="OUTPUT" tail="T10"/>
+      <arc head="RecRel2" kind="OUTPUT" tail="T9"/>
+      <arc head="T10" kind="INPUT" tail="roughtOnType"/>
+      <arc head="T9" kind="INPUT" tail="roughtOnType"/>
+      <arc head="T7" kind="INHIBITOR" tail="atleast1"/>
+    </edges>
+  </gspn>
+  <gspn name="RecReq" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="1" name="RoughtONType" x="9.0" y="23.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="14.55" y="23.0"/>
+      <place name="findNewClock" x="27.0" y="23.0"/>
+      <place name="pid" x="16.0" y="26.0"/>
+      <place name="putTsForCompCl" x="19.0" y="23.0"/>
+      <place marking="8" name="Clock" x="32.0" y="11.0"/>
+      <place name="tempTS" x="32.0" y="17.0"/>
+      <place name="coClock" x="42.0" y="14.0"/>
+      <transition name="copy_T0" nservers-x="0.5" type="EXP" x="36.55" y="16.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="36.55" y="20.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="37.55" y="9.0"/>
+      <transition name="inc1" nservers-x="0.5" type="EXP" x="36.55" y="23.0"/>
+      <place marking="3" name="TS" x="17.0" y="15.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="23.55" y="23.0"/>
+      <place name="QIsCurPid" x="18.0" y="31.0"/>
+      <place name="Qpid" x="23.0" y="31.0"/>
+      <place name="QTS" x="28.0" y="31.0"/>
+      <place name="isInQ" x="33.0" y="31.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="24.55" y="17.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="21.55" y="26.0"/>
+      <place name="updateClock" x="43.0" y="23.0"/>
+      <transition name="T6" nservers-x="0.5" type="EXP" x="37.55" y="13.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="47.55" y="23.0"/>
+      <place name="whoToSend" x="50.0" y="23.0"/>
+      <place label-x="0.5" label-y="2.0" name="isSending0" x="77.0" y="19.0"/>
+      <place name="TS0" x="77.0" y="11.0"/>
+      <place name="MsgType0" x="77.0" y="15.0"/>
+      <place name="TS1" x="86.0" y="28.0"/>
+      <place name="MsgType1" x="86.0" y="32.0"/>
+      <place name="isSend1" x="86.0" y="36.0"/>
+      <place name="keptPid" x="50.0" y="27.0"/>
+      <transition name="T11" nservers-x="0.5" type="EXP" x="57.55" y="21.0"/>
+      <place name="sendto0" x="62.0" y="18.0"/>
+      <place name="atleast1" x="57.0" y="30.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="54.55" y="30.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="60.55" y="30.0"/>
+      <transition label-x="-2.5" label-y="-0.5" name="T10" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="59.55" y="24.0"/>
+      <place name="sendTo1" x="68.0" y="27.0"/>
+      <place name="SendTo2" x="55.0" y="36.0"/>
+      <place name="tempCLock" x="69.0" y="22.0"/>
+      <place marking="1" name="typeAc" x="65.0" y="23.0"/>
+      <transition name="T12" nservers-x="0.5" type="EXP" x="68.55" y="16.0"/>
+      <transition name="T13" nservers-x="0.5" type="EXP" x="69.55" y="11.0"/>
+      <transition name="T14" nservers-x="0.5" type="EXP" x="78.55" y="28.0"/>
+      <transition name="T15" nservers-x="0.5" type="EXP" x="78.55" y="33.0"/>
+      <transition name="T17" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="62.55" y="35.0"/>
+      <transition name="T18" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="69.55" y="35.0"/>
+      <place name="Ready" x="65.0" y="39.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="RoughtONType"/>
+      <arc head="copy_T0" kind="INPUT" tail="Clock"/>
+      <arc head="copy_T0" kind="INPUT" tail="tempTS"/>
+      <arc head="coClock" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="T1" kind="INHIBITOR" tail="Clock"/>
+      <arc head="T2" kind="INHIBITOR" tail="tempTS"/>
+      <arc head="T2" kind="INPUT" tail="Clock"/>
+      <arc head="T1" kind="INPUT" tail="tempTS"/>
+      <arc head="coClock" kind="OUTPUT" tail="T2"/>
+      <arc head="coClock" kind="OUTPUT" tail="T1"/>
+      <arc head="copy_T0" kind="INPUT" tail="findNewClock"/>
+      <arc head="findNewClock" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="T1" kind="INPUT" tail="findNewClock"/>
+      <arc head="findNewClock" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="findNewClock"/>
+      <arc head="findNewClock" kind="OUTPUT" tail="T2"/>
+      <arc head="inc1" kind="INPUT" tail="findNewClock"/>
+      <arc head="coClock" kind="OUTPUT" tail="inc1"/>
+      <arc head="putTsForCompCl" kind="OUTPUT" tail="T0"/>
+      <arc head="T3" kind="INPUT" tail="putTsForCompCl"/>
+      <arc head="findNewClock" kind="OUTPUT" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="TS"/>
+      <arc head="tempTS" kind="OUTPUT" tail="T4"/>
+      <arc head="QTS" kind="OUTPUT" tail="T4"/>
+      <arc head="T4" kind="INPUT" tail="putTsForCompCl"/>
+      <arc head="putTsForCompCl" kind="OUTPUT" tail="T4"/>
+      <arc head="T3" kind="INHIBITOR" tail="TS"/>
+      <arc head="T4" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T5" kind="INPUT" tail="pid"/>
+      <arc head="Qpid" kind="OUTPUT" tail="T5"/>
+      <arc head="T5" kind="INPUT" tail="putTsForCompCl"/>
+      <arc head="putTsForCompCl" kind="OUTPUT" tail="T5"/>
+      <arc head="T3" kind="INHIBITOR" tail="pid"/>
+      <arc head="inc1" kind="INHIBITOR" tail="Clock"/>
+      <arc head="inc1" kind="INHIBITOR" tail="tempTS"/>
+      <arc head="updateClock" kind="OUTPUT" tail="inc1"/>
+      <arc head="isInQ" kind="OUTPUT" tail="T3"/>
+      <arc head="T5" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T3" kind="INHIBITOR" tail="isInQ"/>
+      <arc head="T6" kind="INPUT" tail="coClock"/>
+      <arc head="Clock" kind="OUTPUT" tail="T6"/>
+      <arc head="T6" kind="INPUT" tail="updateClock"/>
+      <arc head="updateClock" kind="OUTPUT" tail="T6"/>
+      <arc head="T7" kind="INPUT" tail="updateClock"/>
+      <arc head="whoToSend" kind="OUTPUT" tail="T7"/>
+      <arc head="T7" kind="INHIBITOR" tail="coClock"/>
+      <arc head="keptPid" kind="OUTPUT" tail="T5"/>
+      <arc head="sendto0" kind="OUTPUT" tail="T11"/>
+      <arc head="atleast1" kind="OUTPUT" tail="T8"/>
+      <arc head="T9" kind="INPUT" tail="atleast1"/>
+      <arc head="T10" kind="INPUT" tail="atleast1"/>
+      <arc head="T8" kind="INHIBITOR" tail="atleast1"/>
+      <arc head="sendTo1" kind="OUTPUT" tail="T10"/>
+      <arc head="SendTo2" kind="OUTPUT" tail="T9"/>
+      <arc head="T11" kind="INHIBITOR" tail="atleast1"/>
+      <arc head="T11" kind="INHIBITOR" tail="keptPid"/>
+      <arc head="T11" kind="INPUT" tail="whoToSend"/>
+      <arc head="T8" kind="INPUT" tail="keptPid"/>
+      <arc head="T10" kind="INPUT" tail="whoToSend"/>
+      <arc head="T10" kind="INHIBITOR" tail="keptPid"/>
+      <arc head="T9" kind="INPUT" tail="whoToSend"/>
+      <arc head="T9" kind="INPUT" tail="keptPid"/>
+      <arc head="tempCLock" kind="OUTPUT" tail="T6"/>
+      <arc head="T12" kind="INPUT" tail="sendto0"/>
+      <arc head="sendto0" kind="OUTPUT" tail="T12"/>
+      <arc head="T12" kind="INPUT" tail="typeAc"/>
+      <arc head="MsgType0" kind="OUTPUT" tail="T12"/>
+      <arc head="T13" kind="INPUT" tail="sendto0"/>
+      <arc head="sendto0" kind="OUTPUT" tail="T13"/>
+      <arc head="T13" kind="INPUT" tail="tempCLock"/>
+      <arc head="TS0" kind="OUTPUT" tail="T13"/>
+      <arc head="T14" kind="INPUT" tail="sendTo1"/>
+      <arc head="sendTo1" kind="OUTPUT" tail="T14"/>
+      <arc head="T15" kind="INPUT" tail="sendTo1"/>
+      <arc head="sendTo1" kind="OUTPUT" tail="T15"/>
+      <arc head="T15" kind="INPUT" tail="typeAc"/>
+      <arc head="MsgType1" kind="OUTPUT" tail="T15"/>
+      <arc head="TS1" kind="OUTPUT" tail="T14"/>
+      <arc head="T14" kind="INPUT" tail="tempCLock"/>
+      <arc head="T17" kind="INHIBITOR" tail="typeAc"/>
+      <arc head="T17" kind="INHIBITOR" tail="tempCLock"/>
+      <arc head="T17" kind="INPUT" tail="sendto0"/>
+      <arc head="typeAc" kind="OUTPUT" tail="T17"/>
+      <arc head="T18" kind="INPUT" tail="sendTo1"/>
+      <arc head="typeAc" kind="OUTPUT" tail="T18"/>
+      <arc head="T18" kind="INHIBITOR" tail="typeAc"/>
+      <arc head="T18" kind="INHIBITOR" tail="tempCLock"/>
+      <arc head="Ready" kind="OUTPUT" tail="T17"/>
+      <arc head="Ready" kind="OUTPUT" tail="T18"/>
+      <arc head="T8" kind="INPUT" tail="whoToSend"/>
+      <arc head="whoToSend" kind="OUTPUT" tail="T8"/>
+      <arc head="isSend1" kind="OUTPUT" tail="T18"/>
+      <arc head="isSending0" kind="OUTPUT" tail="T17"/>
+    </edges>
+  </gspn>
+  <resource-list>
+    <document-log uuid="c0521366-9f91-476d-87df-68eb6e288fb9">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAB10AKIbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxXTlJHLmV4ZSIgIkQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtTWVhc3VyZXMuc29sdXRpb25cTWFrZVJlcSIgLWd1aS1zdGF0IAp0AGMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0ABxVU0UgOiBXTlJHIG5ldG5hbWUgWy1vXVstbV0KdAABCnQALVRvIHBsb3QgdGhlIGdlbmVyYXRlZCBSRyBpbiBHcmFwaHZpeiBmb3JtYXQ6CnQANCAgICAgIFstZG90LUYgZmlsZW5hbWUuZG90XSBbLW1heC1kb3QtbWFya2luZ3MgbWF4XQp0ADRQYXJhbWV0cmljIG1hcmtpbmcvcmF0ZSBwYXJhbWV0ZXJzIGNhbiBiZSBzZXQgd2l0aDoKdAA5ICAgICAgWy1tcGFyIHBhcmFtX25hbWUgdmFsdWVdICBbLXJwYXIgcGFyYW1fbmFtZSB2YWx1ZV0KdABjLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdAAvU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0ACpncmVhdHNwbkBkaS51bml0by5pdCBpZiB5b3UgZmluZCBhbnkgYnVnLgp0AGMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0AAEKdAABCnQAISAqKioqKiBSZWFjaGFiaWxpdHkgR3JhcGggKioqKiogCnQAAQp0ABhUQU5HSUJMRSBNQVJLSU5HUyAgOiAxNwp0ABdWQU5JU0hJTkcgTUFSS0lOR1MgOiAwCnQAF0RFQUQgTUFSS0lOR1MgICAgICA6IDEKdAABCnQAGFRPVEFMIE1BUktJTkdTICAgICA6IDE4CnQAAQp0ACogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIAp0AAEKdAAcVGltZSByZXF1aXJlZCAtLS0tLS0tLS0tPiAwCnQAAQp0ACogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIAp0AC1SZWFjaGFiaWxpdHkgZ3JhcGggY29udGFpbnMgZGVhZCBtYXJraW5ncyAhIQp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp4c3EAfgAAdwQAAAAdc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAheA</document-log>
+  </resource-list>
 </project>
