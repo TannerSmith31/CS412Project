@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Store ReqAck" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="Ac10" x="47.0" y="29.0"/>
+      <place name="Ac11" x="52.0" y="29.0"/>
+      <place marking="1" name="Ac12" x="57.0" y="29.0"/>
+      <place name="Ac00" x="67.0" y="29.0"/>
+      <place name="Ac01" x="71.0" y="29.0"/>
+      <place marking="1" name="Ac02" x="76.0" y="29.0"/>
+      <place name="Ac30" x="10.0" y="29.0"/>
+      <place name="Ac31" x="15.0" y="29.0"/>
+      <place marking="1" name="Ac32" x="20.0" y="29.0"/>
+      <place name="Ac20" x="29.0" y="29.0"/>
+      <place name="Ac21" x="34.0" y="29.0"/>
+      <place marking="1" name="Ac22" x="39.0" y="29.0"/>
+      <place name="AcF1" x="84.0" y="40.0"/>
+      <place name="AcF0" x="79.0" y="51.0"/>
+      <transition label-x="1.0" name="T0" nservers-x="0.5" type="EXP" x="75.55" y="35.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="56.55" y="36.0"/>
+      <transition name="T2" nservers-x="0.5" type="EXP" x="37.55" y="35.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="19.55" y="34.0"/>
+      <transition label-x="1.0" name="copy_T0" nservers-x="0.5" type="EXP" x="70.55" y="46.0"/>
+      <transition name="copy_T1" nservers-x="0.5" type="EXP" x="51.55" y="47.0"/>
+      <transition name="copy_T2" nservers-x="0.5" type="EXP" x="32.55" y="46.0"/>
+      <transition name="copy_T3" nservers-x="0.5" type="EXP" x="14.55" y="45.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="88.55" y="40.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="87.55" y="51.0"/>
+      <place name="Ready0" x="71.0" y="23.0"/>
+      <place name="Ready1" x="51.0" y="23.0"/>
+      <place name="Ready2" x="35.0" y="23.0"/>
+      <place name="Ready3" x="14.0" y="23.0"/>
+      <transition name="T6" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="71.55" y="26.0"/>
+      <transition name="T7" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="35.55" y="26.0"/>
+      <transition name="T8" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="51.55" y="26.0"/>
+      <transition name="T9" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="14.55" y="26.0"/>
+      <place label-y="2.0" name="P0" x="61.0" y="14.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" tail="AcF1"/>
+      <arc head="Ac01" kind="OUTPUT" tail="T0"/>
+      <arc head="T1" kind="INPUT" tail="AcF1"/>
+      <arc head="T1" kind="INPUT" tail="Ac01"/>
+      <arc head="Ac01" kind="OUTPUT" tail="T1"/>
+      <arc head="Ac11" kind="OUTPUT" tail="T1"/>
+      <arc head="Ac21" kind="OUTPUT" tail="T2"/>
+      <arc head="T2" kind="INPUT" tail="AcF1"/>
+      <arc head="T2" kind="INPUT" tail="Ac11"/>
+      <arc head="Ac11" kind="OUTPUT" tail="T2"/>
+      <arc head="T2" kind="INPUT" tail="Ac01"/>
+      <arc head="Ac01" kind="OUTPUT" tail="T2"/>
+      <arc head="T3" kind="INPUT" tail="AcF1"/>
+      <arc head="T3" kind="INPUT" tail="Ac01"/>
+      <arc head="Ac01" kind="OUTPUT" tail="T3"/>
+      <arc head="Ac11" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INPUT" tail="Ac11"/>
+      <arc head="Ac21" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INPUT" tail="Ac21"/>
+      <arc head="Ac31" kind="OUTPUT" tail="T3"/>
+      <arc head="copy_T0" kind="INPUT" tail="AcF0"/>
+      <arc head="Ac00" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="copy_T1" kind="INPUT" tail="AcF0"/>
+      <arc head="copy_T1" kind="INPUT" tail="Ac00"/>
+      <arc head="Ac00" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="Ac10" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="Ac20" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="copy_T2" kind="INPUT" tail="AcF0"/>
+      <arc head="copy_T2" kind="INPUT" tail="Ac10"/>
+      <arc head="Ac10" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="copy_T2" kind="INPUT" tail="Ac00"/>
+      <arc head="Ac00" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="copy_T3" kind="INPUT" tail="AcF0"/>
+      <arc head="copy_T3" kind="INPUT" tail="Ac00"/>
+      <arc head="Ac00" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="Ac10" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_T3" kind="INPUT" tail="Ac10"/>
+      <arc head="Ac20" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_T3" kind="INPUT" tail="Ac20"/>
+      <arc head="Ac30" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="AcF1" kind="OUTPUT" tail="T4"/>
+      <arc head="AcF0" kind="OUTPUT" tail="T5"/>
+      <arc head="T0" kind="INHIBITOR" tail="Ac01"/>
+      <arc head="T1" kind="INHIBITOR" tail="Ac11"/>
+      <arc head="T2" kind="INHIBITOR" tail="Ac21"/>
+      <arc head="T3" kind="INHIBITOR" tail="Ac31"/>
+      <arc head="copy_T0" kind="INHIBITOR" tail="Ac00"/>
+      <arc head="copy_T1" kind="INHIBITOR" tail="Ac10"/>
+      <arc head="copy_T2" kind="INHIBITOR" tail="Ac20"/>
+      <arc head="copy_T3" kind="INHIBITOR" tail="Ac30"/>
+      <arc head="T6" kind="INPUT" tail="Ac00"/>
+      <arc head="T6" kind="INPUT" tail="Ac01"/>
+      <arc head="T6" kind="INPUT" tail="Ac02"/>
+      <arc head="Ready0" kind="OUTPUT" tail="T6"/>
+      <arc head="T8" kind="INPUT" tail="Ac10"/>
+      <arc head="T8" kind="INPUT" tail="Ac11"/>
+      <arc head="T8" kind="INPUT" tail="Ac12"/>
+      <arc head="Ready1" kind="OUTPUT" tail="T8"/>
+      <arc head="T7" kind="INPUT" tail="Ac20"/>
+      <arc head="T7" kind="INPUT" tail="Ac21"/>
+      <arc head="T7" kind="INPUT" tail="Ac22"/>
+      <arc head="Ready2" kind="OUTPUT" tail="T7"/>
+      <arc head="T9" kind="INPUT" tail="Ac30"/>
+      <arc head="T9" kind="INPUT" tail="Ac31"/>
+      <arc head="T9" kind="INPUT" tail="Ac32"/>
+      <arc head="Ready3" kind="OUTPUT" tail="T9"/>
+    </edges>
+  </gspn>
+  <dta name="DTA">
+    <nodes>
+      <clock name="x" x="2.0" y="2.0"/>
+    </nodes>
+    <edges/>
+  </dta>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>
