@@ -110,7 +110,7 @@
     </nodes>
     <edges/>
   </dta>
-  <measures gspn-name="MakeReq" log-uuid="c0521366-9f91-476d-87df-68eb6e288fb9" name="Measures" simplified-UI="false">
+  <measures gspn-name="MessagePassingQ" log-uuid="98ade898-867f-412f-bdc6-fde7762f527d" name="Measures" simplified-UI="false">
     <assignments/>
     <greatspn/>
     <formulas>
@@ -121,7 +121,7 @@
             <stat key="build_time" value="0 seconds"/>
             <stat key="home_state" value="False"/>
             <stat key="num_dead_markings" value="1"/>
-            <stat key="num_tangible_markings" value="17"/>
+            <stat key="num_tangible_markings" value="53"/>
             <stat key="num_vanishing_markings" value="0"/>
           </stat-result>
         </result-table>
@@ -776,7 +776,380 @@
       <arc head="isSending0" kind="OUTPUT" tail="T17"/>
     </edges>
   </gspn>
+  <gspn name="MessagePassingQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place label-x="0.5" label-y="2.0" marking="1" name="isSending0" text-size="SMALL" x="20.0" y="24.0"/>
+      <place name="pidSend0" x="73.0" y="8.0"/>
+      <place name="TS0" x="6.0" y="11.0"/>
+      <place marking="2" name="MsgType0" text-size="SMALL" x="20.0" y="20.0"/>
+      <transition name="Take8" nservers-x="0.5" text-size="SMALL" type="EXP" x="26.55" y="14.0"/>
+      <place label-x="0.5" label-y="2.5" marking="2" name="TS" text-size="SMALL" x="20.0" y="17.0"/>
+      <place label-y="-2.0" name="TS1" text-size="SMALL" x="36.0" y="17.0"/>
+      <place name="P0" text-size="SMALL" x="24.0" y="28.0"/>
+      <transition name="T0" nservers-x="0.5" text-size="SMALL" type="EXP" x="22.55" y="28.0"/>
+      <place marking="1" name="start" text-size="SMALL" x="20.0" y="28.0"/>
+      <transition name="tak4" nservers-x="0.5" text-size="SMALL" type="EXP" x="27.55" y="16.0"/>
+      <transition name="tak2" nservers-x="0.5" text-size="SMALL" type="EXP" x="28.55" y="18.0"/>
+      <transition name="tak1" nservers-x="0.5" text-size="SMALL" type="EXP" x="30.55" y="20.0"/>
+      <transition name="T3" nservers-x="0.5" text-size="SMALL" type="EXP" x="26.55" y="28.0"/>
+      <place name="P3" text-size="SMALL" x="28.0" y="28.0"/>
+      <transition name="T4" nservers-x="0.5" text-size="SMALL" type="EXP" x="30.55" y="28.0"/>
+      <place name="P4" text-size="SMALL" x="32.0" y="28.0"/>
+      <transition name="T5" nservers-x="0.5" text-size="SMALL" type="EXP" x="34.55" y="28.0"/>
+      <place name="isSending" text-size="SMALL" x="36.0" y="24.0"/>
+      <place name="copy_P0" x="25.0" y="8.0"/>
+      <transition name="copy_T0" nservers-x="0.5" type="EXP" x="31.55" y="8.0"/>
+      <place name="Add" x="25.0" y="2.0"/>
+      <transition name="copy_T1" nservers-x="0.5" type="EXP" x="31.55" y="2.0"/>
+      <place name="copy_P1" x="36.0" y="2.0"/>
+      <place name="copy_P2" x="36.0" y="8.0"/>
+      <transition name="copy_T2" nservers-x="0.5" type="EXP" x="42.55" y="2.0"/>
+      <transition name="copy_T3" nservers-x="0.5" type="EXP" x="42.55" y="8.0"/>
+      <place name="copy_P3" x="47.0" y="2.0"/>
+      <place name="copy_P4" x="47.0" y="8.0"/>
+      <place name="MSgType" text-size="SMALL" x="36.0" y="20.0"/>
+      <place marking="2" name="P1" x="59.0" y="5.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="65.55" y="5.0"/>
+      <transition name="T6" nservers-x="0.5" text-size="SMALL" type="EXP" x="34.55" y="25.0"/>
+      <transition name="T7" nservers-x="0.5" text-size="SMALL" type="EXP" x="34.55" y="22.0"/>
+      <place name="P2" text-size="SMALL" x="36.0" y="28.0"/>
+      <transition name="copy_Take8" nservers-x="0.5" text-size="SMALL" type="EXP" x="42.55" y="14.0"/>
+      <place label-y="-2.0" marking="5" name="copy_TS1" text-size="SMALL" x="52.0" y="17.0"/>
+      <place name="copy_copy_P0" text-size="SMALL" x="40.0" y="28.0"/>
+      <transition name="copy_copy_T0" nservers-x="0.5" text-size="SMALL" type="EXP" x="38.55" y="28.0"/>
+      <transition name="copy_tak4" nservers-x="0.5" text-size="SMALL" type="EXP" x="43.55" y="16.0"/>
+      <transition name="copy_tak2" nservers-x="0.5" text-size="SMALL" type="EXP" x="44.55" y="18.0"/>
+      <transition name="copy_tak1" nservers-x="0.5" text-size="SMALL" type="EXP" x="46.55" y="20.0"/>
+      <transition name="copy_copy_T3" nservers-x="0.5" text-size="SMALL" type="EXP" x="42.55" y="28.0"/>
+      <place name="copy_copy_P3" text-size="SMALL" x="44.0" y="28.0"/>
+      <transition name="copy_T4" nservers-x="0.5" text-size="SMALL" type="EXP" x="46.55" y="28.0"/>
+      <place name="copy_copy_P4" text-size="SMALL" x="48.0" y="28.0"/>
+      <transition name="copy_T5" nservers-x="0.5" text-size="SMALL" type="EXP" x="50.55" y="28.0"/>
+      <place marking="1" name="copy_isSending" text-size="SMALL" x="52.0" y="24.0"/>
+      <place marking="2" name="copy_MSgType" text-size="SMALL" x="52.0" y="20.0"/>
+      <transition name="copy_T6" nservers-x="0.5" text-size="SMALL" type="EXP" x="50.55" y="25.0"/>
+      <transition name="copy_T7" nservers-x="0.5" text-size="SMALL" type="EXP" x="50.55" y="22.0"/>
+      <place marking="1" name="copy_copy_P2" text-size="SMALL" x="52.0" y="28.0"/>
+      <transition name="copy_copy_Take8" nservers-x="0.5" text-size="SMALL" type="EXP" x="58.55" y="14.0"/>
+      <place label-y="-2.0" marking="4" name="copy_copy_TS1" text-size="SMALL" x="68.0" y="17.0"/>
+      <place name="copy_copy_copy_P0" text-size="SMALL" x="56.0" y="28.0"/>
+      <transition name="copy_copy_copy_T0" nservers-x="0.5" text-size="SMALL" type="EXP" x="54.55" y="28.0"/>
+      <transition name="copy_copy_tak4" nservers-x="0.5" text-size="SMALL" type="EXP" x="59.55" y="16.0"/>
+      <transition name="copy_copy_tak2" nservers-x="0.5" text-size="SMALL" type="EXP" x="60.55" y="18.0"/>
+      <transition name="copy_copy_tak1" nservers-x="0.5" text-size="SMALL" type="EXP" x="62.55" y="20.0"/>
+      <transition name="copy_copy_copy_T3" nservers-x="0.5" text-size="SMALL" type="EXP" x="58.55" y="28.0"/>
+      <place name="copy_copy_copy_P3" text-size="SMALL" x="60.0" y="28.0"/>
+      <transition name="copy_copy_T4" nservers-x="0.5" text-size="SMALL" type="EXP" x="62.55" y="28.0"/>
+      <place name="copy_copy_copy_P4" text-size="SMALL" x="64.0" y="28.0"/>
+      <transition name="copy_copy_T5" nservers-x="0.5" text-size="SMALL" type="EXP" x="66.55" y="28.0"/>
+      <place marking="1" name="copy_copy_isSending" text-size="SMALL" x="68.0" y="24.0"/>
+      <place marking="2" name="copy_copy_MSgType" text-size="SMALL" x="68.0" y="20.0"/>
+      <transition name="lab" nservers-x="0.5" text-size="SMALL" type="EXP" x="66.55" y="25.0"/>
+      <transition name="copy_copy_T7" nservers-x="0.5" text-size="SMALL" type="EXP" x="66.55" y="22.0"/>
+      <place marking="1" name="copy_copy_copy_P2" text-size="SMALL" x="68.0" y="28.0"/>
+      <transition name="copy_copy_copy_Take8" nservers-x="0.5" text-size="SMALL" type="EXP" x="74.55" y="14.0"/>
+      <place label-y="-2.0" name="copy_copy_copy_TS1" text-size="SMALL" x="84.0" y="17.0"/>
+      <place name="copy_copy_copy_copy_P0" text-size="SMALL" x="72.0" y="28.0"/>
+      <transition name="copy_copy_copy_copy_T0" nservers-x="0.5" text-size="SMALL" type="EXP" x="70.55" y="28.0"/>
+      <transition name="copy_copy_copy_tak4" nservers-x="0.5" text-size="SMALL" type="EXP" x="75.55" y="16.0"/>
+      <transition name="copy_copy_copy_tak2" nservers-x="0.5" text-size="SMALL" type="EXP" x="76.55" y="18.0"/>
+      <transition name="copy_copy_copy_tak1" nservers-x="0.5" text-size="SMALL" type="EXP" x="78.55" y="20.0"/>
+      <transition name="copy_copy_copy_copy_T3" nservers-x="0.5" text-size="SMALL" type="EXP" x="74.55" y="28.0"/>
+      <place name="copy_copy_copy_copy_P3" text-size="SMALL" x="76.0" y="28.0"/>
+      <transition name="copy_copy_copy_T4" nservers-x="0.5" text-size="SMALL" type="EXP" x="78.55" y="28.0"/>
+      <place name="copy_copy_copy_copy_P4" text-size="SMALL" x="80.0" y="28.0"/>
+      <transition name="copy_copy_copy_T5" nservers-x="0.5" text-size="SMALL" type="EXP" x="82.55" y="28.0"/>
+      <place name="copy_copy_copy_isSending" text-size="SMALL" x="84.0" y="24.0"/>
+      <place name="copy_copy_copy_MSgType" text-size="SMALL" x="84.0" y="20.0"/>
+      <transition name="copy_copy_copy_T6" nservers-x="0.5" text-size="SMALL" type="EXP" x="82.55" y="25.0"/>
+      <transition name="copy_copy_copy_T7" nservers-x="0.5" text-size="SMALL" type="EXP" x="82.55" y="22.0"/>
+      <place name="copy_copy_copy_copy_P2" text-size="SMALL" x="84.0" y="28.0"/>
+    </nodes>
+    <edges>
+      <arc head="Take8" kind="INPUT" mult="8" tail="TS" text-size="SMALL"/>
+      <arc head="T0" kind="INPUT" tail="start" text-size="SMALL"/>
+      <arc head="T0" kind="INHIBITOR" mult="8" tail="TS" text-size="SMALL"/>
+      <arc head="P0" kind="OUTPUT" tail="T0" text-size="SMALL"/>
+      <arc head="TS1" kind="OUTPUT" mult="4" tail="tak4" text-size="SMALL"/>
+      <arc head="tak2" kind="INPUT" mult="2" tail="TS" text-size="SMALL"/>
+      <arc head="TS1" kind="OUTPUT" mult="2" tail="tak2" text-size="SMALL"/>
+      <arc head="tak4" kind="INPUT" mult="4" tail="TS" text-size="SMALL"/>
+      <arc head="tak1" kind="INPUT" tail="TS" text-size="SMALL"/>
+      <arc head="TS1" kind="OUTPUT" tail="tak1" text-size="SMALL">
+        <point x="31.5" y="20.5"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="P0" text-size="SMALL"/>
+      <arc head="TS1" kind="OUTPUT" mult="8" tail="Take8" text-size="SMALL"/>
+      <arc head="T3" kind="INHIBITOR" mult="4" tail="TS" text-size="SMALL"/>
+      <arc head="P3" kind="OUTPUT" tail="T3" text-size="SMALL"/>
+      <arc head="T4" kind="INPUT" tail="P3" text-size="SMALL"/>
+      <arc head="T4" kind="INHIBITOR" mult="2" tail="TS" text-size="SMALL"/>
+      <arc head="P4" kind="OUTPUT" tail="T4" text-size="SMALL"/>
+      <arc head="T5" kind="INHIBITOR" tail="TS" text-size="SMALL"/>
+      <arc head="T5" kind="INPUT" tail="P4" text-size="SMALL"/>
+      <arc head="Take8" kind="INPUT" tail="start" text-size="SMALL"/>
+      <arc head="P4" kind="OUTPUT" tail="tak1" text-size="SMALL"/>
+      <arc head="copy_T0" kind="INPUT" tail="copy_P0"/>
+      <arc head="copy_T0" kind="INPUT" tail="Add"/>
+      <arc head="copy_T1" kind="INHIBITOR" tail="copy_P0"/>
+      <arc head="copy_T1" kind="INPUT" tail="Add"/>
+      <arc head="Add" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="copy_T1" kind="INHIBITOR" tail="copy_P1"/>
+      <arc head="copy_P2" kind="OUTPUT" tail="copy_T0"/>
+      <arc head="copy_P1" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_T3" kind="INPUT" tail="copy_P1"/>
+      <arc head="copy_T3" kind="INPUT" tail="copy_P2"/>
+      <arc head="copy_T2" kind="INPUT" tail="copy_P1"/>
+      <arc head="copy_T2" kind="INHIBITOR" tail="copy_P2"/>
+      <arc head="copy_P3" kind="OUTPUT" tail="copy_T2"/>
+      <arc head="copy_P4" kind="OUTPUT" tail="copy_T3"/>
+      <arc head="copy_P1" kind="OUTPUT" tail="copy_T1"/>
+      <arc head="copy_T2" kind="INHIBITOR" tail="copy_P3"/>
+      <arc head="copy_T3" kind="INHIBITOR" tail="copy_P3"/>
+      <arc head="copy_T0" kind="INHIBITOR" tail="copy_P1"/>
+      <arc head="T5" kind="INPUT" tail="isSending0" text-size="SMALL"/>
+      <arc head="T5" kind="INPUT" tail="MsgType0" text-size="SMALL"/>
+      <arc head="isSending" kind="OUTPUT" tail="T5" text-size="SMALL"/>
+      <arc head="T1" kind="INHIBITOR" mult="2" tail="P1"/>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="T5" kind="INHIBITOR" mult="2" tail="MsgType0" text-size="SMALL"/>
+      <arc head="T6" kind="INHIBITOR" tail="MsgType0" text-size="SMALL"/>
+      <arc head="T6" kind="INPUT" tail="P4" text-size="SMALL"/>
+      <arc head="isSending" kind="OUTPUT" tail="T6" text-size="SMALL"/>
+      <arc head="MSgType" kind="OUTPUT" tail="T5" text-size="SMALL"/>
+      <arc head="T7" kind="INPUT" mult="2" mult-k="0.9614257812499999" tail="MsgType0" text-size="SMALL">
+        <point x="25.843261718750004" y="22.0361328125"/>
+      </arc>
+      <arc head="MSgType" kind="OUTPUT" mult="2" tail="T7" text-size="SMALL"/>
+      <arc head="T6" kind="INHIBITOR" tail="TS" text-size="SMALL"/>
+      <arc head="P0" kind="OUTPUT" tail="Take8" text-size="SMALL"/>
+      <arc head="P3" kind="OUTPUT" tail="tak4" text-size="SMALL"/>
+      <arc head="tak4" kind="INPUT" tail="P0" text-size="SMALL"/>
+      <arc head="tak2" kind="INPUT" tail="P3" text-size="SMALL"/>
+      <arc head="P4" kind="OUTPUT" tail="tak2" text-size="SMALL"/>
+      <arc head="tak1" kind="INPUT" tail="P4" text-size="SMALL"/>
+      <arc head="T6" kind="INPUT" tail="isSending0" text-size="SMALL"/>
+      <arc head="T7" kind="INPUT" tail="isSending0" text-size="SMALL"/>
+      <arc head="T7" kind="INPUT" tail="P4" text-size="SMALL"/>
+      <arc head="T7" kind="INHIBITOR" tail="TS" text-size="SMALL"/>
+      <arc head="isSending" kind="OUTPUT" tail="T7" text-size="SMALL"/>
+      <arc head="P2" kind="OUTPUT" tail="T5" text-size="SMALL"/>
+      <arc head="P2" kind="OUTPUT" tail="T6" text-size="SMALL"/>
+      <arc head="P2" kind="OUTPUT" tail="T7" text-size="SMALL"/>
+      <arc head="copy_copy_P0" kind="OUTPUT" tail="copy_copy_T0" text-size="SMALL"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="copy_tak4" text-size="SMALL"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="copy_tak2" text-size="SMALL"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="copy_tak1" text-size="SMALL">
+        <point x="47.5" y="20.5"/>
+      </arc>
+      <arc head="copy_copy_T3" kind="INPUT" tail="copy_copy_P0" text-size="SMALL"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="copy_Take8" text-size="SMALL"/>
+      <arc head="copy_copy_P3" kind="OUTPUT" tail="copy_copy_T3" text-size="SMALL"/>
+      <arc head="copy_T4" kind="INPUT" tail="copy_copy_P3" text-size="SMALL"/>
+      <arc head="copy_copy_P4" kind="OUTPUT" tail="copy_T4" text-size="SMALL"/>
+      <arc head="copy_T5" kind="INPUT" tail="copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_P4" kind="OUTPUT" tail="copy_tak1" text-size="SMALL"/>
+      <arc head="copy_isSending" kind="OUTPUT" tail="copy_T5" text-size="SMALL"/>
+      <arc head="copy_T6" kind="INPUT" tail="copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_isSending" kind="OUTPUT" tail="copy_T6" text-size="SMALL"/>
+      <arc head="copy_MSgType" kind="OUTPUT" tail="copy_T5" text-size="SMALL"/>
+      <arc head="copy_MSgType" kind="OUTPUT" mult="2" tail="copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_P0" kind="OUTPUT" tail="copy_Take8" text-size="SMALL"/>
+      <arc head="copy_copy_P3" kind="OUTPUT" tail="copy_tak4" text-size="SMALL"/>
+      <arc head="copy_tak4" kind="INPUT" tail="copy_copy_P0" text-size="SMALL"/>
+      <arc head="copy_tak2" kind="INPUT" tail="copy_copy_P3" text-size="SMALL"/>
+      <arc head="copy_copy_P4" kind="OUTPUT" tail="copy_tak2" text-size="SMALL"/>
+      <arc head="copy_tak1" kind="INPUT" tail="copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_T7" kind="INPUT" tail="copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_isSending" kind="OUTPUT" tail="copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_T5" text-size="SMALL"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_T6" text-size="SMALL"/>
+      <arc head="copy_copy_P2" kind="OUTPUT" tail="copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_T0" kind="INPUT" tail="P2" text-size="SMALL"/>
+      <arc head="copy_Take8" kind="INPUT" tail="P2" text-size="SMALL"/>
+      <arc head="copy_Take8" kind="INPUT" mult="8" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_tak4" kind="INPUT" mult="4" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_tak2" kind="INPUT" mult="2" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_tak1" kind="INPUT" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_T7" kind="INHIBITOR" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_T6" kind="INHIBITOR" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_T5" kind="INHIBITOR" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_T4" kind="INHIBITOR" mult="2" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_copy_T3" kind="INHIBITOR" mult="4" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_copy_T0" kind="INHIBITOR" mult="8" tail="TS1" text-size="SMALL"/>
+      <arc head="copy_T5" kind="INPUT" tail="isSending" text-size="SMALL"/>
+      <arc head="copy_T6" kind="INPUT" tail="isSending" text-size="SMALL"/>
+      <arc head="copy_T7" kind="INPUT" tail="isSending" text-size="SMALL"/>
+      <arc head="copy_T6" kind="INHIBITOR" tail="MSgType" text-size="SMALL"/>
+      <arc head="copy_T5" kind="INHIBITOR" mult="2" tail="MSgType" text-size="SMALL"/>
+      <arc head="copy_T5" kind="INPUT" tail="MSgType" text-size="SMALL"/>
+      <arc head="copy_T7" kind="INPUT" mult="2" tail="MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P0" kind="OUTPUT" tail="copy_copy_copy_T0" text-size="SMALL"/>
+      <arc head="copy_copy_TS1" kind="OUTPUT" mult="4" tail="copy_copy_tak4" text-size="SMALL"/>
+      <arc head="copy_copy_TS1" kind="OUTPUT" mult="2" tail="copy_copy_tak2" text-size="SMALL"/>
+      <arc head="copy_copy_TS1" kind="OUTPUT" tail="copy_copy_tak1" text-size="SMALL">
+        <point x="63.5" y="20.5"/>
+      </arc>
+      <arc head="copy_copy_copy_T3" kind="INPUT" tail="copy_copy_copy_P0" text-size="SMALL"/>
+      <arc head="copy_copy_TS1" kind="OUTPUT" mult="8" tail="copy_copy_Take8" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P3" kind="OUTPUT" tail="copy_copy_copy_T3" text-size="SMALL"/>
+      <arc head="copy_copy_T4" kind="INPUT" tail="copy_copy_copy_P3" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_T4" text-size="SMALL"/>
+      <arc head="copy_copy_T5" kind="INPUT" tail="copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_tak1" text-size="SMALL"/>
+      <arc head="copy_copy_isSending" kind="OUTPUT" tail="copy_copy_T5" text-size="SMALL"/>
+      <arc head="lab" kind="INPUT" tail="copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_isSending" kind="OUTPUT" tail="lab" text-size="SMALL"/>
+      <arc head="copy_copy_MSgType" kind="OUTPUT" tail="copy_copy_T5" text-size="SMALL"/>
+      <arc head="copy_copy_MSgType" kind="OUTPUT" mult="2" tail="copy_copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P0" kind="OUTPUT" tail="copy_copy_Take8" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P3" kind="OUTPUT" tail="copy_copy_tak4" text-size="SMALL"/>
+      <arc head="copy_copy_tak4" kind="INPUT" tail="copy_copy_copy_P0" text-size="SMALL"/>
+      <arc head="copy_copy_tak2" kind="INPUT" tail="copy_copy_copy_P3" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_tak2" text-size="SMALL"/>
+      <arc head="copy_copy_tak1" kind="INPUT" tail="copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_T7" kind="INPUT" tail="copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_isSending" kind="OUTPUT" tail="copy_copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_T5" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="lab" text-size="SMALL"/>
+      <arc head="copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P0" kind="OUTPUT" tail="copy_copy_copy_copy_T0" text-size="SMALL"/>
+      <arc head="copy_copy_copy_TS1" kind="OUTPUT" mult="4" tail="copy_copy_copy_tak4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_TS1" kind="OUTPUT" mult="2" tail="copy_copy_copy_tak2" text-size="SMALL"/>
+      <arc head="copy_copy_copy_TS1" kind="OUTPUT" tail="copy_copy_copy_tak1" text-size="SMALL">
+        <point x="79.5" y="20.5"/>
+      </arc>
+      <arc head="copy_copy_copy_copy_T3" kind="INPUT" tail="copy_copy_copy_copy_P0" text-size="SMALL"/>
+      <arc head="copy_copy_copy_TS1" kind="OUTPUT" mult="8" tail="copy_copy_copy_Take8" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P3" kind="OUTPUT" tail="copy_copy_copy_copy_T3" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T4" kind="INPUT" tail="copy_copy_copy_copy_P3" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_copy_T4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T5" kind="INPUT" tail="copy_copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_copy_tak1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_isSending" kind="OUTPUT" tail="copy_copy_copy_T5" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T6" kind="INPUT" tail="copy_copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_isSending" kind="OUTPUT" tail="copy_copy_copy_T6" text-size="SMALL"/>
+      <arc head="copy_copy_copy_MSgType" kind="OUTPUT" tail="copy_copy_copy_T5" text-size="SMALL"/>
+      <arc head="copy_copy_copy_MSgType" kind="OUTPUT" mult="2" tail="copy_copy_copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P0" kind="OUTPUT" tail="copy_copy_copy_Take8" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P3" kind="OUTPUT" tail="copy_copy_copy_tak4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_tak4" kind="INPUT" tail="copy_copy_copy_copy_P0" text-size="SMALL"/>
+      <arc head="copy_copy_copy_tak2" kind="INPUT" tail="copy_copy_copy_copy_P3" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P4" kind="OUTPUT" tail="copy_copy_copy_tak2" text-size="SMALL"/>
+      <arc head="copy_copy_copy_tak1" kind="INPUT" tail="copy_copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T7" kind="INPUT" tail="copy_copy_copy_copy_P4" text-size="SMALL"/>
+      <arc head="copy_copy_copy_isSending" kind="OUTPUT" tail="copy_copy_copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T5" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T6" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_P2" kind="OUTPUT" tail="copy_copy_copy_T7" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_T0" kind="INPUT" tail="copy_copy_copy_P2" text-size="SMALL"/>
+      <arc head="copy_copy_copy_Take8" kind="INPUT" tail="copy_copy_copy_P2" text-size="SMALL"/>
+      <arc head="copy_copy_copy_Take8" kind="INPUT" mult="8" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_tak4" kind="INPUT" mult="4" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_tak2" kind="INPUT" mult="2" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_tak1" kind="INPUT" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T7" kind="INHIBITOR" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T6" kind="INHIBITOR" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T5" kind="INHIBITOR" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T4" kind="INHIBITOR" mult="2" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_T3" kind="INHIBITOR" mult="4" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_T0" kind="INHIBITOR" mult="8" tail="copy_copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T5" kind="INPUT" tail="copy_copy_isSending" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T6" kind="INPUT" tail="copy_copy_isSending" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T7" kind="INPUT" tail="copy_copy_isSending" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T6" kind="INHIBITOR" tail="copy_copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T5" kind="INHIBITOR" mult="2" tail="copy_copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T5" kind="INPUT" tail="copy_copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T7" kind="INPUT" mult="2" tail="copy_copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T0" kind="INPUT" tail="copy_copy_P2" text-size="SMALL"/>
+      <arc head="copy_copy_Take8" kind="INPUT" mult="8" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_tak4" kind="INPUT" mult="4" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_tak2" kind="INPUT" mult="2" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_tak1" kind="INPUT" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T0" kind="INHIBITOR" mult="8" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T3" kind="INHIBITOR" mult="4" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_T4" kind="INHIBITOR" mult="2" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_T5" kind="INHIBITOR" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="lab" kind="INHIBITOR" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_T7" kind="INHIBITOR" tail="copy_TS1" text-size="SMALL"/>
+      <arc head="copy_copy_T7" kind="INPUT" mult="2" tail="copy_MSgType" text-size="SMALL"/>
+      <arc head="lab" kind="INHIBITOR" tail="copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_T5" kind="INHIBITOR" mult="2" tail="copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_T5" kind="INPUT" tail="copy_MSgType" text-size="SMALL"/>
+      <arc head="copy_copy_Take8" kind="INPUT" tail="copy_copy_P2" text-size="SMALL"/>
+      <arc head="copy_copy_T7" kind="INPUT" tail="copy_isSending" text-size="SMALL"/>
+      <arc head="lab" kind="INPUT" tail="copy_isSending" text-size="SMALL"/>
+      <arc head="copy_copy_T5" kind="INPUT" tail="copy_isSending" text-size="SMALL"/>
+      <arc head="T0" kind="INHIBITOR" tail="isSending" text-size="SMALL"/>
+      <arc head="copy_copy_T0" kind="INHIBITOR" tail="copy_isSending" text-size="SMALL"/>
+      <arc head="copy_copy_copy_T0" kind="INHIBITOR" tail="copy_copy_isSending" text-size="SMALL"/>
+      <arc head="copy_copy_copy_copy_T0" kind="INHIBITOR" tail="copy_copy_copy_isSending" text-size="SMALL"/>
+    </edges>
+  </gspn>
+  <gspn name="LogDataTransfer" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <transition name="Take8" nservers-x="0.5" type="EXP" x="14.55" y="7.0"/>
+      <place label-x="0.5" label-y="2.5" marking="15" name="Start" x="12.0" y="16.0"/>
+      <place name="P1" x="4.0" y="16.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="8.55" y="16.0"/>
+      <place marking="1" name="P2" x="4.0" y="21.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="-0.0" type="EXP" x="6.55" y="21.0"/>
+      <place label-y="-2.0" name="Goal" x="19.0" y="7.0"/>
+      <place name="P0" x="12.0" y="21.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="10.55" y="21.0"/>
+      <place name="start" x="8.0" y="21.0"/>
+      <transition name="tak4" nservers-x="0.5" type="EXP" x="15.55" y="9.0"/>
+      <transition name="tak2" nservers-x="0.5" type="EXP" x="16.55" y="11.0"/>
+      <transition name="tak1" nservers-x="0.5" type="EXP" x="17.55" y="13.0"/>
+      <transition name="T3" nservers-x="0.5" type="EXP" x="14.55" y="21.0"/>
+      <place name="P3" x="16.0" y="21.0"/>
+      <transition name="T4" nservers-x="0.5" type="EXP" x="18.55" y="21.0"/>
+      <place name="P4" x="20.0" y="21.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="22.55" y="21.0"/>
+      <place name="P5" x="24.0" y="21.0"/>
+    </nodes>
+    <edges>
+      <arc head="T1" kind="INPUT" tail="P1"/>
+      <arc head="Start" kind="OUTPUT" tail="T1"/>
+      <arc head="T1" kind="INPUT" tail="P2"/>
+      <arc head="P2" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="P2"/>
+      <arc head="Take8" kind="INPUT" mult="8" tail="Start"/>
+      <arc head="start" kind="OUTPUT" tail="T2"/>
+      <arc head="T0" kind="INPUT" tail="start"/>
+      <arc head="T0" kind="INHIBITOR" mult="8" tail="Start"/>
+      <arc head="P0" kind="OUTPUT" tail="T0"/>
+      <arc head="Goal" kind="OUTPUT" mult="4" tail="tak4"/>
+      <arc head="tak2" kind="INPUT" mult="2" tail="Start"/>
+      <arc head="Goal" kind="OUTPUT" mult="2" tail="tak2"/>
+      <arc head="tak4" kind="INPUT" mult="4" tail="Start"/>
+      <arc head="tak1" kind="INPUT" tail="Start"/>
+      <arc head="Goal" kind="OUTPUT" tail="tak1">
+        <point x="19.5" y="13.5"/>
+      </arc>
+      <arc head="T3" kind="INPUT" tail="P0"/>
+      <arc head="Goal" kind="OUTPUT" mult="8" tail="Take8"/>
+      <arc head="T3" kind="INHIBITOR" mult="4" tail="Start"/>
+      <arc head="P3" kind="OUTPUT" tail="T3"/>
+      <arc head="T4" kind="INPUT" tail="P3"/>
+      <arc head="T4" kind="INHIBITOR" mult="2" tail="Start"/>
+      <arc head="P4" kind="OUTPUT" tail="T4"/>
+      <arc head="T5" kind="INHIBITOR" tail="Start"/>
+      <arc head="T5" kind="INPUT" tail="P4"/>
+      <arc head="P5" kind="OUTPUT" tail="T5">
+        <point x="24.0" y="22.0"/>
+      </arc>
+      <arc head="Take8" kind="INPUT" tail="start"/>
+      <arc head="start" kind="OUTPUT" tail="Take8"/>
+      <arc head="tak4" kind="INPUT" tail="P0"/>
+      <arc head="P0" kind="OUTPUT" tail="tak4"/>
+      <arc head="tak2" kind="INPUT" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="tak2"/>
+      <arc head="P4" kind="OUTPUT" tail="tak1"/>
+      <arc head="tak1" kind="INPUT" tail="P4"/>
+    </edges>
+  </gspn>
   <resource-list>
-    <document-log uuid="c0521366-9f91-476d-87df-68eb6e288fb9">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAB10AKIbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxXTlJHLmV4ZSIgIkQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtTWVhc3VyZXMuc29sdXRpb25cTWFrZVJlcSIgLWd1aS1zdGF0IAp0AGMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0ABxVU0UgOiBXTlJHIG5ldG5hbWUgWy1vXVstbV0KdAABCnQALVRvIHBsb3QgdGhlIGdlbmVyYXRlZCBSRyBpbiBHcmFwaHZpeiBmb3JtYXQ6CnQANCAgICAgIFstZG90LUYgZmlsZW5hbWUuZG90XSBbLW1heC1kb3QtbWFya2luZ3MgbWF4XQp0ADRQYXJhbWV0cmljIG1hcmtpbmcvcmF0ZSBwYXJhbWV0ZXJzIGNhbiBiZSBzZXQgd2l0aDoKdAA5ICAgICAgWy1tcGFyIHBhcmFtX25hbWUgdmFsdWVdICBbLXJwYXIgcGFyYW1fbmFtZSB2YWx1ZV0KdABjLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdAAvU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0ACpncmVhdHNwbkBkaS51bml0by5pdCBpZiB5b3UgZmluZCBhbnkgYnVnLgp0AGMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQp0AAEKdAABCnQAISAqKioqKiBSZWFjaGFiaWxpdHkgR3JhcGggKioqKiogCnQAAQp0ABhUQU5HSUJMRSBNQVJLSU5HUyAgOiAxNwp0ABdWQU5JU0hJTkcgTUFSS0lOR1MgOiAwCnQAF0RFQUQgTUFSS0lOR1MgICAgICA6IDEKdAABCnQAGFRPVEFMIE1BUktJTkdTICAgICA6IDE4CnQAAQp0ACogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIAp0AAEKdAAcVGltZSByZXF1aXJlZCAtLS0tLS0tLS0tPiAwCnQAAQp0ACogKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqIAp0AC1SZWFjaGFiaWxpdHkgZ3JhcGggY29udGFpbnMgZGVhZCBtYXJraW5ncyAhIQp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp4c3EAfgAAdwQAAAAdc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAheA</document-log>
+    <document-log uuid="98ade898-867f-412f-bdc6-fde7762f527d">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAB10AK8bWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxXTlJHLmV4ZSIgIkM6XFVzZXJzXERhcmFMXE9uZURyaXZlXERlc2t0b3BcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1NZWFzdXJlcy5zb2x1dGlvblxNZXNzYWdlUGFzc2luZ1EiIC1ndWktc3RhdCAKdABjLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdAAcVVNFIDogV05SRyBuZXRuYW1lIFstb11bLW1dCnQAAQp0AC1UbyBwbG90IHRoZSBnZW5lcmF0ZWQgUkcgaW4gR3JhcGh2aXogZm9ybWF0Ogp0ADQgICAgICBbLWRvdC1GIGZpbGVuYW1lLmRvdF0gWy1tYXgtZG90LW1hcmtpbmdzIG1heF0KdAA0UGFyYW1ldHJpYyBtYXJraW5nL3JhdGUgcGFyYW1ldGVycyBjYW4gYmUgc2V0IHdpdGg6CnQAOSAgICAgIFstbXBhciBwYXJhbV9uYW1lIHZhbHVlXSAgWy1ycGFyIHBhcmFtX25hbWUgdmFsdWVdCnQAYy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCnQAL1NlbmQgZmlsZXMgbmV0bmFtZS5uZXQsIC5kZWYgdG8gZS1tYWlsIGFkZHJlc3MKdAAqZ3JlYXRzcG5AZGkudW5pdG8uaXQgaWYgeW91IGZpbmQgYW55IGJ1Zy4KdABjLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KdAABCnQAAQp0ACEgKioqKiogUmVhY2hhYmlsaXR5IEdyYXBoICoqKioqIAp0AAEKdAAYVEFOR0lCTEUgTUFSS0lOR1MgIDogNTMKdAAXVkFOSVNISU5HIE1BUktJTkdTIDogMAp0ABdERUFEIE1BUktJTkdTICAgICAgOiAxCnQAAQp0ABhUT1RBTCBNQVJLSU5HUyAgICAgOiA1NAp0AAEKdAAqICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiAKdAABCnQAHFRpbWUgcmVxdWlyZWQgLS0tLS0tLS0tLT4gMAp0AAEKdAAqICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiAKdAAtUmVhY2hhYmlsaXR5IGdyYXBoIGNvbnRhaW5zIGRlYWQgbWFya2luZ3MgISEKdAAnG1swWBtbMzJtIFBST0NFU1MgRVhJVEVEIE5PUk1BTExZLhtbMG0KeHNxAH4AAHcEAAAAHXNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXEAfgAhcQB+ACFxAH4AIXg</document-log>
   </resource-list>
 </project>
