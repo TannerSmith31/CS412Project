@@ -1,0 +1,55 @@
+P0(8)P1(3)
+MARKING T1 (tangible)
+[T0 (<NO BINDING (non-colored)
+MARKING T2 
+P0(7)P1(2)P2(1)
+
+MARKING T2 (tangible)
+[T0 (<NO BINDING (non-colored)
+MARKING T3 
+P0(6)P1(1)P2(2)
+
+MARKING T3 (tangible)
+[T0 (<NO BINDING (non-colored)
+MARKING T4 
+P0(5)P2(3)
+
+MARKING T4 (tangible)
+[T2 (<NO BINDING (non-colored)
+MARKING T5 
+P0(4)P2(4)
+
+MARKING T5 (tangible)
+[T2 (<NO BINDING (non-colored)
+MARKING T6 
+P0(3)P2(5)
+
+MARKING T6 (tangible)
+[T2 (<NO BINDING (non-colored)
+MARKING T7 
+P0(2)P2(6)
+
+MARKING T7 (tangible)
+[T2 (<NO BINDING (non-colored)
+MARKING T8 
+P0(1)P2(7)
+
+MARKING T8 (tangible)
+[T2 (<NO BINDING (non-colored)
+MARKING D9 (dead)
+P2(8)
+
+
+ ***** Reachability Graph ***** 
+
+TANGIBLE MARKINGS  : 8
+VANISHING MARKINGS : 0
+DEAD MARKINGS      : 1
+
+TOTAL MARKINGS     : 9
+
+ *************************************** 
+
+Time required ----------> 0
+
+ *************************************** 

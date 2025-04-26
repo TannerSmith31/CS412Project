@@ -1,0 +1,24 @@
+digraph RG {
+  T1 [ label="P0(6) P1(3)
+"];
+  T2 [ label="P0(5) P1(2) P2(1)
+"];
+  T1 -> T2 [ label=<T0>];
+  T3 [ label="P0(4) P1(1) P2(2)
+"];
+  T2 -> T3 [ label=<T0>];
+  T4 [ label="P0(3) P2(3)
+"];
+  T3 -> T4 [ label=<T0>];
+  T5 [ label="P0(2) P2(4)
+"];
+  T4 -> T5 [ label=<T2>];
+  T6 [ label="P0(1) P2(5)
+"];
+  T5 -> T6 [ label=<T2>];
+  D7 [color=red label="P2(6)
+DEAD MARKING
+"];
+  T6 -> D7 [ label=<T2>];
+report [ style = "filled, bold" penwidth = 5 fillcolor = "white" shape=box label=<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">Reachability Graph</font></td></tr><tr><td align="left" colspan="2">Showing all markings.</td></tr><tr><td align="left">Total markings:</td><td>7</td></tr><tr><td align="left">Dead markings:</td><td>1</td></tr></table>> ];
+}
