@@ -1,0 +1,165 @@
+isBooting(1)req1(1)
+MARKING T1 (tangible)
+[T1 (<NO BINDING (non-colored)
+MARKING T2 
+isReady(1)req1(1)
+
+MARKING T2 (tangible)
+[make_request1 (<NO BINDING (non-colored)
+MARKING T3 
+tsReq1(1)
+
+MARKING T2 (tangible)
+[T3 (<NO BINDING (non-colored)
+MARKING T4 
+req1(1)ChooseMessageToRout(1)
+
+MARKING T3 (tangible)
+[T2 (<NO BINDING (non-colored)
+MARKING T5 
+refilClock(1)
+
+MARKING T4 (tangible)
+[T15 (<NO BINDING (non-colored)
+MARKING T6 
+req1(1)roughtOnMesType(1)
+
+MARKING T5 (tangible)
+[T0 (<NO BINDING (non-colored)
+MARKING T7 
+sendReqAddQ(1)
+
+MARKING T6 (tangible)
+[T5 (<NO BINDING (non-colored)
+MARKING T8 
+req1(1)SetUpTSandPid(1)
+
+MARKING T6 (tangible)
+[T8 (<NO BINDING (non-colored)
+MARKING T9 
+req1(1)RecRel(1)
+
+MARKING T6 (tangible)
+[T16 (<NO BINDING (non-colored)
+MARKING D10 (dead)
+req1(1)RecAcn(1)
+
+MARKING T7 (tangible)
+[trigerQSafty (<NO BINDING (non-colored)
+MARKING T11 
+resetVar(1)
+
+MARKING T8 (tangible)
+[LockQ (<NO BINDING (non-colored)
+MARKING T12 
+req1(1)findNewCLock(1)
+
+MARKING T9 (tangible)
+[T9 (<NO BINDING (non-colored)
+MARKING T13 
+req1(1)remQ(1)
+
+MARKING T11 (tangible)
+[T4 (<NO BINDING (non-colored)
+MARKING T14 
+isReady(1)
+
+MARKING T12 (tangible)
+[T14 (<NO BINDING (non-colored)
+MARKING T15 
+req1(1)updateClock(1)
+
+MARKING T13 (tangible)
+[T10 (<NO BINDING (non-colored)
+MARKING T2 
+isReady(1)req1(1)
+
+MARKING T14 (tangible)
+[T3 (<NO BINDING (non-colored)
+MARKING T16 
+ChooseMessageToRout(1)
+
+MARKING T15 (tangible)
+[T6 (<NO BINDING (non-colored)
+MARKING T17 
+req1(1)WhoToSend(1)
+
+MARKING T16 (tangible)
+[T15 (<NO BINDING (non-colored)
+MARKING T18 
+roughtOnMesType(1)
+
+MARKING T17 (tangible)
+[T17 (<NO BINDING (non-colored)
+MARKING T19 
+req1(1)sendTo(1)
+
+MARKING T18 (tangible)
+[T5 (<NO BINDING (non-colored)
+MARKING T20 
+SetUpTSandPid(1)
+
+MARKING T18 (tangible)
+[T8 (<NO BINDING (non-colored)
+MARKING T21 
+RecRel(1)
+
+MARKING T18 (tangible)
+[T16 (<NO BINDING (non-colored)
+MARKING D22 (dead)
+RecAcn(1)
+
+MARKING T19 (tangible)
+[T18 (<NO BINDING (non-colored)
+MARKING T2 
+isReady(1)req1(1)
+
+MARKING T20 (tangible)
+[LockQ (<NO BINDING (non-colored)
+MARKING T23 
+findNewCLock(1)
+
+MARKING T21 (tangible)
+[T9 (<NO BINDING (non-colored)
+MARKING T24 
+remQ(1)
+
+MARKING T23 (tangible)
+[T14 (<NO BINDING (non-colored)
+MARKING T25 
+updateClock(1)
+
+MARKING T24 (tangible)
+[T10 (<NO BINDING (non-colored)
+MARKING T14 
+isReady(1)
+
+MARKING T25 (tangible)
+[T6 (<NO BINDING (non-colored)
+MARKING T26 
+WhoToSend(1)
+
+MARKING T26 (tangible)
+[T17 (<NO BINDING (non-colored)
+MARKING T27 
+sendTo(1)
+
+MARKING T27 (tangible)
+[T18 (<NO BINDING (non-colored)
+MARKING T14 
+isReady(1)
+
+
+ ***** Reachability Graph ***** 
+
+TANGIBLE MARKINGS  : 25
+VANISHING MARKINGS : 0
+DEAD MARKINGS      : 2
+
+TOTAL MARKINGS     : 27
+
+ *************************************** 
+
+Time required ----------> 0
+
+ *************************************** 

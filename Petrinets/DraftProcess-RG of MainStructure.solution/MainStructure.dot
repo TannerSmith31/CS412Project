@@ -1,0 +1,89 @@
+digraph RG {
+  T1 [ label="isBooting(1) req1(1)
+"];
+  T2 [ label="isReady(1) req1(1)
+"];
+  T1 -> T2 [ label=<T1>];
+  T3 [ label="tsReq1(1)
+"];
+  T2 -> T3 [ label=<make_request1>];
+  T4 [ label="req1(1) ChooseMessageToRout(1)
+"];
+  T2 -> T4 [ label=<T3>];
+  T5 [ label="refilClock(1)
+"];
+  T3 -> T5 [ label=<T2>];
+  T6 [ label="req1(1) roughtOnMesType(1)
+"];
+  T4 -> T6 [ label=<T15>];
+  T7 [ label="sendReqAddQ(1)
+"];
+  T5 -> T7 [ label=<T0>];
+  T8 [ label="req1(1) SetUpTSandPid(1)
+"];
+  T6 -> T8 [ label=<T5>];
+  T9 [ label="req1(1) RecRel(1)
+"];
+  T6 -> T9 [ label=<T8>];
+  D10 [color=red label="req1(1) RecAcn(1)
+DEAD MARKING
+"];
+  T6 -> D10 [ label=<T16>];
+  T11 [ label="resetVar(1)
+"];
+  T7 -> T11 [ label=<trigerQSafty>];
+  T12 [ label="req1(1) findNewCLock(1)
+"];
+  T8 -> T12 [ label=<LockQ>];
+  T13 [ label="req1(1) remQ(1)
+"];
+  T9 -> T13 [ label=<T9>];
+  T14 [ label="isReady(1)
+"];
+  T11 -> T14 [ label=<T4>];
+  T15 [ label="req1(1) updateClock(1)
+"];
+  T12 -> T15 [ label=<T14>];
+  T13 -> T2 [ label=<T10>];
+  T16 [ label="ChooseMessageToRout(1)
+"];
+  T14 -> T16 [ label=<T3>];
+  T17 [ label="req1(1) WhoToSend(1)
+"];
+  T15 -> T17 [ label=<T6>];
+  T18 [ label="roughtOnMesType(1)
+"];
+  T16 -> T18 [ label=<T15>];
+  T19 [ label="req1(1) sendTo(1)
+"];
+  T17 -> T19 [ label=<T17>];
+  T20 [ label="SetUpTSandPid(1)
+"];
+  T18 -> T20 [ label=<T5>];
+  T21 [ label="RecRel(1)
+"];
+  T18 -> T21 [ label=<T8>];
+  D22 [color=red label="RecAcn(1)
+DEAD MARKING
+"];
+  T18 -> D22 [ label=<T16>];
+  T19 -> T2 [ label=<T18>];
+  T23 [ label="findNewCLock(1)
+"];
+  T20 -> T23 [ label=<LockQ>];
+  T24 [ label="remQ(1)
+"];
+  T21 -> T24 [ label=<T9>];
+  T25 [ label="updateClock(1)
+"];
+  T23 -> T25 [ label=<T14>];
+  T24 -> T14 [ label=<T10>];
+  T26 [ label="WhoToSend(1)
+"];
+  T25 -> T26 [ label=<T6>];
+  T27 [ label="sendTo(1)
+"];
+  T26 -> T27 [ label=<T17>];
+  T27 -> T14 [ label=<T18>];
+report [ style = "filled, bold" penwidth = 5 fillcolor = "white" shape=box label=<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">Reachability Graph</font></td></tr><tr><td align="left" colspan="2">Showing all markings.</td></tr><tr><td align="left">Total markings:</td><td>27</td></tr><tr><td align="left">Dead markings:</td><td>2</td></tr></table>> ];
+}
