@@ -2256,13 +2256,13 @@
       <arc head="P1" kind="OUTPUT" mult="#P0" tail="T0"/>
     </edges>
   </gspn>
-  <gspn name="QwithPound" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="125">
+  <gspn name="QwithPound" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
     <nodes>
       <place marking="3" name="TS1" x="32.0" y="35.0"/>
       <place name="isSwit0" x="32.0" y="21.0"/>
       <place name="Qpid1" x="32.0" y="15.0"/>
       <place name="IsInQ" x="31.0" y="46.0"/>
-      <place name="InProg" x="15.0" y="44.0"/>
+      <place name="InProg" x="50.0" y="60.0"/>
       <transition name="T39" nservers-x="0.5" type="EXP" x="14.55" y="18.0"/>
       <place marking="1" name="P7" x="12.0" y="18.0"/>
       <transition name="T40" nservers-x="0.5" type="EXP" x="22.55" y="19.0"/>
@@ -2356,7 +2356,7 @@
       <transition name="T11" nservers-x="0.5" type="EXP" x="81.55" y="58.0"/>
       <transition name="T37" nservers-x="0.5" type="EXP" x="86.55" y="58.0"/>
       <transition name="T38" nservers-x="0.5" type="EXP" x="90.55" y="58.0"/>
-      <place name="Done1" x="64.0" y="57.0"/>
+      <place name="Done1" x="66.0" y="60.0"/>
       <place name="IsInQ2" x="57.0" y="47.0"/>
       <transition name="Push" nservers-x="0.5" type="EXP" x="39.55" y="21.0"/>
       <place name="Ts2" x="56.0" y="34.0"/>
@@ -2366,6 +2366,7 @@
       <transition name="P1G" nservers-x="0.5" type="EXP" x="39.55" y="39.0"/>
       <transition name="EQNS" nservers-x="0.5" type="EXP" x="39.55" y="32.0"/>
       <transition name="EQS" nservers-x="0.5" type="EXP" x="39.55" y="28.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="26.55" y="36.0"/>
     </nodes>
     <edges>
       <arc head="isSwit0" kind="OUTPUT" tail="T40"/>
@@ -2672,6 +2673,7 @@
       <arc head="P0G" kind="INPUT" tail="IsInQ2"/>
       <arc head="IsInQ2" kind="OUTPUT" tail="P1G"/>
       <arc head="P1G" kind="INPUT" tail="IsInQ2"/>
+      <arc head="TS1" kind="OUTPUT" mult="3" tail="T0"/>
     </edges>
   </gspn>
   <gspn name="TestCOmp" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
