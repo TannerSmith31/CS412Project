@@ -28,7 +28,7 @@
       <place name="HasRec" x="26.0" y="13.0"/>
       <transition name="T12" nservers-x="0.5" type="EXP" x="21.55" y="13.0"/>
       <place name="SendRel" x="17.0" y="14.0"/>
-      <transition name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="26.55" y="18.0"/>
+      <transition name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="25.55" y="19.0"/>
       <place name="findNewCLock" x="53.0" y="37.0"/>
       <transition name="T14" nservers-x="0.5" type="EXP" x="56.55" y="37.0"/>
       <place name="atHeadQ" x="35.0" y="10.0"/>
@@ -110,7 +110,7 @@
     </nodes>
     <edges/>
   </dta>
-  <measures gspn-name="FullQ" name="Measures" simplified-UI="false">
+  <measures gspn-name="ExpanQ" name="Measures" simplified-UI="false">
     <assignments/>
     <greatspn/>
     <formulas>
@@ -1138,126 +1138,101 @@
       <arc head="tak1" kind="INPUT" tail="P4"/>
     </edges>
   </gspn>
-  <gspn name="FullQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+  <gspn name="FullQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
     <nodes>
-      <place name="TS1" x="26.0" y="34.0"/>
-      <place name="TS2" x="64.0" y="34.0"/>
-      <place name="P2" x="64.0" y="70.0"/>
-      <place name="P3" x="109.0" y="25.0"/>
-      <transition name="Tak4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="39.55" y="27.0"/>
-      <place name="min" x="40.0" y="34.0"/>
-      <transition name="Tak2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="43.55" y="27.0"/>
-      <transition name="Tak1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="46.55" y="27.0"/>
-      <place name="isSwit8" x="26.0" y="20.0"/>
-      <place label-y="-2.5" name="SudoQIsCurPid" x="102.0" y="14.0"/>
-      <place name="Qpid" x="110.0" y="18.0"/>
-      <place name="QTS" x="115.0" y="18.0"/>
-      <place name="isInQ" x="120.0" y="18.0"/>
-      <transition name="Eq" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="22.0"/>
-      <place name="ckPid" x="45.0" y="18.0"/>
-      <place name="Qpid1" x="26.0" y="14.0"/>
-      <place name="Qpid2" x="64.0" y="14.0"/>
-      <place label-x="2.0" label-y="0.0" name="Sw8" x="58.0" y="27.0"/>
-      <place label-x="-1.5" label-y="1.0" name="ret8" x="46.0" y="35.0"/>
-      <transition name="is01" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="35.55" y="11.0"/>
-      <transition name="is02" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="11.0"/>
-      <place marking="2" name="P6" x="90.0" y="2.0"/>
-      <transition name="T0" nservers-x="0.5" type="EXP" x="98.55" y="2.0"/>
-      <transition name="is10" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="41.55" y="11.0"/>
-      <transition name="is12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="44.55" y="11.0"/>
-      <transition name="is20" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="47.55" y="11.0"/>
-      <transition name="is21" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="50.55" y="11.0"/>
-      <transition name="T6" nservers-x="0.5" type="EXP" x="59.55" y="24.0"/>
-      <transition name="Tak8" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="36.55" y="27.0"/>
-      <transition name="T12" nservers-x="0.5" type="EXP" x="50.55" y="25.0"/>
-      <place label-x="2.0" label-y="0.0" name="Sw4" x="59.0" y="33.0"/>
-      <transition label-x="2.0" label-y="0.0" name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="59.55" y="31.0"/>
-      <transition name="T14" nservers-x="0.5" type="EXP" x="50.55" y="27.0"/>
-      <transition label-x="2.0" label-y="0.0" name="T15" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="59.55" y="35.0"/>
-      <place label-x="2.0" label-y="0.0" name="Sw2" x="59.0" y="37.0"/>
-      <transition name="T16" nservers-x="0.5" type="EXP" x="50.55" y="29.0"/>
-      <transition label-x="2.0" label-y="0.0" name="T17" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="59.55" y="39.0"/>
-      <transition name="T18" nservers-x="0.5" type="EXP" x="50.55" y="31.0"/>
-      <place label-x="2.0" label-y="0.0" name="Sw1" x="59.0" y="41.0"/>
-      <transition label-x="2.0" label-y="0.0" name="T19" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="59.55" y="43.0"/>
-      <place name="isSwit4" x="36.0" y="19.0"/>
-      <transition name="T20" nservers-x="0.5" type="EXP" x="34.55" y="19.0"/>
-      <transition name="T21" nservers-x="0.5" type="EXP" x="34.55" y="21.0"/>
-      <transition name="T22" nservers-x="0.5" type="EXP" x="38.55" y="20.0"/>
-      <transition name="T23" nservers-x="0.5" type="EXP" x="38.55" y="22.0"/>
-      <place name="IsSwit2" x="40.0" y="20.0"/>
-      <transition name="T24" nservers-x="0.5" type="EXP" x="42.55" y="21.0"/>
-      <transition name="T25" nservers-x="0.5" type="EXP" x="42.55" y="23.0"/>
-      <place name="IsSwit1" x="44.0" y="21.0"/>
-      <transition name="T26" nservers-x="0.5" type="EXP" x="46.55" y="22.0"/>
-      <transition name="T27" nservers-x="0.5" type="EXP" x="46.55" y="24.0"/>
-      <place name="P8" x="48.0" y="22.0"/>
-      <transition name="T28" nservers-x="0.5" type="EXP" x="56.55" y="38.0"/>
-      <transition name="T29" nservers-x="0.5" type="EXP" x="46.55" y="51.0"/>
-      <place name="Ret4" x="49.0" y="51.0"/>
-      <transition name="T30" nservers-x="0.5" type="EXP" x="48.55" y="48.0"/>
-      <transition name="T31" nservers-x="0.5" type="EXP" x="52.55" y="51.0"/>
-      <transition name="T32" nservers-x="0.5" type="EXP" x="51.55" y="48.0"/>
-      <place name="Ret2" x="54.0" y="51.0"/>
-      <place name="Ret1" x="58.0" y="51.0"/>
-      <transition name="T33" nservers-x="0.5" type="EXP" x="56.55" y="51.0"/>
-      <transition name="T34" nservers-x="0.5" type="EXP" x="55.55" y="48.0"/>
-      <transition name="T35" nservers-x="0.5" type="EXP" x="58.55" y="48.0"/>
-      <place marking="1" name="Done" x="64.0" y="51.0"/>
-      <transition name="T36" nservers-x="0.5" type="EXP" x="60.55" y="51.0"/>
-      <place name="P9" x="59.0" y="19.0"/>
-      <transition name="Sw10" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="41.55" y="7.0"/>
-      <transition name="Sw02" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="38.55" y="7.0"/>
-      <transition name="Sw01" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="34.55" y="7.0"/>
-      <transition name="Sw12" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="44.55" y="7.0"/>
-      <transition name="Sw20" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="48.55" y="7.0"/>
-      <transition name="Sw21" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="52.55" y="7.0"/>
-      <place name="IsInQ" x="26.0" y="45.0"/>
-      <place name="IsInQ1" x="64.0" y="44.0"/>
-      <place name="InProg" x="26.0" y="41.0"/>
-      <transition name="T1" nservers-x="0.5" type="EXP" x="29.55" y="46.0"/>
-      <place name="Pupid" x="29.0" y="16.0"/>
-      <transition name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="33.55" y="15.0"/>
-      <transition name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="39.55" y="3.0"/>
-      <transition name="T4" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="44.55" y="3.0"/>
-      <place label-x="-1.0" label-y="0.5" name="PushTS8" x="27.0" y="50.0"/>
-      <transition name="T5" nservers-x="0.5" type="EXP" x="29.55" y="50.0"/>
-      <place name="PuTS4" x="31.0" y="50.0"/>
-      <transition name="T7" nservers-x="0.5" type="EXP" x="33.55" y="50.0"/>
-      <transition name="T8" nservers-x="0.5" type="EXP" x="37.55" y="50.0"/>
-      <place name="PuTS2" x="35.0" y="50.0"/>
-      <place name="PutTS1" x="39.0" y="50.0"/>
-      <transition name="T9" nservers-x="0.5" type="EXP" x="41.55" y="50.0"/>
-      <place name="IsSwit8" x="64.0" y="22.0"/>
-      <transition name="Take8" nservers-x="0.5" type="EXP" x="90.55" y="59.0"/>
-      <place label-x="0.5" label-y="2.5" marking="15" name="Start" x="88.0" y="68.0"/>
-      <place name="P1" x="80.0" y="68.0"/>
-      <transition name="copy_T1" nservers-x="0.5" type="EXP" x="84.55" y="68.0"/>
-      <place marking="1" name="copy_P2" x="80.0" y="73.0"/>
-      <transition name="copy_T2" nservers-x="0.5" rotation="-0.0" type="EXP" x="82.55" y="73.0"/>
-      <place label-y="-2.0" name="Goal" x="95.0" y="59.0"/>
-      <place name="P0" x="88.0" y="73.0"/>
-      <transition name="copy_T0" nservers-x="0.5" type="EXP" x="86.55" y="73.0"/>
-      <place name="start" x="84.0" y="73.0"/>
-      <transition name="tak4" nservers-x="0.5" type="EXP" x="91.55" y="61.0"/>
-      <transition name="tak2" nservers-x="0.5" type="EXP" x="92.55" y="63.0"/>
-      <transition name="tak1" nservers-x="0.5" type="EXP" x="93.55" y="65.0"/>
-      <transition name="copy_T3" nservers-x="0.5" type="EXP" x="90.55" y="73.0"/>
-      <place name="copy_P3" x="92.0" y="73.0"/>
-      <transition name="copy_T4" nservers-x="0.5" type="EXP" x="94.55" y="73.0"/>
-      <place name="P4" x="96.0" y="73.0"/>
-      <transition name="copy_T5" nservers-x="0.5" type="EXP" x="98.55" y="73.0"/>
-      <place name="P5" x="100.0" y="73.0"/>
-      <transition name="T10" nservers-x="0.5" type="EXP" x="28.55" y="56.0"/>
-      <transition name="T11" nservers-x="0.5" type="EXP" x="32.55" y="56.0"/>
-      <transition name="T37" nservers-x="0.5" type="EXP" x="37.55" y="56.0"/>
-      <transition name="T38" nservers-x="0.5" type="EXP" x="41.55" y="56.0"/>
-      <transition name="T39" nservers-x="0.5" type="EXP" x="18.55" y="14.0"/>
-      <place marking="1" name="P7" x="13.0" y="19.0"/>
-      <transition name="T40" nservers-x="0.5" type="EXP" x="18.55" y="20.0"/>
-      <transition name="T41" nservers-x="0.5" type="EXP" x="18.55" y="26.0"/>
-      <place marking="1" name="P10" x="7.0" y="14.0"/>
-      <transition name="T42" nservers-x="0.5" type="EXP" x="9.55" y="20.0"/>
+      <place marking="3" name="TS1" x="50.0" y="35.0"/>
+      <place name="TS2" x="88.0" y="35.0"/>
+      <transition name="Tak4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="63.55" y="28.0"/>
+      <place name="min" x="64.0" y="35.0"/>
+      <transition name="Tak2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="67.55" y="28.0"/>
+      <transition name="Tak1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="70.55" y="28.0"/>
+      <place name="isSwit8" x="50.0" y="21.0"/>
+      <transition name="Eq" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="77.55" y="23.0"/>
+      <place name="ckPid" x="69.0" y="19.0"/>
+      <place name="Qpid1" x="50.0" y="15.0"/>
+      <place name="Qpid2" x="88.0" y="15.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw8" x="82.0" y="28.0"/>
+      <place label-x="-1.5" label-y="1.0" name="ret8" x="70.0" y="36.0"/>
+      <transition name="is01" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="59.55" y="12.0"/>
+      <transition name="is02" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="62.55" y="12.0"/>
+      <transition name="is10" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="65.55" y="12.0"/>
+      <transition name="is12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="68.55" y="12.0"/>
+      <transition name="is20" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="71.55" y="12.0"/>
+      <transition name="is21" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="12.0"/>
+      <transition name="T6" nservers-x="0.5" type="EXP" x="83.55" y="25.0"/>
+      <transition name="Tak8" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="60.55" y="28.0"/>
+      <transition name="T12" nservers-x="0.5" type="EXP" x="74.55" y="26.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw4" x="83.0" y="34.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.55" y="32.0"/>
+      <transition name="T14" nservers-x="0.5" type="EXP" x="74.55" y="28.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T15" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.55" y="36.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw2" x="83.0" y="38.0"/>
+      <transition name="T16" nservers-x="0.5" type="EXP" x="74.55" y="30.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T17" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.55" y="40.0"/>
+      <transition name="T18" nservers-x="0.5" type="EXP" x="74.55" y="32.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw1" x="83.0" y="42.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T19" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.55" y="44.0"/>
+      <place name="isSwit4" x="60.0" y="20.0"/>
+      <transition name="T20" nservers-x="0.5" type="EXP" x="58.55" y="20.0"/>
+      <transition name="T21" nservers-x="0.5" type="EXP" x="58.55" y="22.0"/>
+      <transition name="T22" nservers-x="0.5" type="EXP" x="62.55" y="21.0"/>
+      <transition name="T23" nservers-x="0.5" type="EXP" x="62.55" y="23.0"/>
+      <place name="IsSwit2" x="64.0" y="21.0"/>
+      <transition name="T24" nservers-x="0.5" type="EXP" x="66.55" y="22.0"/>
+      <transition name="T25" nservers-x="0.5" type="EXP" x="66.55" y="24.0"/>
+      <place name="IsSwit1" x="68.0" y="22.0"/>
+      <transition name="T26" nservers-x="0.5" type="EXP" x="70.55" y="23.0"/>
+      <transition name="T27" nservers-x="0.5" type="EXP" x="70.55" y="25.0"/>
+      <place name="P8" x="72.0" y="23.0"/>
+      <transition name="T28" nservers-x="0.5" type="EXP" x="80.55" y="39.0"/>
+      <transition name="T29" nservers-x="0.5" type="EXP" x="70.55" y="52.0"/>
+      <place name="Ret4" x="73.0" y="52.0"/>
+      <transition name="T30" nservers-x="0.5" type="EXP" x="72.55" y="49.0"/>
+      <transition name="T31" nservers-x="0.5" type="EXP" x="76.55" y="52.0"/>
+      <transition name="T32" nservers-x="0.5" type="EXP" x="75.55" y="49.0"/>
+      <place name="Ret2" x="78.0" y="52.0"/>
+      <place name="Ret1" x="82.0" y="52.0"/>
+      <transition name="T33" nservers-x="0.5" type="EXP" x="80.55" y="52.0"/>
+      <transition name="T34" nservers-x="0.5" type="EXP" x="79.55" y="49.0"/>
+      <transition name="T35" nservers-x="0.5" type="EXP" x="82.55" y="49.0"/>
+      <place marking="1" name="Done" x="88.0" y="52.0"/>
+      <transition name="T36" nservers-x="0.5" type="EXP" x="84.55" y="52.0"/>
+      <place name="P9" x="83.0" y="20.0"/>
+      <transition name="Sw10" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="65.55" y="8.0"/>
+      <transition name="Sw02" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="62.55" y="8.0"/>
+      <transition name="Sw01" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="58.55" y="8.0"/>
+      <transition name="Sw12" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="68.55" y="8.0"/>
+      <transition name="Sw20" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="72.55" y="8.0"/>
+      <transition name="Sw21" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="76.55" y="8.0"/>
+      <place name="IsInQ" x="50.0" y="46.0"/>
+      <place name="IsInQ1" x="88.0" y="45.0"/>
+      <place name="InProg" x="50.0" y="42.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="53.55" y="47.0"/>
+      <place name="Pupid" x="53.0" y="17.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="57.55" y="16.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="63.55" y="4.0"/>
+      <transition name="T4" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="68.55" y="4.0"/>
+      <place label-x="-1.0" label-y="0.5" name="PushTS8" x="51.0" y="51.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="53.55" y="51.0"/>
+      <place name="PuTS4" x="55.0" y="51.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="57.55" y="51.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="61.55" y="51.0"/>
+      <place name="PuTS2" x="59.0" y="51.0"/>
+      <place name="PutTS1" x="63.0" y="51.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="65.55" y="51.0"/>
+      <place name="IsSwit8" x="88.0" y="23.0"/>
+      <transition name="T10" nservers-x="0.5" type="EXP" x="52.55" y="57.0"/>
+      <transition name="T11" nservers-x="0.5" type="EXP" x="56.55" y="57.0"/>
+      <transition name="T37" nservers-x="0.5" type="EXP" x="61.55" y="57.0"/>
+      <transition name="T38" nservers-x="0.5" type="EXP" x="65.55" y="57.0"/>
+      <transition name="T39" nservers-x="0.5" type="EXP" x="32.55" y="18.0"/>
+      <place marking="1" name="P7" x="30.0" y="18.0"/>
+      <transition name="T40" nservers-x="0.5" type="EXP" x="40.55" y="19.0"/>
+      <place marking="1" name="P10" x="23.0" y="18.0"/>
+      <transition name="T42" nservers-x="0.5" type="EXP" x="26.55" y="18.0"/>
+      <transition name="T43" nservers-x="0.5" type="EXP" x="32.55" y="14.0"/>
+      <transition name="T44" nservers-x="0.5" type="EXP" x="32.55" y="22.0"/>
+      <place name="P3" x="37.0" y="19.0"/>
     </nodes>
     <edges>
       <arc head="Tak4" kind="INPUT" mult="4" tail="TS2"/>
@@ -1276,10 +1251,6 @@
       <arc head="is01" kind="INPUT" tail="Qpid2"/>
       <arc head="is02" kind="INHIBITOR" tail="Qpid1"/>
       <arc head="is02" kind="INPUT" mult="2" tail="Qpid2"/>
-      <arc head="T0" kind="INPUT" tail="P6"/>
-      <arc head="T0" kind="INHIBITOR" mult="2" tail="P6">
-        <point x="95.5" y="7.5"/>
-      </arc>
       <arc head="Sw8" kind="OUTPUT" tail="is01"/>
       <arc head="Sw8" kind="OUTPUT" tail="is02"/>
       <arc head="is01" kind="INHIBITOR" mult="2" tail="Qpid2"/>
@@ -1490,44 +1461,6 @@
       <arc head="T9" kind="INPUT" tail="InProg"/>
       <arc head="PushTS8" kind="OUTPUT" tail="T3"/>
       <arc head="PushTS8" kind="OUTPUT" tail="T4"/>
-      <arc head="copy_T1" kind="INPUT" tail="P1"/>
-      <arc head="Start" kind="OUTPUT" tail="copy_T1"/>
-      <arc head="copy_T1" kind="INPUT" tail="copy_P2"/>
-      <arc head="copy_P2" kind="OUTPUT" tail="copy_T1"/>
-      <arc head="copy_T2" kind="INPUT" tail="copy_P2"/>
-      <arc head="Take8" kind="INPUT" mult="8" tail="Start"/>
-      <arc head="start" kind="OUTPUT" tail="copy_T2"/>
-      <arc head="copy_T0" kind="INPUT" tail="start"/>
-      <arc head="copy_T0" kind="INHIBITOR" mult="8" tail="Start"/>
-      <arc head="P0" kind="OUTPUT" tail="copy_T0"/>
-      <arc head="Goal" kind="OUTPUT" mult="4" tail="tak4"/>
-      <arc head="tak2" kind="INPUT" mult="2" tail="Start"/>
-      <arc head="Goal" kind="OUTPUT" mult="2" tail="tak2"/>
-      <arc head="tak4" kind="INPUT" mult="4" tail="Start"/>
-      <arc head="tak1" kind="INPUT" tail="Start"/>
-      <arc head="Goal" kind="OUTPUT" tail="tak1">
-        <point x="95.5" y="65.5"/>
-      </arc>
-      <arc head="copy_T3" kind="INPUT" tail="P0"/>
-      <arc head="Goal" kind="OUTPUT" mult="8" tail="Take8"/>
-      <arc head="copy_T3" kind="INHIBITOR" mult="4" tail="Start"/>
-      <arc head="copy_P3" kind="OUTPUT" tail="copy_T3"/>
-      <arc head="copy_T4" kind="INPUT" tail="copy_P3"/>
-      <arc head="copy_T4" kind="INHIBITOR" mult="2" tail="Start"/>
-      <arc head="P4" kind="OUTPUT" tail="copy_T4"/>
-      <arc head="copy_T5" kind="INHIBITOR" tail="Start"/>
-      <arc head="copy_T5" kind="INPUT" tail="P4"/>
-      <arc head="P5" kind="OUTPUT" tail="copy_T5">
-        <point x="100.0" y="74.0"/>
-      </arc>
-      <arc head="Take8" kind="INPUT" tail="start"/>
-      <arc head="start" kind="OUTPUT" tail="Take8"/>
-      <arc head="tak4" kind="INPUT" tail="P0"/>
-      <arc head="P0" kind="OUTPUT" tail="tak4"/>
-      <arc head="tak2" kind="INPUT" tail="copy_P3"/>
-      <arc head="copy_P3" kind="OUTPUT" tail="tak2"/>
-      <arc head="P4" kind="OUTPUT" tail="tak1"/>
-      <arc head="tak1" kind="INPUT" tail="P4"/>
       <arc head="T10" kind="INPUT" mult="8" tail="TS1"/>
       <arc head="T10" kind="INPUT" tail="PushTS8"/>
       <arc head="PuTS4" kind="OUTPUT" tail="T10"/>
@@ -1546,50 +1479,41 @@
       <arc head="T11" kind="INPUT" tail="PuTS4"/>
       <arc head="T37" kind="INPUT" mult="2" tail="TS1"/>
       <arc head="T38" kind="INPUT" tail="TS1"/>
-      <arc head="Qpid1" kind="OUTPUT" tail="T39"/>
-      <arc head="T39" kind="INHIBITOR" mult="2" tail="Qpid1"/>
-      <arc head="T39" kind="INPUT" tail="P7"/>
-      <arc head="P7" kind="OUTPUT" tail="T39"/>
-      <arc head="T40" kind="INPUT" tail="P7"/>
-      <arc head="isSwit8" kind="OUTPUT" tail="T40"/>
-      <arc head="IsInQ" kind="OUTPUT" tail="T40"/>
-      <arc head="T41" kind="INPUT" tail="P7"/>
-      <arc head="TS1" kind="OUTPUT" tail="T41"/>
-      <arc head="P7" kind="OUTPUT" tail="T41"/>
-      <arc head="T41" kind="INHIBITOR" mult="15" tail="TS1"/>
       <arc head="T38" kind="INPUT" tail="InProg"/>
       <arc head="T38" kind="INPUT" tail="IsInQ"/>
+      <arc head="isSwit8" kind="OUTPUT" tail="T40"/>
+      <arc head="IsInQ" kind="OUTPUT" tail="T40"/>
       <arc head="T42" kind="INPUT" tail="P10"/>
       <arc head="P7" kind="OUTPUT" tail="T42"/>
-      <arc head="T42" kind="INPUT" tail="IsInQ1"/>
+      <arc head="T39" kind="INPUT" tail="P7"/>
+      <arc head="T44" kind="INPUT" tail="P7"/>
+      <arc head="T43" kind="INPUT" tail="P7"/>
+      <arc head="Qpid1" kind="OUTPUT" mult="2" tail="T43"/>
+      <arc head="Qpid1" kind="OUTPUT" tail="T39"/>
+      <arc head="T40" kind="INPUT" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="T44"/>
+      <arc head="P3" kind="OUTPUT" tail="T39"/>
+      <arc head="P3" kind="OUTPUT" tail="T43"/>
       <arc head="IsInQ1" kind="OUTPUT" tail="T42"/>
+      <arc head="T42" kind="INPUT" tail="IsInQ1"/>
     </edges>
   </gspn>
-  <gspn name="ExpanQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+  <gspn name="ExpanQ" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="50">
     <nodes>
-      <place name="TS1" x="26.0" y="34.0"/>
-      <place name="TS2" x="64.0" y="34.0"/>
-      <place name="P2" x="64.0" y="70.0"/>
-      <place name="P3" x="107.0" y="24.0"/>
+      <place marking="5" name="TS1" x="26.0" y="34.0"/>
       <transition name="Tak4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="39.55" y="27.0"/>
       <place name="min" x="40.0" y="34.0"/>
       <transition name="Tak2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="43.55" y="27.0"/>
       <transition name="Tak1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="46.55" y="27.0"/>
       <place name="isSwit8" x="26.0" y="22.0"/>
       <place label-y="-2.5" name="SudoQIsCurPid" x="100.0" y="13.0"/>
-      <place name="Qpid" x="34.0" y="77.0"/>
-      <place name="QTS" x="39.0" y="77.0"/>
-      <place name="isInQ" x="44.0" y="77.0"/>
       <transition name="Eq" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="22.0"/>
       <place name="ckPid" x="45.0" y="18.0"/>
       <place name="Qpid1" x="26.0" y="14.0"/>
-      <place name="Qpid2" x="64.0" y="14.0"/>
       <place label-x="2.0" label-y="0.0" name="Sw8" x="58.0" y="27.0"/>
       <place label-x="-1.5" label-y="1.0" name="ret8" x="46.0" y="35.0"/>
       <transition name="is01" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="35.55" y="11.0"/>
       <transition name="is02" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="11.0"/>
-      <place marking="2" name="P6" x="9.0" y="79.0"/>
-      <transition name="T0" nservers-x="0.5" type="EXP" x="17.55" y="79.0"/>
       <transition name="is10" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="41.55" y="11.0"/>
       <transition name="is12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="44.55" y="11.0"/>
       <transition name="is20" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="47.55" y="11.0"/>
@@ -1630,7 +1554,7 @@
       <transition name="T33" nservers-x="0.5" type="EXP" x="56.55" y="51.0"/>
       <transition name="T34" nservers-x="0.5" type="EXP" x="55.55" y="48.0"/>
       <transition name="T35" nservers-x="0.5" type="EXP" x="58.55" y="48.0"/>
-      <place marking="1" name="Done" x="64.0" y="51.0"/>
+      <place marking="1" name="Done" x="62.0" y="51.0"/>
       <transition name="T36" nservers-x="0.5" type="EXP" x="60.55" y="51.0"/>
       <place name="P9" x="59.0" y="19.0"/>
       <transition name="Sw10" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="41.55" y="7.0"/>
@@ -1640,7 +1564,6 @@
       <transition name="Sw20" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="48.55" y="7.0"/>
       <transition name="Sw21" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="52.55" y="7.0"/>
       <place name="IsInQ" x="26.0" y="45.0"/>
-      <place name="IsInQ1" x="64.0" y="44.0"/>
       <place name="InProg" x="26.0" y="41.0"/>
       <transition name="T1" nservers-x="0.5" type="EXP" x="29.55" y="46.0"/>
       <place name="Pupid" x="29.0" y="16.0"/>
@@ -1655,40 +1578,20 @@
       <place name="PuTS2" x="35.0" y="50.0"/>
       <place name="PutTS1" x="39.0" y="50.0"/>
       <transition name="T9" nservers-x="0.5" type="EXP" x="41.55" y="50.0"/>
-      <place name="IsSwit8" x="64.0" y="22.0"/>
-      <transition name="Take8" nservers-x="0.5" type="EXP" x="90.55" y="66.0"/>
-      <place label-x="0.5" label-y="2.5" marking="15" name="Start" x="88.0" y="75.0"/>
-      <place name="P1" x="79.0" y="75.0"/>
-      <transition name="copy_T1" nservers-x="0.5" type="EXP" x="83.55" y="75.0"/>
-      <place marking="1" name="copy_P2" x="79.0" y="80.0"/>
-      <transition name="copy_T2" nservers-x="0.5" rotation="-0.0" type="EXP" x="81.55" y="80.0"/>
-      <place label-y="-2.0" name="Goal" x="95.0" y="66.0"/>
-      <place name="P0" x="88.0" y="80.0"/>
-      <transition name="copy_T0" nservers-x="0.5" type="EXP" x="86.55" y="80.0"/>
-      <place name="start" x="83.0" y="80.0"/>
-      <transition name="tak4" nservers-x="0.5" type="EXP" x="91.55" y="68.0"/>
-      <transition name="tak2" nservers-x="0.5" type="EXP" x="92.55" y="70.0"/>
-      <transition name="tak1" nservers-x="0.5" type="EXP" x="93.55" y="72.0"/>
-      <transition name="copy_T3" nservers-x="0.5" type="EXP" x="90.55" y="80.0"/>
-      <place name="copy_P3" x="92.0" y="80.0"/>
-      <transition name="copy_T4" nservers-x="0.5" type="EXP" x="94.55" y="80.0"/>
-      <place name="P4" x="96.0" y="80.0"/>
-      <transition name="copy_T5" nservers-x="0.5" type="EXP" x="98.55" y="80.0"/>
-      <place name="P5" x="100.0" y="80.0"/>
       <transition name="T10" nservers-x="0.5" type="EXP" x="28.55" y="56.0"/>
       <transition name="T11" nservers-x="0.5" type="EXP" x="32.55" y="56.0"/>
       <transition name="T37" nservers-x="0.5" type="EXP" x="37.55" y="56.0"/>
       <transition name="T38" nservers-x="0.5" type="EXP" x="41.55" y="56.0"/>
       <place name="copy_TS1" x="67.0" y="34.0"/>
-      <place name="copy_TS2" x="105.0" y="34.0"/>
+      <place name="TS3" x="105.0" y="34.0"/>
       <transition name="copy_Tak4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="80.55" y="27.0"/>
       <place name="copy_min" x="81.0" y="34.0"/>
       <transition name="copy_Tak2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="84.55" y="27.0"/>
       <transition name="copy_Tak1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="87.55" y="27.0"/>
-      <place name="copy_isSwit8" x="67.0" y="20.0"/>
+      <place name="copy_isSwit8" x="67.0" y="19.0"/>
       <transition name="copy_Eq" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="94.55" y="22.0"/>
       <place name="copy_ckPid" x="86.0" y="18.0"/>
-      <place name="copy_Qpid1" x="67.0" y="14.0"/>
+      <place name="Qpid2" x="67.0" y="14.0"/>
       <place name="copy_Qpid2" x="105.0" y="14.0"/>
       <place label-x="2.0" label-y="0.0" name="copy_Sw8" x="99.0" y="27.0"/>
       <place label-x="-1.5" label-y="1.0" name="copy_ret8" x="87.0" y="35.0"/>
@@ -1745,7 +1648,7 @@
       <transition name="copy_Sw21" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="93.55" y="7.0"/>
       <place name="copy_IsInQ" x="67.0" y="45.0"/>
       <place name="copy_IsInQ1" x="105.0" y="44.0"/>
-      <place name="copy_InProg" x="67.0" y="41.0"/>
+      <place name="copy_InProg" x="80.0" y="37.0"/>
       <transition name="copy_copy_T1" nservers-x="0.5" type="EXP" x="70.55" y="46.0"/>
       <place name="copy_Pupid" x="70.0" y="16.0"/>
       <transition name="copy_copy_T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="15.0"/>
@@ -1764,28 +1667,32 @@
       <transition name="copy_T11" nservers-x="0.5" type="EXP" x="73.55" y="56.0"/>
       <transition name="copy_T37" nservers-x="0.5" type="EXP" x="78.55" y="56.0"/>
       <transition name="copy_T38" nservers-x="0.5" type="EXP" x="82.55" y="56.0"/>
+      <transition name="T39" nservers-x="0.5" type="EXP" x="10.55" y="17.0"/>
+      <place marking="1" name="P7" x="8.0" y="17.0"/>
+      <transition name="T40" nservers-x="0.5" type="EXP" x="18.55" y="18.0"/>
+      <place marking="1" name="P10" x="0.0" y="17.0"/>
+      <transition name="T42" nservers-x="0.5" type="EXP" x="4.55" y="17.0"/>
+      <transition name="T43" nservers-x="0.5" type="EXP" x="10.55" y="13.0"/>
+      <transition name="T44" nservers-x="0.5" type="EXP" x="10.55" y="21.0"/>
+      <place name="P3" x="15.0" y="18.0"/>
     </nodes>
     <edges>
-      <arc head="Tak4" kind="INPUT" mult="4" tail="TS2"/>
+      <arc head="Tak4" kind="INPUT" mult="4" tail="copy_TS1"/>
       <arc head="Tak4" kind="INPUT" mult="4" tail="TS1"/>
       <arc head="min" kind="OUTPUT" mult="4" tail="Tak4"/>
       <arc head="Tak2" kind="INPUT" mult="2" tail="TS1"/>
-      <arc head="Tak2" kind="INPUT" mult="2" tail="TS2"/>
+      <arc head="Tak2" kind="INPUT" mult="2" tail="copy_TS1"/>
       <arc head="Tak1" kind="INPUT" tail="TS1"/>
       <arc head="min" kind="OUTPUT" mult="2" tail="Tak2"/>
       <arc head="min" kind="OUTPUT" tail="Tak1"/>
-      <arc head="Tak1" kind="INPUT" tail="TS2"/>
+      <arc head="Tak1" kind="INPUT" tail="copy_TS1"/>
       <arc head="Eq" kind="INHIBITOR" tail="TS1"/>
-      <arc head="Eq" kind="INHIBITOR" tail="TS2"/>
+      <arc head="Eq" kind="INHIBITOR" tail="copy_TS1"/>
       <arc head="ckPid" kind="OUTPUT" tail="Eq"/>
       <arc head="is01" kind="INHIBITOR" tail="Qpid1"/>
       <arc head="is01" kind="INPUT" tail="Qpid2"/>
       <arc head="is02" kind="INHIBITOR" tail="Qpid1"/>
       <arc head="is02" kind="INPUT" mult="2" tail="Qpid2"/>
-      <arc head="T0" kind="INPUT" tail="P6"/>
-      <arc head="T0" kind="INHIBITOR" mult="2" tail="P6">
-        <point x="14.5" y="84.5"/>
-      </arc>
       <arc head="Sw8" kind="OUTPUT" tail="is01"/>
       <arc head="Sw8" kind="OUTPUT" tail="is02"/>
       <arc head="is01" kind="INHIBITOR" mult="2" tail="Qpid2"/>
@@ -1809,8 +1716,8 @@
       <arc head="is20" kind="INPUT" tail="ckPid"/>
       <arc head="is21" kind="INPUT" tail="ckPid"/>
       <arc head="T6" kind="INHIBITOR" tail="TS1"/>
-      <arc head="T6" kind="INPUT" tail="TS2"/>
-      <arc head="TS2" kind="OUTPUT" tail="T6"/>
+      <arc head="T6" kind="INPUT" tail="copy_TS1"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="T6"/>
       <arc head="P9" kind="OUTPUT" tail="T6"/>
       <arc head="Qpid1" kind="OUTPUT" tail="is01"/>
       <arc head="Qpid1" kind="OUTPUT" mult="2" tail="is02"/>
@@ -1822,29 +1729,29 @@
       <arc head="Qpid2" kind="OUTPUT" tail="is21"/>
       <arc head="Tak8" kind="INPUT" mult="8" tail="TS1"/>
       <arc head="min" kind="OUTPUT" mult="8" tail="Tak8"/>
-      <arc head="Tak8" kind="INPUT" mult="8" tail="TS2"/>
-      <arc head="T12" kind="INPUT" mult="8" tail="TS2"/>
+      <arc head="Tak8" kind="INPUT" mult="8" tail="copy_TS1"/>
+      <arc head="T12" kind="INPUT" mult="8" tail="copy_TS1"/>
       <arc head="TS1" kind="OUTPUT" mult="8" tail="T12"/>
       <arc head="T12" kind="INPUT" tail="Sw8"/>
       <arc head="Sw4" kind="OUTPUT" tail="T12"/>
       <arc head="T13" kind="INPUT" tail="Sw8"/>
       <arc head="Sw4" kind="OUTPUT" tail="T13"/>
-      <arc head="T13" kind="INHIBITOR" mult="8" tail="TS2"/>
-      <arc head="T14" kind="INPUT" mult="4" tail="TS2"/>
+      <arc head="T13" kind="INHIBITOR" mult="8" tail="copy_TS1"/>
+      <arc head="T14" kind="INPUT" mult="4" tail="copy_TS1"/>
       <arc head="TS1" kind="OUTPUT" mult="4" tail="T14"/>
       <arc head="T15" kind="INPUT" tail="Sw4"/>
-      <arc head="T15" kind="INHIBITOR" mult="4" tail="TS2"/>
+      <arc head="T15" kind="INHIBITOR" mult="4" tail="copy_TS1"/>
       <arc head="Sw2" kind="OUTPUT" tail="T14"/>
       <arc head="Sw2" kind="OUTPUT" tail="T15"/>
-      <arc head="T16" kind="INPUT" mult="2" tail="TS2"/>
+      <arc head="T16" kind="INPUT" mult="2" tail="copy_TS1"/>
       <arc head="TS1" kind="OUTPUT" mult="2" tail="T16"/>
       <arc head="T17" kind="INPUT" tail="Sw2"/>
-      <arc head="T17" kind="INHIBITOR" mult="2" tail="TS2"/>
+      <arc head="T17" kind="INHIBITOR" mult="2" tail="copy_TS1"/>
       <arc head="TS1" kind="OUTPUT" tail="T18"/>
-      <arc head="T18" kind="INPUT" tail="TS2"/>
+      <arc head="T18" kind="INPUT" tail="copy_TS1"/>
       <arc head="Sw1" kind="OUTPUT" tail="T17"/>
       <arc head="T19" kind="INPUT" tail="Sw1"/>
-      <arc head="T19" kind="INHIBITOR" tail="TS2"/>
+      <arc head="T19" kind="INHIBITOR" tail="copy_TS1"/>
       <arc head="T14" kind="INPUT" tail="Sw4"/>
       <arc head="T16" kind="INPUT" tail="Sw2"/>
       <arc head="T18" kind="INPUT" tail="Sw1"/>
@@ -1855,13 +1762,13 @@
       <arc head="T20" kind="INHIBITOR" mult="8" tail="TS1"/>
       <arc head="T20" kind="INPUT" tail="isSwit8"/>
       <arc head="isSwit4" kind="OUTPUT" tail="T20"/>
-      <arc head="T21" kind="INHIBITOR" mult="8" tail="TS2"/>
+      <arc head="T21" kind="INHIBITOR" mult="8" tail="copy_TS1"/>
       <arc head="isSwit4" kind="OUTPUT" tail="T21"/>
       <arc head="T21" kind="INPUT" tail="isSwit8"/>
       <arc head="T22" kind="INPUT" tail="isSwit4"/>
       <arc head="T22" kind="INHIBITOR" mult="4" tail="TS1"/>
       <arc head="Tak4" kind="INPUT" tail="isSwit4"/>
-      <arc head="T23" kind="INHIBITOR" mult="4" tail="TS2"/>
+      <arc head="T23" kind="INHIBITOR" mult="4" tail="copy_TS1"/>
       <arc head="IsSwit2" kind="OUTPUT" tail="T22"/>
       <arc head="IsSwit2" kind="OUTPUT" tail="T23"/>
       <arc head="T23" kind="INPUT" tail="isSwit4"/>
@@ -1869,7 +1776,7 @@
       <arc head="T24" kind="INPUT" tail="IsSwit2"/>
       <arc head="T25" kind="INPUT" tail="IsSwit2"/>
       <arc head="T24" kind="INHIBITOR" mult="2" tail="TS1"/>
-      <arc head="T25" kind="INHIBITOR" mult="2" tail="TS2"/>
+      <arc head="T25" kind="INHIBITOR" mult="2" tail="copy_TS1"/>
       <arc head="IsSwit1" kind="OUTPUT" tail="T24"/>
       <arc head="IsSwit1" kind="OUTPUT" tail="T25"/>
       <arc head="T26" kind="INPUT" tail="IsSwit1"/>
@@ -1878,7 +1785,7 @@
       <arc head="P8" kind="OUTPUT" tail="T27"/>
       <arc head="T6" kind="INPUT" tail="P8"/>
       <arc head="T26" kind="INHIBITOR" tail="TS1"/>
-      <arc head="T27" kind="INHIBITOR" tail="TS2"/>
+      <arc head="T27" kind="INHIBITOR" tail="copy_TS1"/>
       <arc head="Tak2" kind="INPUT" tail="IsSwit2"/>
       <arc head="IsSwit1" kind="OUTPUT" tail="Tak2"/>
       <arc head="Tak1" kind="INPUT" tail="IsSwit1"/>
@@ -1887,7 +1794,7 @@
       <arc head="Sw01" kind="INHIBITOR" mult="2" tail="Qpid1"/>
       <arc head="Eq" kind="INPUT" tail="P8"/>
       <arc head="T28" kind="INPUT" tail="P8"/>
-      <arc head="T28" kind="INHIBITOR" tail="TS2"/>
+      <arc head="T28" kind="INHIBITOR" tail="copy_TS1"/>
       <arc head="T28" kind="INPUT" tail="TS1"/>
       <arc head="TS1" kind="OUTPUT" tail="T28"/>
       <arc head="ret8" kind="OUTPUT" tail="T28"/>
@@ -1916,13 +1823,13 @@
       <arc head="T36" kind="INHIBITOR" tail="min"/>
       <arc head="T35" kind="INPUT" tail="Ret1"/>
       <arc head="TS1" kind="OUTPUT" mult="8" tail="T30"/>
-      <arc head="TS2" kind="OUTPUT" mult="8" tail="T30"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="T30"/>
       <arc head="TS1" kind="OUTPUT" mult="4" tail="T32"/>
-      <arc head="TS2" kind="OUTPUT" mult="4" tail="T32"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="T32"/>
       <arc head="TS1" kind="OUTPUT" mult="2" tail="T34"/>
-      <arc head="TS2" kind="OUTPUT" mult="2" tail="T34"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="T34"/>
       <arc head="TS1" kind="OUTPUT" tail="T35"/>
-      <arc head="TS2" kind="OUTPUT" tail="T35"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="T35"/>
       <arc head="Sw02" kind="INPUT" mult="2" tail="Qpid2"/>
       <arc head="Sw02" kind="INHIBITOR" tail="Qpid1"/>
       <arc head="Sw10" kind="INPUT" tail="Qpid1"/>
@@ -1963,9 +1870,9 @@
       <arc head="InProg" kind="OUTPUT" tail="Tak8"/>
       <arc head="T1" kind="INPUT" tail="isSwit8"/>
       <arc head="T1" kind="INPUT" tail="Done"/>
-      <arc head="T1" kind="INHIBITOR" tail="IsInQ1"/>
-      <arc head="T21" kind="INPUT" tail="IsInQ1"/>
-      <arc head="T20" kind="INPUT" tail="IsInQ1"/>
+      <arc head="T1" kind="INHIBITOR" tail="copy_IsInQ"/>
+      <arc head="T21" kind="INPUT" tail="copy_IsInQ"/>
+      <arc head="T20" kind="INPUT" tail="copy_IsInQ"/>
       <arc head="Pupid" kind="OUTPUT" tail="T1"/>
       <arc head="T2" kind="INPUT" tail="Pupid"/>
       <arc head="T2" kind="INHIBITOR" tail="Qpid1"/>
@@ -1990,50 +1897,12 @@
       <arc head="T9" kind="INHIBITOR" tail="TS1"/>
       <arc head="T9" kind="INPUT" tail="PutTS1"/>
       <arc head="Done" kind="OUTPUT" tail="T9"/>
-      <arc head="IsInQ1" kind="OUTPUT" tail="T9"/>
+      <arc head="copy_IsInQ" kind="OUTPUT" tail="T9"/>
       <arc head="T9" kind="INPUT" tail="IsInQ"/>
-      <arc head="IsSwit8" kind="OUTPUT" tail="T9"/>
+      <arc head="copy_isSwit8" kind="OUTPUT" tail="T9"/>
       <arc head="T9" kind="INPUT" tail="InProg"/>
       <arc head="PushTS8" kind="OUTPUT" tail="T3"/>
       <arc head="PushTS8" kind="OUTPUT" tail="T4"/>
-      <arc head="copy_T1" kind="INPUT" tail="P1"/>
-      <arc head="Start" kind="OUTPUT" tail="copy_T1"/>
-      <arc head="copy_T1" kind="INPUT" tail="copy_P2"/>
-      <arc head="copy_P2" kind="OUTPUT" tail="copy_T1"/>
-      <arc head="copy_T2" kind="INPUT" tail="copy_P2"/>
-      <arc head="Take8" kind="INPUT" mult="8" tail="Start"/>
-      <arc head="start" kind="OUTPUT" tail="copy_T2"/>
-      <arc head="copy_T0" kind="INPUT" tail="start"/>
-      <arc head="copy_T0" kind="INHIBITOR" mult="8" tail="Start"/>
-      <arc head="P0" kind="OUTPUT" tail="copy_T0"/>
-      <arc head="Goal" kind="OUTPUT" mult="4" tail="tak4"/>
-      <arc head="tak2" kind="INPUT" mult="2" tail="Start"/>
-      <arc head="Goal" kind="OUTPUT" mult="2" tail="tak2"/>
-      <arc head="tak4" kind="INPUT" mult="4" tail="Start"/>
-      <arc head="tak1" kind="INPUT" tail="Start"/>
-      <arc head="Goal" kind="OUTPUT" tail="tak1">
-        <point x="95.5" y="72.5"/>
-      </arc>
-      <arc head="copy_T3" kind="INPUT" tail="P0"/>
-      <arc head="Goal" kind="OUTPUT" mult="8" tail="Take8"/>
-      <arc head="copy_T3" kind="INHIBITOR" mult="4" tail="Start"/>
-      <arc head="copy_P3" kind="OUTPUT" tail="copy_T3"/>
-      <arc head="copy_T4" kind="INPUT" tail="copy_P3"/>
-      <arc head="copy_T4" kind="INHIBITOR" mult="2" tail="Start"/>
-      <arc head="P4" kind="OUTPUT" tail="copy_T4"/>
-      <arc head="copy_T5" kind="INHIBITOR" tail="Start"/>
-      <arc head="copy_T5" kind="INPUT" tail="P4"/>
-      <arc head="P5" kind="OUTPUT" tail="copy_T5">
-        <point x="100.0" y="81.0"/>
-      </arc>
-      <arc head="Take8" kind="INPUT" tail="start"/>
-      <arc head="start" kind="OUTPUT" tail="Take8"/>
-      <arc head="tak4" kind="INPUT" tail="P0"/>
-      <arc head="P0" kind="OUTPUT" tail="tak4"/>
-      <arc head="tak2" kind="INPUT" tail="copy_P3"/>
-      <arc head="copy_P3" kind="OUTPUT" tail="tak2"/>
-      <arc head="P4" kind="OUTPUT" tail="tak1"/>
-      <arc head="tak1" kind="INPUT" tail="P4"/>
       <arc head="T10" kind="INPUT" mult="8" tail="TS1"/>
       <arc head="T10" kind="INPUT" tail="PushTS8"/>
       <arc head="PuTS4" kind="OUTPUT" tail="T10"/>
@@ -2042,50 +1911,50 @@
       <arc head="T37" kind="INPUT" tail="PuTS2"/>
       <arc head="PutTS1" kind="OUTPUT" tail="T37"/>
       <arc head="T38" kind="INPUT" tail="PutTS1"/>
-      <arc head="TS2" kind="OUTPUT" tail="T38"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="T38"/>
       <arc head="Done" kind="OUTPUT" tail="T38"/>
-      <arc head="IsInQ1" kind="OUTPUT" tail="T38"/>
-      <arc head="IsSwit8" kind="OUTPUT" tail="T38"/>
-      <arc head="TS2" kind="OUTPUT" mult="2" tail="T37"/>
-      <arc head="TS2" kind="OUTPUT" mult="4" tail="T11"/>
-      <arc head="TS2" kind="OUTPUT" mult="8" tail="T10"/>
+      <arc head="copy_IsInQ" kind="OUTPUT" tail="T38"/>
+      <arc head="copy_isSwit8" kind="OUTPUT" tail="T38"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="T37"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="T11"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="T10"/>
       <arc head="T11" kind="INPUT" tail="PuTS4"/>
       <arc head="T37" kind="INPUT" mult="2" tail="TS1"/>
       <arc head="T38" kind="INPUT" tail="TS1"/>
       <arc head="T38" kind="INPUT" tail="InProg"/>
       <arc head="T38" kind="INPUT" tail="IsInQ"/>
-      <arc head="copy_Tak4" kind="INPUT" mult="4" tail="copy_TS2"/>
+      <arc head="copy_Tak4" kind="INPUT" mult="4" tail="TS3"/>
       <arc head="copy_Tak4" kind="INPUT" mult="4" tail="copy_TS1"/>
       <arc head="copy_min" kind="OUTPUT" mult="4" tail="copy_Tak4"/>
       <arc head="copy_Tak2" kind="INPUT" mult="2" tail="copy_TS1"/>
-      <arc head="copy_Tak2" kind="INPUT" mult="2" tail="copy_TS2"/>
+      <arc head="copy_Tak2" kind="INPUT" mult="2" tail="TS3"/>
       <arc head="copy_Tak1" kind="INPUT" tail="copy_TS1"/>
       <arc head="copy_min" kind="OUTPUT" mult="2" tail="copy_Tak2"/>
       <arc head="copy_min" kind="OUTPUT" tail="copy_Tak1"/>
-      <arc head="copy_Tak1" kind="INPUT" tail="copy_TS2"/>
+      <arc head="copy_Tak1" kind="INPUT" tail="TS3"/>
       <arc head="copy_Eq" kind="INHIBITOR" tail="copy_TS1"/>
-      <arc head="copy_Eq" kind="INHIBITOR" tail="copy_TS2"/>
+      <arc head="copy_Eq" kind="INHIBITOR" tail="TS3"/>
       <arc head="copy_ckPid" kind="OUTPUT" tail="copy_Eq"/>
-      <arc head="copy_is01" kind="INHIBITOR" tail="copy_Qpid1"/>
+      <arc head="copy_is01" kind="INHIBITOR" tail="Qpid2"/>
       <arc head="copy_is01" kind="INPUT" tail="copy_Qpid2"/>
-      <arc head="copy_is02" kind="INHIBITOR" tail="copy_Qpid1"/>
+      <arc head="copy_is02" kind="INHIBITOR" tail="Qpid2"/>
       <arc head="copy_is02" kind="INPUT" mult="2" tail="copy_Qpid2"/>
       <arc head="copy_Sw8" kind="OUTPUT" tail="copy_is01"/>
       <arc head="copy_Sw8" kind="OUTPUT" tail="copy_is02"/>
       <arc head="copy_is01" kind="INHIBITOR" mult="2" tail="copy_Qpid2"/>
-      <arc head="copy_is10" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="copy_is10" kind="INPUT" tail="Qpid2"/>
       <arc head="copy_is10" kind="INHIBITOR" tail="copy_Qpid2"/>
       <arc head="copy_ret8" kind="OUTPUT" tail="copy_is10"/>
-      <arc head="copy_is12" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="copy_is12" kind="INPUT" tail="Qpid2"/>
       <arc head="copy_is12" kind="INPUT" mult="2" tail="copy_Qpid2"/>
       <arc head="copy_Sw8" kind="OUTPUT" tail="copy_is12"/>
       <arc head="copy_ret8" kind="OUTPUT" tail="copy_is20"/>
       <arc head="copy_ret8" kind="OUTPUT" tail="copy_is21"/>
-      <arc head="copy_is20" kind="INPUT" mult="2" tail="copy_Qpid1"/>
-      <arc head="copy_is21" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="copy_is20" kind="INPUT" mult="2" tail="Qpid2"/>
+      <arc head="copy_is21" kind="INPUT" mult="2" tail="Qpid2"/>
       <arc head="copy_is20" kind="INHIBITOR" tail="copy_Qpid2"/>
       <arc head="copy_is21" kind="INPUT" tail="copy_Qpid2"/>
-      <arc head="copy_is10" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
+      <arc head="copy_is10" kind="INHIBITOR" mult="2" tail="Qpid2"/>
       <arc head="copy_is01" kind="INPUT" tail="copy_ckPid"/>
       <arc head="copy_is02" kind="INPUT" tail="copy_ckPid"/>
       <arc head="copy_is10" kind="INPUT" tail="copy_ckPid"/>
@@ -2093,42 +1962,42 @@
       <arc head="copy_is20" kind="INPUT" tail="copy_ckPid"/>
       <arc head="copy_is21" kind="INPUT" tail="copy_ckPid"/>
       <arc head="copy_T6" kind="INHIBITOR" tail="copy_TS1"/>
-      <arc head="copy_T6" kind="INPUT" tail="copy_TS2"/>
-      <arc head="copy_TS2" kind="OUTPUT" tail="copy_T6"/>
+      <arc head="copy_T6" kind="INPUT" tail="TS3"/>
+      <arc head="TS3" kind="OUTPUT" tail="copy_T6"/>
       <arc head="copy_P9" kind="OUTPUT" tail="copy_T6"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" tail="copy_is01"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="copy_is02"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" tail="copy_is10"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="copy_is12"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="copy_is01"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="copy_is02"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="copy_is10"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="copy_is12"/>
       <arc head="copy_Qpid2" kind="OUTPUT" tail="copy_is12"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="copy_is20"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="copy_is21"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="copy_is20"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="copy_is21"/>
       <arc head="copy_Qpid2" kind="OUTPUT" tail="copy_is21"/>
       <arc head="copy_Tak8" kind="INPUT" mult="8" tail="copy_TS1"/>
       <arc head="copy_min" kind="OUTPUT" mult="8" tail="copy_Tak8"/>
-      <arc head="copy_Tak8" kind="INPUT" mult="8" tail="copy_TS2"/>
-      <arc head="copy_T12" kind="INPUT" mult="8" tail="copy_TS2"/>
+      <arc head="copy_Tak8" kind="INPUT" mult="8" tail="TS3"/>
+      <arc head="copy_T12" kind="INPUT" mult="8" tail="TS3"/>
       <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="copy_T12"/>
       <arc head="copy_T12" kind="INPUT" tail="copy_Sw8"/>
       <arc head="copy_Sw4" kind="OUTPUT" tail="copy_T12"/>
       <arc head="copy_T13" kind="INPUT" tail="copy_Sw8"/>
       <arc head="copy_Sw4" kind="OUTPUT" tail="copy_T13"/>
-      <arc head="copy_T13" kind="INHIBITOR" mult="8" tail="copy_TS2"/>
-      <arc head="copy_T14" kind="INPUT" mult="4" tail="copy_TS2"/>
+      <arc head="copy_T13" kind="INHIBITOR" mult="8" tail="TS3"/>
+      <arc head="copy_T14" kind="INPUT" mult="4" tail="TS3"/>
       <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="copy_T14"/>
       <arc head="copy_T15" kind="INPUT" tail="copy_Sw4"/>
-      <arc head="copy_T15" kind="INHIBITOR" mult="4" tail="copy_TS2"/>
+      <arc head="copy_T15" kind="INHIBITOR" mult="4" tail="TS3"/>
       <arc head="copy_Sw2" kind="OUTPUT" tail="copy_T14"/>
       <arc head="copy_Sw2" kind="OUTPUT" tail="copy_T15"/>
-      <arc head="copy_T16" kind="INPUT" mult="2" tail="copy_TS2"/>
+      <arc head="copy_T16" kind="INPUT" mult="2" tail="TS3"/>
       <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="copy_T16"/>
       <arc head="copy_T17" kind="INPUT" tail="copy_Sw2"/>
-      <arc head="copy_T17" kind="INHIBITOR" mult="2" tail="copy_TS2"/>
+      <arc head="copy_T17" kind="INHIBITOR" mult="2" tail="TS3"/>
       <arc head="copy_TS1" kind="OUTPUT" tail="copy_T18"/>
-      <arc head="copy_T18" kind="INPUT" tail="copy_TS2"/>
+      <arc head="copy_T18" kind="INPUT" tail="TS3"/>
       <arc head="copy_Sw1" kind="OUTPUT" tail="copy_T17"/>
       <arc head="copy_T19" kind="INPUT" tail="copy_Sw1"/>
-      <arc head="copy_T19" kind="INHIBITOR" tail="copy_TS2"/>
+      <arc head="copy_T19" kind="INHIBITOR" tail="TS3"/>
       <arc head="copy_T14" kind="INPUT" tail="copy_Sw4"/>
       <arc head="copy_T16" kind="INPUT" tail="copy_Sw2"/>
       <arc head="copy_T18" kind="INPUT" tail="copy_Sw1"/>
@@ -2139,13 +2008,13 @@
       <arc head="copy_T20" kind="INHIBITOR" mult="8" tail="copy_TS1"/>
       <arc head="copy_T20" kind="INPUT" tail="copy_isSwit8"/>
       <arc head="copy_isSwit4" kind="OUTPUT" tail="copy_T20"/>
-      <arc head="copy_T21" kind="INHIBITOR" mult="8" tail="copy_TS2"/>
+      <arc head="copy_T21" kind="INHIBITOR" mult="8" tail="TS3"/>
       <arc head="copy_isSwit4" kind="OUTPUT" tail="copy_T21"/>
       <arc head="copy_T21" kind="INPUT" tail="copy_isSwit8"/>
       <arc head="copy_T22" kind="INPUT" tail="copy_isSwit4"/>
       <arc head="copy_T22" kind="INHIBITOR" mult="4" tail="copy_TS1"/>
       <arc head="copy_Tak4" kind="INPUT" tail="copy_isSwit4"/>
-      <arc head="copy_T23" kind="INHIBITOR" mult="4" tail="copy_TS2"/>
+      <arc head="copy_T23" kind="INHIBITOR" mult="4" tail="TS3"/>
       <arc head="copy_IsSwit2" kind="OUTPUT" tail="copy_T22"/>
       <arc head="copy_IsSwit2" kind="OUTPUT" tail="copy_T23"/>
       <arc head="copy_T23" kind="INPUT" tail="copy_isSwit4"/>
@@ -2153,7 +2022,7 @@
       <arc head="copy_T24" kind="INPUT" tail="copy_IsSwit2"/>
       <arc head="copy_T25" kind="INPUT" tail="copy_IsSwit2"/>
       <arc head="copy_T24" kind="INHIBITOR" mult="2" tail="copy_TS1"/>
-      <arc head="copy_T25" kind="INHIBITOR" mult="2" tail="copy_TS2"/>
+      <arc head="copy_T25" kind="INHIBITOR" mult="2" tail="TS3"/>
       <arc head="copy_IsSwit1" kind="OUTPUT" tail="copy_T24"/>
       <arc head="copy_IsSwit1" kind="OUTPUT" tail="copy_T25"/>
       <arc head="copy_T26" kind="INPUT" tail="copy_IsSwit1"/>
@@ -2162,16 +2031,16 @@
       <arc head="copy_P8" kind="OUTPUT" tail="copy_T27"/>
       <arc head="copy_T6" kind="INPUT" tail="copy_P8"/>
       <arc head="copy_T26" kind="INHIBITOR" tail="copy_TS1"/>
-      <arc head="copy_T27" kind="INHIBITOR" tail="copy_TS2"/>
+      <arc head="copy_T27" kind="INHIBITOR" tail="TS3"/>
       <arc head="copy_Tak2" kind="INPUT" tail="copy_IsSwit2"/>
       <arc head="copy_IsSwit1" kind="OUTPUT" tail="copy_Tak2"/>
       <arc head="copy_Tak1" kind="INPUT" tail="copy_IsSwit1"/>
       <arc head="copy_P8" kind="OUTPUT" tail="copy_Tak1"/>
       <arc head="copy_ret8" kind="OUTPUT" tail="copy_T19"/>
-      <arc head="copy_Sw01" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
+      <arc head="copy_Sw01" kind="INHIBITOR" mult="2" tail="Qpid2"/>
       <arc head="copy_Eq" kind="INPUT" tail="copy_P8"/>
       <arc head="copy_T28" kind="INPUT" tail="copy_P8"/>
-      <arc head="copy_T28" kind="INHIBITOR" tail="copy_TS2"/>
+      <arc head="copy_T28" kind="INHIBITOR" tail="TS3"/>
       <arc head="copy_T28" kind="INPUT" tail="copy_TS1"/>
       <arc head="copy_TS1" kind="OUTPUT" tail="copy_T28"/>
       <arc head="copy_ret8" kind="OUTPUT" tail="copy_T28"/>
@@ -2200,29 +2069,29 @@
       <arc head="copy_T36" kind="INHIBITOR" tail="copy_min"/>
       <arc head="copy_T35" kind="INPUT" tail="copy_Ret1"/>
       <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="copy_T30"/>
-      <arc head="copy_TS2" kind="OUTPUT" mult="8" tail="copy_T30"/>
+      <arc head="TS3" kind="OUTPUT" mult="8" tail="copy_T30"/>
       <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="copy_T32"/>
-      <arc head="copy_TS2" kind="OUTPUT" mult="4" tail="copy_T32"/>
+      <arc head="TS3" kind="OUTPUT" mult="4" tail="copy_T32"/>
       <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="copy_T34"/>
-      <arc head="copy_TS2" kind="OUTPUT" mult="2" tail="copy_T34"/>
+      <arc head="TS3" kind="OUTPUT" mult="2" tail="copy_T34"/>
       <arc head="copy_TS1" kind="OUTPUT" tail="copy_T35"/>
-      <arc head="copy_TS2" kind="OUTPUT" tail="copy_T35"/>
+      <arc head="TS3" kind="OUTPUT" tail="copy_T35"/>
       <arc head="copy_Sw02" kind="INPUT" mult="2" tail="copy_Qpid2"/>
-      <arc head="copy_Sw02" kind="INHIBITOR" tail="copy_Qpid1"/>
-      <arc head="copy_Sw10" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="copy_Sw02" kind="INHIBITOR" tail="Qpid2"/>
+      <arc head="copy_Sw10" kind="INPUT" tail="Qpid2"/>
       <arc head="copy_Qpid2" kind="OUTPUT" tail="copy_Sw10"/>
-      <arc head="copy_Sw10" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" tail="copy_Sw01"/>
-      <arc head="copy_Sw12" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="copy_Sw10" kind="INHIBITOR" mult="2" tail="Qpid2"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="copy_Sw01"/>
+      <arc head="copy_Sw12" kind="INPUT" tail="Qpid2"/>
       <arc head="copy_Sw12" kind="INPUT" mult="2" tail="copy_Qpid2"/>
       <arc head="copy_Qpid2" kind="OUTPUT" tail="copy_Sw12"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="copy_Sw12"/>
-      <arc head="copy_Sw20" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="copy_Sw12"/>
+      <arc head="copy_Sw20" kind="INPUT" mult="2" tail="Qpid2"/>
       <arc head="copy_Qpid2" kind="OUTPUT" mult="2" tail="copy_Sw20"/>
-      <arc head="copy_Sw21" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="copy_Sw21" kind="INPUT" mult="2" tail="Qpid2"/>
       <arc head="copy_Qpid2" kind="OUTPUT" mult="2" tail="copy_Sw21"/>
       <arc head="copy_Sw21" kind="INPUT" tail="copy_Qpid2"/>
-      <arc head="copy_Qpid1" kind="OUTPUT" tail="copy_Sw21"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="copy_Sw21"/>
       <arc head="copy_Sw01" kind="INPUT" tail="copy_Qpid2"/>
       <arc head="copy_Sw01" kind="INHIBITOR" mult="2" tail="copy_Qpid2"/>
       <arc head="copy_Sw10" kind="INHIBITOR" tail="copy_Qpid2"/>
@@ -2252,12 +2121,12 @@
       <arc head="copy_T20" kind="INPUT" tail="copy_IsInQ1"/>
       <arc head="copy_Pupid" kind="OUTPUT" tail="copy_copy_T1"/>
       <arc head="copy_copy_T2" kind="INPUT" tail="copy_Pupid"/>
-      <arc head="copy_copy_T2" kind="INHIBITOR" tail="copy_Qpid1"/>
-      <arc head="copy_copy_T3" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="copy_copy_T2" kind="INHIBITOR" tail="Qpid2"/>
+      <arc head="copy_copy_T3" kind="INPUT" tail="Qpid2"/>
       <arc head="copy_copy_T3" kind="INPUT" tail="copy_Pupid"/>
       <arc head="copy_Qpid2" kind="OUTPUT" tail="copy_copy_T3"/>
-      <arc head="copy_copy_T3" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
-      <arc head="copy_copy_T4" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="copy_copy_T3" kind="INHIBITOR" mult="2" tail="Qpid2"/>
+      <arc head="copy_copy_T4" kind="INPUT" mult="2" tail="Qpid2"/>
       <arc head="copy_Qpid2" kind="OUTPUT" mult="2" tail="copy_copy_T4"/>
       <arc head="copy_copy_T4" kind="INPUT" tail="copy_Pupid"/>
       <arc head="copy_InProg" kind="OUTPUT" tail="copy_copy_T1"/>
@@ -2288,18 +2157,577 @@
       <arc head="copy_T37" kind="INPUT" tail="copy_PuTS2"/>
       <arc head="copy_PutTS1" kind="OUTPUT" tail="copy_T37"/>
       <arc head="copy_T38" kind="INPUT" tail="copy_PutTS1"/>
-      <arc head="copy_TS2" kind="OUTPUT" tail="copy_T38"/>
+      <arc head="TS3" kind="OUTPUT" tail="copy_T38"/>
       <arc head="copy_Done" kind="OUTPUT" tail="copy_T38"/>
       <arc head="copy_IsInQ1" kind="OUTPUT" tail="copy_T38"/>
       <arc head="copy_IsSwit8" kind="OUTPUT" tail="copy_T38"/>
-      <arc head="copy_TS2" kind="OUTPUT" mult="2" tail="copy_T37"/>
-      <arc head="copy_TS2" kind="OUTPUT" mult="4" tail="copy_T11"/>
-      <arc head="copy_TS2" kind="OUTPUT" mult="8" tail="copy_T10"/>
+      <arc head="TS3" kind="OUTPUT" mult="2" tail="copy_T37"/>
+      <arc head="TS3" kind="OUTPUT" mult="4" tail="copy_T11"/>
+      <arc head="TS3" kind="OUTPUT" mult="8" tail="copy_T10"/>
       <arc head="copy_T11" kind="INPUT" tail="copy_PuTS4"/>
       <arc head="copy_T37" kind="INPUT" mult="2" tail="copy_TS1"/>
       <arc head="copy_T38" kind="INPUT" tail="copy_TS1"/>
       <arc head="copy_T38" kind="INPUT" tail="copy_InProg"/>
       <arc head="copy_T38" kind="INPUT" tail="copy_IsInQ"/>
+      <arc head="isSwit8" kind="OUTPUT" tail="T40"/>
+      <arc head="IsInQ" kind="OUTPUT" tail="T40"/>
+      <arc head="T42" kind="INPUT" tail="P10"/>
+      <arc head="P7" kind="OUTPUT" tail="T42"/>
+      <arc head="T20" kind="INPUT" tail="copy_isSwit8"/>
+      <arc head="T21" kind="INPUT" tail="copy_isSwit8"/>
+      <arc head="copy_isSwit8" kind="OUTPUT" tail="T20"/>
+      <arc head="copy_isSwit8" kind="OUTPUT" tail="T21"/>
+      <arc head="T39" kind="INPUT" tail="P7"/>
+      <arc head="T44" kind="INPUT" tail="P7"/>
+      <arc head="T43" kind="INPUT" tail="P7"/>
+      <arc head="Qpid1" kind="OUTPUT" mult="2" tail="T43"/>
+      <arc head="Qpid1" kind="OUTPUT" tail="T39"/>
+      <arc head="T40" kind="INPUT" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="T44"/>
+      <arc head="P3" kind="OUTPUT" tail="T39"/>
+      <arc head="P3" kind="OUTPUT" tail="T43"/>
+      <arc head="T36" kind="INPUT" tail="Done"/>
+      <arc head="copy_IsInQ" kind="OUTPUT" tail="T42"/>
+      <arc head="T42" kind="INPUT" tail="copy_IsInQ"/>
+      <arc head="TS1" kind="OUTPUT" mult="7" tail="T42"/>
     </edges>
   </gspn>
+  <measures gspn-name="FullQ" log-uuid="d7587ed1-6da2-4845-80b1-e2a6776ee52c" name="CTL model checking of FullQ" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2 counter-examples="true"/>
+    <formulas>
+      <formula language="STAT">
+        <result-table>
+          <stat-result name="STAT">
+            <bindings/>
+            <stat key="build_time" value="0.016 seconds."/>
+            <stat key="num_rs_nodes" value="236"/>
+            <stat key="num_tangible_markings" value="172"/>
+            <stat key="total_firings" value="189"/>
+          </stat-result>
+        </result-table>
+      </formula>
+      <formula comment="CTL formula" expr="EF (#isSwit8 == 1 )" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="EF(#Qpid2==1)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+      <formula expr="EF(#Qpid2==2)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" value="true">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <measures gspn-name="ExpanQ" log-uuid="7e719f88-80c1-4b72-a63e-60ac504bea94" name="CTL model checking of ExpanQ" rapid-type="CTL_MODEL_CHECKING" simplified-UI="true">
+    <assignments/>
+    <rgmedd2 counter-examples="true"/>
+    <formulas>
+      <formula language="STAT"/>
+      <formula comment="CTL formula" expr="EF (#Qpid2 == 1 )" language="CTL"/>
+      <formula expr="EF(#TS3 == 5)" language="CTL">
+        <result-table>
+          <mc-result name="MEASURE0" state="NOT_YET_COMPUTED">
+            <bindings/>
+          </mc-result>
+        </result-table>
+      </formula>
+    </formulas>
+  </measures>
+  <gspn name="SmallTest" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="5" name="P0" x="7.0" y="7.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="13.55" y="7.0"/>
+      <place name="P1" x="20.0" y="7.0"/>
+    </nodes>
+    <edges>
+      <arc head="T0" kind="INPUT" mult="#P0" tail="P0"/>
+      <arc head="P1" kind="OUTPUT" mult="#P0" tail="T0"/>
+    </edges>
+  </gspn>
+  <gspn name="QwithPound" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+    <nodes>
+      <place marking="3" name="TS1" x="32.0" y="35.0"/>
+      <place name="isSwit0" x="32.0" y="21.0"/>
+      <place name="Qpid1" x="32.0" y="15.0"/>
+      <place name="IsInQ" x="31.0" y="46.0"/>
+      <place name="InProg" x="50.0" y="60.0"/>
+      <transition name="T39" nservers-x="0.5" type="EXP" x="14.55" y="18.0"/>
+      <place marking="1" name="P7" x="12.0" y="18.0"/>
+      <transition name="T40" nservers-x="0.5" type="EXP" x="22.55" y="19.0"/>
+      <place marking="1" name="P10" x="5.0" y="18.0"/>
+      <transition name="T42" nservers-x="0.5" type="EXP" x="8.55" y="18.0"/>
+      <transition name="T43" nservers-x="0.5" type="EXP" x="14.55" y="14.0"/>
+      <transition name="T44" nservers-x="0.5" type="EXP" x="14.55" y="22.0"/>
+      <place name="P3" x="19.0" y="19.0"/>
+      <place marking="3" name="copy_TS1" x="75.0" y="36.0"/>
+      <place name="TS2" x="113.0" y="36.0"/>
+      <transition name="Tak4" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="88.55" y="29.0"/>
+      <place name="min" x="89.0" y="36.0"/>
+      <transition name="Tak2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="92.55" y="29.0"/>
+      <transition name="Tak1" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="95.55" y="29.0"/>
+      <place marking="1" name="copy_isSwit8" x="75.0" y="22.0"/>
+      <transition name="Eq" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="102.55" y="24.0"/>
+      <place name="ckPid" x="94.0" y="20.0"/>
+      <place name="copy_Qpid1" x="75.0" y="16.0"/>
+      <place name="Qpid2" x="113.0" y="16.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw8" x="107.0" y="29.0"/>
+      <place label-x="-1.5" label-y="1.0" name="ret8" x="95.0" y="37.0"/>
+      <transition name="is01" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="84.55" y="13.0"/>
+      <transition name="is02" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="87.55" y="13.0"/>
+      <transition name="is10" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="90.55" y="13.0"/>
+      <transition name="is12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="93.55" y="13.0"/>
+      <transition name="is20" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="96.55" y="13.0"/>
+      <transition name="is21" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="99.55" y="13.0"/>
+      <transition name="T6" nservers-x="0.5" type="EXP" x="108.55" y="26.0"/>
+      <transition name="Tak8" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="85.55" y="29.0"/>
+      <transition name="T12" nservers-x="0.5" type="EXP" x="99.55" y="27.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw4" x="108.0" y="35.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T13" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="108.55" y="33.0"/>
+      <transition name="T14" nservers-x="0.5" type="EXP" x="99.55" y="29.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T15" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="108.55" y="37.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw2" x="108.0" y="39.0"/>
+      <transition name="T16" nservers-x="0.5" type="EXP" x="99.55" y="31.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T17" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="108.55" y="41.0"/>
+      <transition name="T18" nservers-x="0.5" type="EXP" x="99.55" y="33.0"/>
+      <place label-x="2.0" label-y="0.0" name="Sw1" x="108.0" y="43.0"/>
+      <transition label-x="2.0" label-y="0.0" name="T19" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="108.55" y="45.0"/>
+      <place name="isSwit4" x="85.0" y="21.0"/>
+      <transition name="T20" nservers-x="0.5" type="EXP" x="83.55" y="21.0"/>
+      <transition name="T21" nservers-x="0.5" type="EXP" x="83.55" y="23.0"/>
+      <transition name="T22" nservers-x="0.5" type="EXP" x="87.55" y="22.0"/>
+      <transition name="T23" nservers-x="0.5" type="EXP" x="87.55" y="24.0"/>
+      <place name="IsSwit2" x="89.0" y="22.0"/>
+      <transition name="T24" nservers-x="0.5" type="EXP" x="91.55" y="23.0"/>
+      <transition name="T25" nservers-x="0.5" type="EXP" x="91.55" y="25.0"/>
+      <place name="IsSwit1" x="93.0" y="23.0"/>
+      <transition name="T26" nservers-x="0.5" type="EXP" x="95.55" y="24.0"/>
+      <transition name="T27" nservers-x="0.5" type="EXP" x="95.55" y="26.0"/>
+      <place name="P8" x="97.0" y="24.0"/>
+      <transition name="T28" nservers-x="0.5" type="EXP" x="105.55" y="40.0"/>
+      <transition name="T29" nservers-x="0.5" type="EXP" x="95.55" y="53.0"/>
+      <place name="Ret4" x="98.0" y="53.0"/>
+      <transition name="T30" nservers-x="0.5" type="EXP" x="97.55" y="50.0"/>
+      <transition name="T31" nservers-x="0.5" type="EXP" x="101.55" y="53.0"/>
+      <transition name="T32" nservers-x="0.5" type="EXP" x="100.55" y="50.0"/>
+      <place name="Ret2" x="103.0" y="53.0"/>
+      <place name="Ret1" x="107.0" y="53.0"/>
+      <transition name="T33" nservers-x="0.5" type="EXP" x="105.55" y="53.0"/>
+      <transition name="T34" nservers-x="0.5" type="EXP" x="104.55" y="50.0"/>
+      <transition name="T35" nservers-x="0.5" type="EXP" x="107.55" y="50.0"/>
+      <place marking="1" name="Done" x="113.0" y="53.0"/>
+      <transition name="T36" nservers-x="0.5" type="EXP" x="109.55" y="53.0"/>
+      <place name="P9" x="108.0" y="21.0"/>
+      <transition name="Sw10" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="90.55" y="9.0"/>
+      <transition name="Sw02" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="87.55" y="9.0"/>
+      <transition name="Sw01" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="83.55" y="9.0"/>
+      <transition name="Sw12" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="93.55" y="9.0"/>
+      <transition name="Sw20" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="97.55" y="9.0"/>
+      <transition name="Sw21" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="101.55" y="9.0"/>
+      <place name="copy_IsInQ" x="75.0" y="47.0"/>
+      <place name="IsInQ1" x="113.0" y="46.0"/>
+      <place name="copy_InProg" x="75.0" y="43.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="78.55" y="48.0"/>
+      <place name="Pupid" x="78.0" y="18.0"/>
+      <transition name="T2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="82.55" y="17.0"/>
+      <transition name="T3" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="88.55" y="5.0"/>
+      <transition name="T4" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="93.55" y="5.0"/>
+      <place label-x="-1.0" label-y="0.5" name="copy_PushTS8" x="76.0" y="52.0"/>
+      <transition name="T5" nservers-x="0.5" type="EXP" x="78.55" y="52.0"/>
+      <place name="PuTS4" x="80.0" y="52.0"/>
+      <transition name="T7" nservers-x="0.5" type="EXP" x="82.55" y="52.0"/>
+      <transition name="T8" nservers-x="0.5" type="EXP" x="86.55" y="52.0"/>
+      <place name="PuTS2" x="84.0" y="52.0"/>
+      <place name="PutTS1" x="88.0" y="52.0"/>
+      <transition name="T9" nservers-x="0.5" type="EXP" x="90.55" y="52.0"/>
+      <place name="IsSwit8" x="113.0" y="24.0"/>
+      <transition name="T10" nservers-x="0.5" type="EXP" x="77.55" y="58.0"/>
+      <transition name="T11" nservers-x="0.5" type="EXP" x="81.55" y="58.0"/>
+      <transition name="T37" nservers-x="0.5" type="EXP" x="86.55" y="58.0"/>
+      <transition name="T38" nservers-x="0.5" type="EXP" x="90.55" y="58.0"/>
+      <place name="Done1" x="66.0" y="60.0"/>
+      <place name="IsInQ2" x="57.0" y="47.0"/>
+      <transition name="Push" nservers-x="0.5" type="EXP" x="39.55" y="21.0"/>
+      <place name="Ts2" x="56.0" y="34.0"/>
+      <place name="IsSwiT1" x="56.0" y="21.0"/>
+      <place name="QPid2" x="56.0" y="13.0"/>
+      <transition name="P0G" nservers-x="0.5" type="EXP" x="39.55" y="35.0"/>
+      <transition name="P1G" nservers-x="0.5" type="EXP" x="39.55" y="39.0"/>
+      <transition name="EQNS" nservers-x="0.5" type="EXP" x="39.55" y="32.0"/>
+      <transition name="EQS" nservers-x="0.5" type="EXP" x="39.55" y="28.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="26.55" y="36.0"/>
+    </nodes>
+    <edges>
+      <arc head="isSwit0" kind="OUTPUT" tail="T40"/>
+      <arc head="IsInQ" kind="OUTPUT" tail="T40"/>
+      <arc head="T42" kind="INPUT" tail="P10"/>
+      <arc head="P7" kind="OUTPUT" tail="T42"/>
+      <arc head="T39" kind="INPUT" tail="P7"/>
+      <arc head="T44" kind="INPUT" tail="P7"/>
+      <arc head="T43" kind="INPUT" tail="P7"/>
+      <arc head="Qpid1" kind="OUTPUT" mult="2" tail="T43"/>
+      <arc head="Qpid1" kind="OUTPUT" tail="T39"/>
+      <arc head="T40" kind="INPUT" tail="P3"/>
+      <arc head="P3" kind="OUTPUT" tail="T44"/>
+      <arc head="P3" kind="OUTPUT" tail="T39"/>
+      <arc head="P3" kind="OUTPUT" tail="T43"/>
+      <arc head="Tak4" kind="INPUT" mult="4" tail="TS2"/>
+      <arc head="Tak4" kind="INPUT" mult="4" tail="copy_TS1"/>
+      <arc head="min" kind="OUTPUT" mult="4" tail="Tak4"/>
+      <arc head="Tak2" kind="INPUT" mult="2" tail="copy_TS1"/>
+      <arc head="Tak2" kind="INPUT" mult="2" tail="TS2"/>
+      <arc head="Tak1" kind="INPUT" tail="copy_TS1"/>
+      <arc head="min" kind="OUTPUT" mult="2" tail="Tak2"/>
+      <arc head="min" kind="OUTPUT" tail="Tak1"/>
+      <arc head="Tak1" kind="INPUT" tail="TS2"/>
+      <arc head="Eq" kind="INHIBITOR" tail="copy_TS1"/>
+      <arc head="Eq" kind="INHIBITOR" tail="TS2"/>
+      <arc head="ckPid" kind="OUTPUT" tail="Eq"/>
+      <arc head="is01" kind="INHIBITOR" tail="copy_Qpid1"/>
+      <arc head="is01" kind="INPUT" tail="Qpid2"/>
+      <arc head="is02" kind="INHIBITOR" tail="copy_Qpid1"/>
+      <arc head="is02" kind="INPUT" mult="2" tail="Qpid2"/>
+      <arc head="Sw8" kind="OUTPUT" tail="is01"/>
+      <arc head="Sw8" kind="OUTPUT" tail="is02"/>
+      <arc head="is01" kind="INHIBITOR" mult="2" tail="Qpid2"/>
+      <arc head="is10" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="is10" kind="INHIBITOR" tail="Qpid2"/>
+      <arc head="ret8" kind="OUTPUT" tail="is10"/>
+      <arc head="is12" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="is12" kind="INPUT" mult="2" tail="Qpid2"/>
+      <arc head="Sw8" kind="OUTPUT" tail="is12"/>
+      <arc head="ret8" kind="OUTPUT" tail="is20"/>
+      <arc head="ret8" kind="OUTPUT" tail="is21"/>
+      <arc head="is20" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="is21" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="is20" kind="INHIBITOR" tail="Qpid2"/>
+      <arc head="is21" kind="INPUT" tail="Qpid2"/>
+      <arc head="is10" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
+      <arc head="is01" kind="INPUT" tail="ckPid"/>
+      <arc head="is02" kind="INPUT" tail="ckPid"/>
+      <arc head="is10" kind="INPUT" tail="ckPid"/>
+      <arc head="is12" kind="INPUT" tail="ckPid"/>
+      <arc head="is20" kind="INPUT" tail="ckPid"/>
+      <arc head="is21" kind="INPUT" tail="ckPid"/>
+      <arc head="T6" kind="INHIBITOR" tail="copy_TS1"/>
+      <arc head="T6" kind="INPUT" tail="TS2"/>
+      <arc head="TS2" kind="OUTPUT" tail="T6"/>
+      <arc head="P9" kind="OUTPUT" tail="T6"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" tail="is01"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="is02"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" tail="is10"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="is12"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="is12"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="is20"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="is21"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="is21"/>
+      <arc head="Tak8" kind="INPUT" mult="8" tail="copy_TS1"/>
+      <arc head="min" kind="OUTPUT" mult="8" tail="Tak8"/>
+      <arc head="Tak8" kind="INPUT" mult="8" tail="TS2"/>
+      <arc head="T12" kind="INPUT" mult="8" tail="TS2"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="T12"/>
+      <arc head="T12" kind="INPUT" tail="Sw8"/>
+      <arc head="Sw4" kind="OUTPUT" tail="T12"/>
+      <arc head="T13" kind="INPUT" tail="Sw8"/>
+      <arc head="Sw4" kind="OUTPUT" tail="T13"/>
+      <arc head="T13" kind="INHIBITOR" mult="8" tail="TS2"/>
+      <arc head="T14" kind="INPUT" mult="4" tail="TS2"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="T14"/>
+      <arc head="T15" kind="INPUT" tail="Sw4"/>
+      <arc head="T15" kind="INHIBITOR" mult="4" tail="TS2"/>
+      <arc head="Sw2" kind="OUTPUT" tail="T14"/>
+      <arc head="Sw2" kind="OUTPUT" tail="T15"/>
+      <arc head="T16" kind="INPUT" mult="2" tail="TS2"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="T16"/>
+      <arc head="T17" kind="INPUT" tail="Sw2"/>
+      <arc head="T17" kind="INHIBITOR" mult="2" tail="TS2"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="T18"/>
+      <arc head="T18" kind="INPUT" tail="TS2"/>
+      <arc head="Sw1" kind="OUTPUT" tail="T17"/>
+      <arc head="T19" kind="INPUT" tail="Sw1"/>
+      <arc head="T19" kind="INHIBITOR" tail="TS2"/>
+      <arc head="T14" kind="INPUT" tail="Sw4"/>
+      <arc head="T16" kind="INPUT" tail="Sw2"/>
+      <arc head="T18" kind="INPUT" tail="Sw1"/>
+      <arc head="Sw1" kind="OUTPUT" tail="T16"/>
+      <arc head="ret8" kind="OUTPUT" tail="T18"/>
+      <arc head="Tak8" kind="INPUT" tail="copy_isSwit8"/>
+      <arc head="isSwit4" kind="OUTPUT" tail="Tak8"/>
+      <arc head="T20" kind="INHIBITOR" mult="8" tail="copy_TS1"/>
+      <arc head="T20" kind="INPUT" tail="copy_isSwit8"/>
+      <arc head="isSwit4" kind="OUTPUT" tail="T20"/>
+      <arc head="T21" kind="INHIBITOR" mult="8" tail="TS2"/>
+      <arc head="isSwit4" kind="OUTPUT" tail="T21"/>
+      <arc head="T21" kind="INPUT" tail="copy_isSwit8"/>
+      <arc head="T22" kind="INPUT" tail="isSwit4"/>
+      <arc head="T22" kind="INHIBITOR" mult="4" tail="copy_TS1"/>
+      <arc head="Tak4" kind="INPUT" tail="isSwit4"/>
+      <arc head="T23" kind="INHIBITOR" mult="4" tail="TS2"/>
+      <arc head="IsSwit2" kind="OUTPUT" tail="T22"/>
+      <arc head="IsSwit2" kind="OUTPUT" tail="T23"/>
+      <arc head="T23" kind="INPUT" tail="isSwit4"/>
+      <arc head="IsSwit2" kind="OUTPUT" tail="Tak4"/>
+      <arc head="T24" kind="INPUT" tail="IsSwit2"/>
+      <arc head="T25" kind="INPUT" tail="IsSwit2"/>
+      <arc head="T24" kind="INHIBITOR" mult="2" tail="copy_TS1"/>
+      <arc head="T25" kind="INHIBITOR" mult="2" tail="TS2"/>
+      <arc head="IsSwit1" kind="OUTPUT" tail="T24"/>
+      <arc head="IsSwit1" kind="OUTPUT" tail="T25"/>
+      <arc head="T26" kind="INPUT" tail="IsSwit1"/>
+      <arc head="T27" kind="INPUT" tail="IsSwit1"/>
+      <arc head="P8" kind="OUTPUT" tail="T26"/>
+      <arc head="P8" kind="OUTPUT" tail="T27"/>
+      <arc head="T6" kind="INPUT" tail="P8"/>
+      <arc head="T26" kind="INHIBITOR" tail="copy_TS1"/>
+      <arc head="T27" kind="INHIBITOR" tail="TS2"/>
+      <arc head="Tak2" kind="INPUT" tail="IsSwit2"/>
+      <arc head="IsSwit1" kind="OUTPUT" tail="Tak2"/>
+      <arc head="Tak1" kind="INPUT" tail="IsSwit1"/>
+      <arc head="P8" kind="OUTPUT" tail="Tak1"/>
+      <arc head="ret8" kind="OUTPUT" tail="T19"/>
+      <arc head="Sw01" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
+      <arc head="Eq" kind="INPUT" tail="P8"/>
+      <arc head="T28" kind="INPUT" tail="P8"/>
+      <arc head="T28" kind="INHIBITOR" tail="TS2"/>
+      <arc head="T28" kind="INPUT" tail="copy_TS1"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="T28"/>
+      <arc head="ret8" kind="OUTPUT" tail="T28"/>
+      <arc head="T29" kind="INPUT" tail="ret8"/>
+      <arc head="Ret4" kind="OUTPUT" tail="T29"/>
+      <arc head="T30" kind="INPUT" tail="ret8"/>
+      <arc head="Ret4" kind="OUTPUT" tail="T30"/>
+      <arc head="T31" kind="INPUT" tail="Ret4"/>
+      <arc head="Ret2" kind="OUTPUT" tail="T31"/>
+      <arc head="T33" kind="INPUT" tail="Ret2"/>
+      <arc head="Ret1" kind="OUTPUT" tail="T33"/>
+      <arc head="T32" kind="INPUT" tail="Ret4"/>
+      <arc head="Ret2" kind="OUTPUT" tail="T32"/>
+      <arc head="T34" kind="INPUT" tail="Ret2"/>
+      <arc head="Ret1" kind="OUTPUT" tail="T34"/>
+      <arc head="T30" kind="INPUT" mult="8" tail="min"/>
+      <arc head="T32" kind="INPUT" mult="4" tail="min"/>
+      <arc head="T34" kind="INPUT" mult="2" tail="min"/>
+      <arc head="T35" kind="INPUT" tail="min"/>
+      <arc head="Done" kind="OUTPUT" tail="T35"/>
+      <arc head="T36" kind="INPUT" tail="Ret1"/>
+      <arc head="Done" kind="OUTPUT" tail="T36"/>
+      <arc head="T29" kind="INHIBITOR" mult="8" tail="min"/>
+      <arc head="T31" kind="INHIBITOR" mult="4" tail="min"/>
+      <arc head="T33" kind="INHIBITOR" mult="2" tail="min"/>
+      <arc head="T36" kind="INHIBITOR" tail="min"/>
+      <arc head="T35" kind="INPUT" tail="Ret1"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="8" tail="T30"/>
+      <arc head="TS2" kind="OUTPUT" mult="8" tail="T30"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="4" tail="T32"/>
+      <arc head="TS2" kind="OUTPUT" mult="4" tail="T32"/>
+      <arc head="copy_TS1" kind="OUTPUT" mult="2" tail="T34"/>
+      <arc head="TS2" kind="OUTPUT" mult="2" tail="T34"/>
+      <arc head="copy_TS1" kind="OUTPUT" tail="T35"/>
+      <arc head="TS2" kind="OUTPUT" tail="T35"/>
+      <arc head="Sw02" kind="INPUT" mult="2" tail="Qpid2"/>
+      <arc head="Sw02" kind="INHIBITOR" tail="copy_Qpid1"/>
+      <arc head="Sw10" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="Sw10"/>
+      <arc head="Sw10" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" tail="Sw01"/>
+      <arc head="Sw12" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="Sw12" kind="INPUT" mult="2" tail="Qpid2"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="Sw12"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" mult="2" tail="Sw12"/>
+      <arc head="Sw20" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="Sw20"/>
+      <arc head="Sw21" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="Sw21"/>
+      <arc head="Sw21" kind="INPUT" tail="Qpid2"/>
+      <arc head="copy_Qpid1" kind="OUTPUT" tail="Sw21"/>
+      <arc head="Sw01" kind="INPUT" tail="Qpid2"/>
+      <arc head="Sw01" kind="INHIBITOR" mult="2" tail="Qpid2"/>
+      <arc head="Sw10" kind="INHIBITOR" tail="Qpid2"/>
+      <arc head="Sw20" kind="INHIBITOR" tail="Qpid2"/>
+      <arc head="Sw21" kind="INPUT" tail="P9"/>
+      <arc head="Sw8" kind="OUTPUT" tail="Sw21"/>
+      <arc head="Sw20" kind="INPUT" tail="P9"/>
+      <arc head="Sw8" kind="OUTPUT" tail="Sw20"/>
+      <arc head="Sw12" kind="INPUT" tail="P9"/>
+      <arc head="Sw8" kind="OUTPUT" tail="Sw12"/>
+      <arc head="Sw10" kind="INPUT" tail="P9"/>
+      <arc head="Sw8" kind="OUTPUT" tail="Sw10"/>
+      <arc head="Sw02" kind="INPUT" tail="P9"/>
+      <arc head="Sw8" kind="OUTPUT" tail="Sw02"/>
+      <arc head="Sw01" kind="INPUT" tail="P9"/>
+      <arc head="Sw8" kind="OUTPUT" tail="Sw01"/>
+      <arc head="T20" kind="INPUT" tail="Done"/>
+      <arc head="T21" kind="INPUT" tail="Done"/>
+      <arc head="T36" kind="INPUT" tail="copy_InProg"/>
+      <arc head="copy_InProg" kind="OUTPUT" tail="T20"/>
+      <arc head="copy_InProg" kind="OUTPUT" tail="T21"/>
+      <arc head="copy_InProg" kind="OUTPUT" tail="Tak8"/>
+      <arc head="T1" kind="INPUT" tail="copy_isSwit8"/>
+      <arc head="T1" kind="INPUT" tail="Done"/>
+      <arc head="T1" kind="INHIBITOR" tail="IsInQ1"/>
+      <arc head="T21" kind="INPUT" tail="IsInQ1"/>
+      <arc head="T20" kind="INPUT" tail="IsInQ1"/>
+      <arc head="Pupid" kind="OUTPUT" tail="T1"/>
+      <arc head="T2" kind="INPUT" tail="Pupid"/>
+      <arc head="T2" kind="INHIBITOR" tail="copy_Qpid1"/>
+      <arc head="T3" kind="INPUT" tail="copy_Qpid1"/>
+      <arc head="T3" kind="INPUT" tail="Pupid"/>
+      <arc head="Qpid2" kind="OUTPUT" tail="T3"/>
+      <arc head="T3" kind="INHIBITOR" mult="2" tail="copy_Qpid1"/>
+      <arc head="T4" kind="INPUT" mult="2" tail="copy_Qpid1"/>
+      <arc head="Qpid2" kind="OUTPUT" mult="2" tail="T4"/>
+      <arc head="T4" kind="INPUT" tail="Pupid"/>
+      <arc head="copy_InProg" kind="OUTPUT" tail="T1"/>
+      <arc head="copy_PushTS8" kind="OUTPUT" tail="T2"/>
+      <arc head="T5" kind="INPUT" tail="copy_PushTS8"/>
+      <arc head="T5" kind="INHIBITOR" mult="8" tail="copy_TS1"/>
+      <arc head="PuTS4" kind="OUTPUT" tail="T5"/>
+      <arc head="T7" kind="INHIBITOR" mult="4" tail="copy_TS1"/>
+      <arc head="T7" kind="INPUT" tail="PuTS4"/>
+      <arc head="PuTS2" kind="OUTPUT" tail="T7"/>
+      <arc head="T8" kind="INPUT" tail="PuTS2"/>
+      <arc head="PutTS1" kind="OUTPUT" tail="T8"/>
+      <arc head="T8" kind="INHIBITOR" mult="2" tail="copy_TS1"/>
+      <arc head="T9" kind="INHIBITOR" tail="copy_TS1"/>
+      <arc head="T9" kind="INPUT" tail="PutTS1"/>
+      <arc head="Done" kind="OUTPUT" tail="T9"/>
+      <arc head="IsInQ1" kind="OUTPUT" tail="T9"/>
+      <arc head="T9" kind="INPUT" tail="copy_IsInQ"/>
+      <arc head="IsSwit8" kind="OUTPUT" tail="T9"/>
+      <arc head="T9" kind="INPUT" tail="copy_InProg"/>
+      <arc head="copy_PushTS8" kind="OUTPUT" tail="T3"/>
+      <arc head="copy_PushTS8" kind="OUTPUT" tail="T4"/>
+      <arc head="T10" kind="INPUT" mult="8" tail="copy_TS1"/>
+      <arc head="T10" kind="INPUT" tail="copy_PushTS8"/>
+      <arc head="PuTS4" kind="OUTPUT" tail="T10"/>
+      <arc head="T11" kind="INPUT" mult="4" tail="copy_TS1"/>
+      <arc head="PuTS2" kind="OUTPUT" tail="T11"/>
+      <arc head="T37" kind="INPUT" tail="PuTS2"/>
+      <arc head="PutTS1" kind="OUTPUT" tail="T37"/>
+      <arc head="T38" kind="INPUT" tail="PutTS1"/>
+      <arc head="TS2" kind="OUTPUT" tail="T38"/>
+      <arc head="Done" kind="OUTPUT" tail="T38"/>
+      <arc head="IsInQ1" kind="OUTPUT" tail="T38"/>
+      <arc head="IsSwit8" kind="OUTPUT" tail="T38"/>
+      <arc head="TS2" kind="OUTPUT" mult="2" tail="T37"/>
+      <arc head="TS2" kind="OUTPUT" mult="4" tail="T11"/>
+      <arc head="TS2" kind="OUTPUT" mult="8" tail="T10"/>
+      <arc head="T11" kind="INPUT" tail="PuTS4"/>
+      <arc head="T37" kind="INPUT" mult="2" tail="copy_TS1"/>
+      <arc head="T38" kind="INPUT" tail="copy_TS1"/>
+      <arc head="T38" kind="INPUT" tail="copy_InProg"/>
+      <arc head="T38" kind="INPUT" tail="copy_IsInQ"/>
+      <arc head="Push" kind="INPUT" tail="isSwit0"/>
+      <arc head="Push" kind="INPUT" mult="#Qpid1" tail="Qpid1"/>
+      <arc head="Push" kind="INPUT" mult="#TS1" tail="TS1"/>
+      <arc head="Push" kind="INPUT" tail="IsInQ"/>
+      <arc head="IsInQ2" kind="OUTPUT" tail="Push"/>
+      <arc head="Ts2" kind="OUTPUT" mult="#TS1" tail="Push"/>
+      <arc head="IsSwiT1" kind="OUTPUT" tail="Push"/>
+      <arc head="QPid2" kind="OUTPUT" mult="#Qpid1" tail="Push"/>
+      <arc head="Push" kind="INHIBITOR" tail="IsInQ2"/>
+      <arc head="P0G" kind="INPUT" mult="#TS2+1" tail="TS1"/>
+      <arc head="P0G" kind="INPUT" mult="#TS2" tail="Ts2"/>
+      <arc head="P1G" kind="INPUT" mult="#TS1" tail="TS1"/>
+      <arc head="P1G" kind="INPUT" mult="#TS1+1" tail="Ts2"/>
+      <arc head="TS1" kind="OUTPUT" mult="#TS1" tail="P0G"/>
+      <arc head="Ts2" kind="OUTPUT" mult="#TS1" tail="P1G"/>
+      <arc head="EQNS" kind="INPUT" mult="#TS1" tail="TS1"/>
+      <arc head="EQNS" kind="INPUT" mult="#TS1" tail="Ts2"/>
+      <arc head="EQS" kind="INPUT" mult="#TS1" tail="TS1"/>
+      <arc head="EQS" kind="INPUT" mult="#TS1" mult-x="0.5" mult-y="-1.0" tail="Ts2"/>
+      <arc head="EQS" kind="INHIBITOR" mult="#TS1+1" tail="Ts2"/>
+      <arc head="EQS" kind="INPUT" mult="#Qpid1" tail="Qpid1"/>
+      <arc head="EQS" kind="INPUT" mult="#Qpid1" tail="QPid2"/>
+      <arc head="EQNS" kind="INPUT" mult="#QPid2" mult-x="0.0" mult-y="0.5" tail="Qpid1"/>
+      <arc head="EQNS" kind="INPUT" mult="#QPid2" tail="QPid2"/>
+      <arc head="P1G" kind="INPUT" mult="#Qpid1" tail="Qpid1"/>
+      <arc head="P1G" kind="INPUT" mult="#QPid2" tail="QPid2"/>
+      <arc head="TS1" kind="OUTPUT" mult="#TS2" mult-x="-2.0" tail="P1G"/>
+      <arc head="Qpid1" kind="OUTPUT" mult="#QPid2" tail="P1G"/>
+      <arc head="QPid2" kind="OUTPUT" mult="#Qpid1" tail="P1G"/>
+      <arc head="Ts2" kind="OUTPUT" mult="#TS2" tail="P0G"/>
+      <arc head="TS1" kind="OUTPUT" mult="#TS1" tail="EQNS"/>
+      <arc head="Ts2" kind="OUTPUT" mult="#TS2" tail="EQNS"/>
+      <arc head="EQNS" kind="INHIBITOR" mult="#TS1+1" tail="Ts2"/>
+      <arc head="EQS" kind="INPUT" tail="isSwit0"/>
+      <arc head="EQNS" kind="INPUT" tail="isSwit0"/>
+      <arc head="P1G" kind="INPUT" tail="isSwit0"/>
+      <arc head="P0G" kind="INPUT" tail="isSwit0"/>
+      <arc head="EQS" kind="INPUT" tail="IsInQ2"/>
+      <arc head="IsInQ2" kind="OUTPUT" tail="EQS"/>
+      <arc head="EQNS" kind="INPUT" tail="IsInQ2"/>
+      <arc head="IsInQ2" kind="OUTPUT" tail="EQNS"/>
+      <arc head="IsInQ2" kind="OUTPUT" tail="P0G"/>
+      <arc head="P0G" kind="INPUT" tail="IsInQ2"/>
+      <arc head="IsInQ2" kind="OUTPUT" tail="P1G"/>
+      <arc head="P1G" kind="INPUT" tail="IsInQ2"/>
+      <arc head="TS1" kind="OUTPUT" mult="3" tail="T0"/>
+    </edges>
+  </gspn>
+  <gspn name="TestCOmp" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place name="P0" x="24.0" y="17.0"/>
+      <place name="P1" x="42.0" y="17.0"/>
+      <transition name="P0G" nservers-x="0.5" type="EXP" x="32.55" y="17.0"/>
+      <transition name="P1G" nservers-x="0.5" type="EXP" x="32.55" y="21.0"/>
+      <place marking="2" name="P2" x="6.0" y="20.0"/>
+      <transition name="T0" nservers-x="0.5" type="EXP" x="13.55" y="20.0"/>
+      <transition name="T1" nservers-x="0.5" type="EXP" x="7.55" y="13.0"/>
+      <place name="P3" x="0.0" y="13.0"/>
+      <place name="P4" x="15.0" y="13.0"/>
+      <transition name="EQNS" nservers-x="0.5" type="EXP" x="32.55" y="13.0"/>
+      <transition name="EQS" nservers-x="0.5" type="EXP" x="32.55" y="9.0"/>
+      <place marking="1" name="Pid0" x="24.0" y="4.0"/>
+      <place name="Pid1" x="42.0" y="4.0"/>
+    </nodes>
+    <edges>
+      <arc head="P0G" kind="INPUT" mult="#P1+1" tail="P0"/>
+      <arc head="P0G" kind="INPUT" mult="#P1" tail="P1"/>
+      <arc head="P1G" kind="INPUT" mult="#P0" tail="P0"/>
+      <arc head="P1G" kind="INPUT" mult="#P0+1" tail="P1"/>
+      <arc head="T0" kind="INPUT" tail="P2"/>
+      <arc head="T0" kind="INHIBITOR" mult="2" tail="P2">
+        <point x="10.0" y="24.5"/>
+      </arc>
+      <arc head="P0" kind="OUTPUT" mult="#P0" tail="P0G"/>
+      <arc head="P1" kind="OUTPUT" mult="#P0" tail="P1G"/>
+      <arc head="T1" kind="INPUT" mult="#P3" tail="P3"/>
+      <arc head="T1" kind="INPUT" mult="#P3" tail="P4"/>
+      <arc head="T1" kind="INHIBITOR" mult="#P3+1" mult-x="-1.0" mult-y="3.0" tail="P4"/>
+      <arc head="EQNS" kind="INPUT" mult="#P0" tail="P0"/>
+      <arc head="EQNS" kind="INPUT" mult="#P0" tail="P1"/>
+      <arc head="EQS" kind="INPUT" mult="#P0" tail="P0"/>
+      <arc head="EQS" kind="INPUT" mult="#P0" mult-x="0.5" mult-y="-1.0" tail="P1"/>
+      <arc head="EQS" kind="INHIBITOR" mult="#P0+1" tail="P1"/>
+      <arc head="EQS" kind="INPUT" mult="#Pid0" tail="Pid0"/>
+      <arc head="EQS" kind="INPUT" mult="#Pid0" tail="Pid1"/>
+      <arc head="EQNS" kind="INPUT" mult="#Pid1" mult-x="0.0" mult-y="0.5" tail="Pid0"/>
+      <arc head="EQNS" kind="INPUT" mult="#Pid1" tail="Pid1"/>
+      <arc head="P1G" kind="INPUT" mult="#Pid0" tail="Pid0"/>
+      <arc head="P1G" kind="INPUT" mult="#Pid1" tail="Pid1"/>
+      <arc head="P0" kind="OUTPUT" mult="#P1" mult-x="-2.0" tail="P1G"/>
+      <arc head="Pid0" kind="OUTPUT" mult="#Pid1" tail="P1G"/>
+      <arc head="Pid1" kind="OUTPUT" mult="#Pid0" tail="P1G"/>
+      <arc head="P1" kind="OUTPUT" mult="#P1" tail="P0G"/>
+      <arc head="P0" kind="OUTPUT" mult="#P0" tail="EQNS"/>
+      <arc head="P1" kind="OUTPUT" mult="#P1" tail="EQNS"/>
+      <arc head="EQNS" kind="INHIBITOR" mult="#P0+1" tail="P1"/>
+    </edges>
+  </gspn>
+  <resource-list>
+    <document-log uuid="7e719f88-80c1-4b72-a63e-60ac504bea94">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAHt0ANUbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiRDpcR2l0XFNjaG9vbFxDUzQxMlByb2plY3RcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgRXhwYW5RLnNvbHV0aW9uXEV4cGFuUSIgLXBiYXNpcyAtZGV0ZWN0LWV4cCAtcHNmbCAtYm5kIAp0AJAbWzFtG1s0bUxPQURJTkcgUEVUUkkgTkVUIEQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEV4cGFuUS5zb2x1dGlvblxFeHBhblEgKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgNjAKdAAPUkFURSBQQVI6ICAgIDAKdAARVFJBTlNJVElPTlM6IDExNQp0AA9NRUFTVVJFUzogICAgMAp0AChMT0FESU5HIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAABCnQAAQp0AB5DT01QVVRJTkcgUExBQ0UgRkxPVyBCQVNJUy4uLgp0ABNNPTExNSwgTj02MCwgTjA9NjAKdABPQ29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogY29tcGxldGVkIGluIDU2IHN0ZXBzLCB8S3w9NC4gICAgICAgICAgICAgICAgICAgICAgCnQAQEZPVU5EIDQgVkVDVE9SUyBJTiBUSEUgUExBQ0UgRkxPVyBCQVNJUyAoMiBzZW1pZmxvd3MsIDIgZmxvd3MpLgp0AAEKdAABCnQALlRoZXJlIGFyZSA1IHBsYWNlcyBub3QgY292ZXJlZCBieSBhbnkgUC1mbG93Ogp0AAEKdAAmVE9UQUwgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0ACdBVk9JRCBFWFBPTkVOVElBTCBHUk9XVEggT0YgU0VNSUZMT1dTLgp0AB1DT01QVVRJTkcgUExBQ0UgU0VNSUZMT1dTLi4uCnQAE009MTE1LCBOPTYwLCBOMD02MAp0AE1HZW5lcmF0aW9uIG9mIFNlbWlmbG93czogY29tcGxldGVkIGluIDU0IHN0ZXBzLCB8S3w9Mi4gICAgICAgICAgICAgICAgICAgICAgCnQAGUZPVU5EIDIgUExBQ0UgU0VNSUZMT1dTLgp0AAEKdAABCnQAM1RoZXJlIGFyZSA1MyBwbGFjZXMgbm90IGNvdmVyZWQgYnkgYW55IFAtc2VtaWZsb3c6CnQAAQp0ACZUT1RBTCBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQALENPTVBVVElORyBQTEFDRSBCT1VORFMgRlJPTSBQLVNFTUlGTE9XUyAuLi4KdABOG1sxbRtbMzFtV0FSTklORzogG1syMm0bWzBtUEVUUkkgTkVUIEhBUyBJTkhJQklUT1IgQVJDUyBUSEFUIFdJTEwgQkUgSUdOT1JFRC4KdABOG1sxbRtbMzFtV0FSTklORzogG1syMm0bWzBtUEVUUkkgTkVUIEhBUyBJTkhJQklUT1IgQVJDUyBUSEFUIFdJTEwgQkUgSUdOT1JFRC4KdAAnG1swWBtbMzJtIFBST0NFU1MgRVhJVEVEIE5PUk1BTExZLhtbMG0KdADUG1swbUVYRUM6ICJDOlxQcm9ncmFtIEZpbGVzXEdyZWF0U1BOXGFwcFxwb3J0YWJsZV9ncmVhdHNwblxiaW5cRFNQTi1Ub29sLmV4ZSIgLWxvYWQgIkQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEV4cGFuUS5zb2x1dGlvblxFeHBhblEiIC1sb2FkLWJuZCAtdGltZW91dCA1IC1pbHAtYm5kIAp0AJAbWzFtG1s0bUxPQURJTkcgUEVUUkkgTkVUIEQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEV4cGFuUS5zb2x1dGlvblxFeHBhblEgKG5ldC9kZWYpLi4uG1syMm0bWzI0bQp0AA9NQVJLSU5HIFBBUjogMAp0ABBQTEFDRVM6ICAgICAgNjAKdAAPUkFURSBQQVI6ICAgIDAKdAARVFJBTlNJVElPTlM6IDExNQp0AA9NRUFTVVJFUzogICAgMAp0AChMT0FESU5HIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAABCnQAAQp0ABVMT0FESU5HIEJORCBGSUxFIC4uLgp0ACBTY2hlZHVsZWQgdGltZW91dCBvZiA1IHNlY29uZHMuCnQAJUNPTVBVVElORyBQTEFDRSBCT1VORFMgVVNJTkcgSUxQIC4uLgp0ACJJbmhpYml0b3IgYXJjcyBoYXZlIGJlZW4gaWdub3JlZC4KdAAYQWxsIHBsYWNlcyBhcmUgYm91bmRlZC4KcQB+ACJ0ALobWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxSR01FREQzLmV4ZSIgIkQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEV4cGFuUS5zb2x1dGlvblxFeHBhblEiIC1NRVRBIC1jIC1DIAp0ACBSYW5kb20gc2VlZHM6IDE3NDU4ODMwOTYgNzUwNDg4CnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAARR3JlYXRTUE4vTWVkZGx5Lgp0ADggIENvcHlyaWdodCAoQykgMTk4Ny0yMDE4LCBVbml2ZXJzaXR5IG9mIFRvcmlubywgSXRhbHkuCnQAMSAgU2VuZCBmaWxlcyBuZXRuYW1lLm5ldCwgLmRlZiB0byBlLW1haWwgYWRkcmVzcwp0ACsgIGJlY2N1dGlAZGkudW5pdG8uaXQgaWYgeW91IGZpbmQgYW55IGJ1Zy4KdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AB9CYXNlZCBvbiBNRURETFkgdmVyc2lvbiAwLjE3LjEKdABGICBDb3B5cmlnaHQgKEMpIDIwMDksIElvd2EgU3RhdGUgVW5pdmVyc2l0eSBSZXNlYXJjaCBGb3VuZGF0aW9uLCBJbmMuCnQALSAgd2Vic2l0ZTogaHR0cHM6Ly9hc21pbmVyLmdpdGh1Yi5pby9tZWRkbHkvCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAApVXNpbmcgcGVyLWV2ZW50IHNhdHVyYXRpb24gKHNhdC1wcmVnZW4pLgp0ABtVc2luZyBmYXN0IE5TRiBnZW5lcmF0aW9uLgp0ABFQcm9jZXNzIElEOiAxNjAzCnQAa01PREVMIE5BTUU6IEQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEV4cGFuUS5zb2x1dGlvblxFeHBhblEKdAAeICA2MCBwbGFjZXMsIDExNSB0cmFuc2l0aW9ucy4KdAAlVXNlZCBNZW1vcnkgZm9yIGVuY29kaW5nIG5ldDogODYwMEtCCnQAdU9wZW5pbmcgZmlsZTogRDpcR2l0XFNjaG9vbFxDUzQxMlByb2plY3RcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgRXhwYW5RLnNvbHV0aW9uXEV4cGFuUS5ibmQgT0suCnQAeE9wZW5pbmcgZmlsZTogRDpcR2l0XFNjaG9vbFxDUzQxMlByb2plY3RcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgRXhwYW5RLnNvbHV0aW9uXEV4cGFuUS5pbHBibmQgT0suCnQAEUlOUFVUIEFSQ1M6ICAxOTEKdAART1VUUFVUIEFSQ1M6IDE4OAp0ABBJTkhJQiBBUkNTOiAgNzgKdAAQVEVTVCBBUkNTOiAgIDI4CnQAEFBMQUNFUzogICAgICA2MAp0ABFUUkFOU0lUSU9OUzogMTE1CnQAD0lOVkFSSUFOVFM6ICA0CnQAD1AtU0VNSUZMT1dTOiAyCnQAFk1BWCBJTlZBUklBTlQgQ0FSRDogNwp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBWQVJJQUJMRSBPUkRFUiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ADxWYXJpYWJsZSBvcmRlciBtZXRob2Q6IE1ldGEtaGV1cmlzdGljIHVzaW5nIHdlaWdodGVkIHNjb3JlLgp0ABhOdW1iZXIgb2YgY29tcG9uZW50czogOAp0AFEgIE1FVEhPRCAgICAgICAgICAgICAgU0NPUkUgICAgICAgIFNXSVIgICAgICAgU09VUFMgRElTQ09VTlQgIFdFSUdIVCAgICAgICBUSU1FIAp0AFUgIFNMTyAgICAgICAgICAgICAgIDQ3OTguNzkgICAgICAgIDQyNzcgICAgICAgIDE5MjQgICAgICAgIDEgICAxLjEyMiAgICAgICAgICAwIHNlYy4KdABVICBTTE8rRm9yY2UgICAgICAgICAyNDEyLjA4ICAgICAgICAyNzQxICAgICAgICAxNzQwICAgICAgICAxICAgIDAuODggICAgICAgICAgMCBzZWMuCnQAVSAgU0xPLTE2ICAgICAgICAgICAgMzQxMy4wNSAgICAgICAgNDI3NyAgICAgICAgMTkyNCAgICAgICAgMSAgIDAuNzk4ICAgICAgICAgIDAgc2VjLgp0AFUgIFNMTy0xNitGb3JjZSAgICAgIDI0OTcuMDUgICAgICAgIDI3NDEgICAgICAgIDE3NDAgICAgICAgIDEgICAwLjkxMSAgICAgICAgICAwIHNlYy4KdABVICBUT1YyICAgICAgICAgICAgICAyNjg3LjkxICAgICAgICAyOTU3ICAgICAgICAxMjE3ICAgICAgICAxICAgMC45MDkgICAgICAgICAgMCBzZWMuCnQAVSAgVE9WMitGb3JjZSAgICAgICAgIDMwNTQuOCAgICAgICAgMjYzOCAgICAgICAgMTc3NSAgICAgICAgMSAgIDEuMTU4ICAgICAgICAgIDAgc2VjLgp0AFUgIE5PQUNLMiAgICAgICAgICAgIDM4MDUuODIgICAgICAgIDMzNjUgICAgICAgIDEzMzcgICAgICAgIDEgICAxLjEzMSAgICAgICAgICAwIHNlYy4KdABVICBOT0FDSzIrRm9yY2UgICAgICAyNjI4LjM2ICAgICAgICAyNjgyICAgICAgICAxNzkyICAgICAgICAxICAgIDAuOTggICAgICAgICAgMCBzZWMuCnQAVSAgQUNNICAgICAgICAgICAgICAgNTYyNC4xOSAgICAgICAgNTU2MyAgICAgICAgMjAzNCAgICAgICAgMSAgIDEuMDExICAgICAgICAgIDAgc2VjLgp0AFUgIEFDTStGb3JjZSAgICAgICAgIDM0OTIuNzcgICAgICAgIDI3MzMgICAgICAgIDE3NjEgICAgICAgIDEgICAxLjI3OCAgICAgICAgICAwIHNlYy4KdABVICBDTTIgICAgICAgICAgICAgICA3MDkyLjgyICAgICAgICA1NTYzICAgICAgICAyMDM0ICAgICAgICAxICAgMS4yNzUgICAgICAgICAgMCBzZWMuCnQAVSAgQ00yK0ZvcmNlICAgICAgICAgMzAwMy41NyAgICAgICAgMjczMyAgICAgICAgMTc2MSAgICAgICAgMSAgIDEuMDk5ICAgICAgICAgIDAgc2VjLgp0AFUgIFAgICAgICAgICAgICAgICAgICA0MjQ5LjUgICAgICAgIDQwNTEgICAgICAgIDIxNDMgICAgICAgIDEgICAxLjA0OSAgICAgICAgICAwIHNlYy4KdABVICBHUCAgICAgICAgICAgICAgICA0NjcyLjkzICAgICAgICA0MDE4ICAgICAgICAyMTEwICAgICAgICAxICAgMS4xNjMgICAgICAgICAgMCBzZWMuCnQAVSAgR1ArRm9yY2UgICAgICAgICAgMzYyOS4yNSAgICAgICAgMzIyNiAgICAgICAgMjE4OSAgICAgICAgMSAgIDEuMTI1ICAgICAgICAgIDAgc2VjLgp0AFUgIFRTICAgICAgICAgICAgICAgIDQwNDcuMjMgICAgICAgIDU5MTcgICAgICAgIDE5OTkgICAgICAgIDEgICAwLjY4NCAgICAgICAgICAwIHNlYy4KdABVICBUUytGb3JjZSAgICAgICAgICAzMzAwLjM5ICAgICAgICA0MTgzICAgICAgICAyMTM0ICAgICAgICAxICAgMC43ODkgICAgICAwLjAxNiBzZWMuCnQAP01ldGEtaGV1cmlzdGljOiBzZWxlY3RpbmcgbWV0aG9kIFNMTytGb3JjZSB3aXRoIHNjb3JlOiAyNDEyLjA4CnQAJlRpbWUgdG8gY29tcHV0ZSB2YXJpYWJsZSBvcmRlcjogMC4wMTYKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gU1RBUlQgRklSSU5HIFJVTEVTIEVOQ09ESU5HID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAtRW5jb2RlZCAxMTUgdHJhbnNpdGlvbiBpbiAxIHByaW9yaXR5IGdyb3Vwcy4KdAAeVGltZSB0byBidWlsZCBhbGwgTlNGczogMC4wMTUKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT0gUkVBQ0hBQklMSVRZIFNFVCBHRU5FUkFUSU9OID09PT09PT09PT09PT09PT09PT09PT09PT0KdAAVU3BsaXQ6IFNwbGl0U3VidHJhY3QKdAAWUlMgZ2VuZXJhdGlvbiB0aW1lOiAwCnQAHUNvbXB1dGluZyB2YXJpYWJsZSBib3VuZHMuLi4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IE1FTU9SWSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAoIFRvdGFsIE1lbW9yeSBVc2VkOiAgICAgICAxMjU3NiBLQnl0ZXMuCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IENUTCBFVkFMVUFUSU9OID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAAQp0ACRQcm9jZXNzaW5nOiBFIEYgKFRTMyA9IDUpICAtPiAgYm9vbAp0AApFdmFsOiBUUzMKdAAUICAgICAgMC4wMDAwMDAgc2VjLgp0ABBFdmFsOiAoVFMzID0gNSkKdAAfICAgICAgMC4wMDAwMDAgc2VjLiAgY2FyZCA9IDk2CnQAFEV2YWw6IEUgRiAoVFMzID0gNSkKeHNxAH4AAHcEAAAAe3NyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAFxAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+cQB+AH5xAH4AfnEAfgB+eA</document-log>
+    <document-log uuid="d7587ed1-6da2-4845-80b1-e2a6776ee52c">rO0ABXNyABRqYXZhLnV0aWwuTGlua2VkTGlzdAwpU11KYIgiAwAAeHB3BAAAAKx0ANMbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiRDpcR2l0XFNjaG9vbFxDUzQxMlByb2plY3RcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgRnVsbFEuc29sdXRpb25cRnVsbFEiIC1wYmFzaXMgLWRldGVjdC1leHAgLXBzZmwgLWJuZCAKdACOG1sxbRtbNG1MT0FESU5HIFBFVFJJIE5FVCBEOlxHaXRcU2Nob29sXENTNDEyUHJvamVjdFxQZXRyaW5ldHNcRHJhZnRQcm9jZXNzLUNUTCBtb2RlbCBjaGVja2luZyBvZiBGdWxsUS5zb2x1dGlvblxGdWxsUSAobmV0L2RlZikuLi4bWzIybRtbMjRtCnQAD01BUktJTkcgUEFSOiAwCnQAEFBMQUNFUzogICAgICAzMwp0AA9SQVRFIFBBUjogICAgMAp0ABBUUkFOU0lUSU9OUzogNjAKdAAPTUVBU1VSRVM6ICAgIDAKdAAoTE9BRElORyBUSU1FOiBbVXNlciAwLjAwMHMsIFN5cyAwLjAwMHNdCnQAAQp0AAEKdAAeQ09NUFVUSU5HIFBMQUNFIEZMT1cgQkFTSVMuLi4KdAASTT02MCwgTj0zMywgTjA9MzMKdABPQ29tcHV0YXRpb24gb2YgRmxvdyBiYXNpczogY29tcGxldGVkIGluIDMwIHN0ZXBzLCB8S3w9My4gICAgICAgICAgICAgICAgICAgICAgCnQAQEZPVU5EIDMgVkVDVE9SUyBJTiBUSEUgUExBQ0UgRkxPVyBCQVNJUyAoMSBzZW1pZmxvd3MsIDIgZmxvd3MpLgp0AAEKdAABCnQALlRoZXJlIGFyZSAzIHBsYWNlcyBub3QgY292ZXJlZCBieSBhbnkgUC1mbG93Ogp0AAEKdAAmVE9UQUwgVElNRTogW1VzZXIgMC4wMDBzLCBTeXMgMC4wMDBzXQp0ACdBVk9JRCBFWFBPTkVOVElBTCBHUk9XVEggT0YgU0VNSUZMT1dTLgp0AB1DT01QVVRJTkcgUExBQ0UgU0VNSUZMT1dTLi4uCnQAEk09NjAsIE49MzMsIE4wPTMzCnQATUdlbmVyYXRpb24gb2YgU2VtaWZsb3dzOiBjb21wbGV0ZWQgaW4gMzAgc3RlcHMsIHxLfD0yLiAgICAgICAgICAgICAgICAgICAgICAKdAAZRk9VTkQgMiBQTEFDRSBTRU1JRkxPV1MuCnQAAQp0AAEKdAAzVGhlcmUgYXJlIDI1IHBsYWNlcyBub3QgY292ZXJlZCBieSBhbnkgUC1zZW1pZmxvdzoKdAABCnQAJlRPVEFMIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAAsQ09NUFVUSU5HIFBMQUNFIEJPVU5EUyBGUk9NIFAtU0VNSUZMT1dTIC4uLgp0ACcbWzBYG1szMm0gUFJPQ0VTUyBFWElURUQgTk9STUFMTFkuG1swbQp0ANIbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxEU1BOLVRvb2wuZXhlIiAtbG9hZCAiRDpcR2l0XFNjaG9vbFxDUzQxMlByb2plY3RcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgRnVsbFEuc29sdXRpb25cRnVsbFEiIC1sb2FkLWJuZCAtdGltZW91dCA1IC1pbHAtYm5kIAp0AE4bWzFtG1szMW1XQVJOSU5HOiAbWzIybRtbMG1QRVRSSSBORVQgSEFTIElOSElCSVRPUiBBUkNTIFRIQVQgV0lMTCBCRSBJR05PUkVELgp0AE4bWzFtG1szMW1XQVJOSU5HOiAbWzIybRtbMG1QRVRSSSBORVQgSEFTIElOSElCSVRPUiBBUkNTIFRIQVQgV0lMTCBCRSBJR05PUkVELgp0AI4bWzFtG1s0bUxPQURJTkcgUEVUUkkgTkVUIEQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEZ1bGxRLnNvbHV0aW9uXEZ1bGxRIChuZXQvZGVmKS4uLhtbMjJtG1syNG0KdAAPTUFSS0lORyBQQVI6IDAKdAAQUExBQ0VTOiAgICAgIDMzCnQAD1JBVEUgUEFSOiAgICAwCnQAEFRSQU5TSVRJT05TOiA2MAp0AA9NRUFTVVJFUzogICAgMAp0AChMT0FESU5HIFRJTUU6IFtVc2VyIDAuMDAwcywgU3lzIDAuMDAwc10KdAABCnQAAQp0ABVMT0FESU5HIEJORCBGSUxFIC4uLgp0ACBTY2hlZHVsZWQgdGltZW91dCBvZiA1IHNlY29uZHMuCnQAJUNPTVBVVElORyBQTEFDRSBCT1VORFMgVVNJTkcgSUxQIC4uLgp0ACJJbmhpYml0b3IgYXJjcyBoYXZlIGJlZW4gaWdub3JlZC4KdAAYQWxsIHBsYWNlcyBhcmUgYm91bmRlZC4KcQB+ACB0ALgbWzBtRVhFQzogIkM6XFByb2dyYW0gRmlsZXNcR3JlYXRTUE5cYXBwXHBvcnRhYmxlX2dyZWF0c3BuXGJpblxSR01FREQzLmV4ZSIgIkQ6XEdpdFxTY2hvb2xcQ1M0MTJQcm9qZWN0XFBldHJpbmV0c1xEcmFmdFByb2Nlc3MtQ1RMIG1vZGVsIGNoZWNraW5nIG9mIEZ1bGxRLnNvbHV0aW9uXEZ1bGxRIiAtTUVUQSAtYyAtQyAKdAAgUmFuZG9tIHNlZWRzOiAxNzQ1ODgyMjc3IDE0ODg1Mwp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAEUdyZWF0U1BOL01lZGRseS4KdAA4ICBDb3B5cmlnaHQgKEMpIDE5ODctMjAxOCwgVW5pdmVyc2l0eSBvZiBUb3Jpbm8sIEl0YWx5Lgp0ADEgIFNlbmQgZmlsZXMgbmV0bmFtZS5uZXQsIC5kZWYgdG8gZS1tYWlsIGFkZHJlc3MKdAArICBiZWNjdXRpQGRpLnVuaXRvLml0IGlmIHlvdSBmaW5kIGFueSBidWcuCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAfQmFzZWQgb24gTUVERExZIHZlcnNpb24gMC4xNy4xCnQARiAgQ29weXJpZ2h0IChDKSAyMDA5LCBJb3dhIFN0YXRlIFVuaXZlcnNpdHkgUmVzZWFyY2ggRm91bmRhdGlvbiwgSW5jLgp0AC0gIHdlYnNpdGU6IGh0dHBzOi8vYXNtaW5lci5naXRodWIuaW8vbWVkZGx5Lwp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAKVVzaW5nIHBlci1ldmVudCBzYXR1cmF0aW9uIChzYXQtcHJlZ2VuKS4KdAAbVXNpbmcgZmFzdCBOU0YgZ2VuZXJhdGlvbi4KdAARUHJvY2VzcyBJRDogMTU4NQp0AGlNT0RFTCBOQU1FOiBEOlxHaXRcU2Nob29sXENTNDEyUHJvamVjdFxQZXRyaW5ldHNcRHJhZnRQcm9jZXNzLUNUTCBtb2RlbCBjaGVja2luZyBvZiBGdWxsUS5zb2x1dGlvblxGdWxsUQp0AB0gIDMzIHBsYWNlcywgNjAgdHJhbnNpdGlvbnMuCnQAJlVzZWQgTWVtb3J5IGZvciBlbmNvZGluZyBuZXQ6IDEwNDYwS0IKdABzT3BlbmluZyBmaWxlOiBEOlxHaXRcU2Nob29sXENTNDEyUHJvamVjdFxQZXRyaW5ldHNcRHJhZnRQcm9jZXNzLUNUTCBtb2RlbCBjaGVja2luZyBvZiBGdWxsUS5zb2x1dGlvblxGdWxsUS5ibmQgT0suCnQAdk9wZW5pbmcgZmlsZTogRDpcR2l0XFNjaG9vbFxDUzQxMlByb2plY3RcUGV0cmluZXRzXERyYWZ0UHJvY2Vzcy1DVEwgbW9kZWwgY2hlY2tpbmcgb2YgRnVsbFEuc29sdXRpb25cRnVsbFEuaWxwYm5kIE9LLgp0ABBJTlBVVCBBUkNTOiAgOTgKdAAQT1VUUFVUIEFSQ1M6IDk4CnQAEElOSElCIEFSQ1M6ICAzOQp0ABBURVNUIEFSQ1M6ICAgMTMKdAAQUExBQ0VTOiAgICAgIDMzCnQAEFRSQU5TSVRJT05TOiA2MAp0AA9JTlZBUklBTlRTOiAgMwp0AA9QLVNFTUlGTE9XUzogMgp0ABZNQVggSU5WQVJJQU5UIENBUkQ6IDIKdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gVkFSSUFCTEUgT1JERVIgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAA8VmFyaWFibGUgb3JkZXIgbWV0aG9kOiBNZXRhLWhldXJpc3RpYyB1c2luZyB3ZWlnaHRlZCBzY29yZS4KdAAYTnVtYmVyIG9mIGNvbXBvbmVudHM6IDcKdABRICBNRVRIT0QgICAgICAgICAgICAgIFNDT1JFICAgICAgICBTV0lSICAgICAgIFNPVVBTIERJU0NPVU5UICBXRUlHSFQgICAgICAgVElNRSAKdABVICBTTE8gICAgICAgICAgICAgICA2NzQuMzIyICAgICAgICAgNjAxICAgICAgICAgNDQzICAgICAgICAxICAgMS4xMjIgICAgICAgICAgMCBzZWMuCnQAVSAgU0xPK0ZvcmNlICAgICAgICAgICA0NjYuNCAgICAgICAgIDUzMCAgICAgICAgIDUyNiAgICAgICAgMSAgICAwLjg4ICAgICAgICAgIDAgc2VjLgp0AFUgIFNMTy0xNiAgICAgICAgICAgICA2MTQuNDYgICAgICAgICA3NzAgICAgICAgICA1MDMgICAgICAgIDEgICAwLjc5OCAgICAgICAgICAwIHNlYy4KdABVICBTTE8tMTYrRm9yY2UgICAgICA0ODAuMDk3ICAgICAgICAgNTI3ICAgICAgICAgNTIzICAgICAgICAxICAgMC45MTEgICAgICAgICAgMCBzZWMuCnQAVSAgVE9WMiAgICAgICAgICAgICAgMzkzLjU5NyAgICAgICAgIDQzMyAgICAgICAgIDM3MSAgICAgICAgMSAgIDAuOTA5ICAgICAgICAgIDAgc2VjLgp0AFUgIFRPVjIrRm9yY2UgICAgICAgIDYxMS40MjQgICAgICAgICA1MjggICAgICAgICA1MjQgICAgICAgIDEgICAxLjE1OCAgICAgICAgICAwIHNlYy4KdABVICBOT0FDSzIgICAgICAgICAgICA1MDYuNjg4ICAgICAgICAgNDQ4ICAgICAgICAgMzcyICAgICAgICAxICAgMS4xMzEgICAgICAgICAgMCBzZWMuCnQAVSAgTk9BQ0syK0ZvcmNlICAgICAgIDUxNy40NCAgICAgICAgIDUyOCAgICAgICAgIDUyNCAgICAgICAgMSAgICAwLjk4ICAgICAgICAgIDAgc2VjLgp0AFUgIEFDTSAgICAgICAgICAgICAgIDE0OTkuMzEgICAgICAgIDE0ODMgICAgICAgICA3MDkgICAgICAgIDEgICAxLjAxMSAgICAgICAgICAwIHNlYy4KdABVICBBQ00rRm9yY2UgICAgICAgICAgMTA5Ny44ICAgICAgICAgODU5ICAgICAgICAgNzIxICAgICAgICAxICAgMS4yNzggICAgICAgICAgMCBzZWMuCnQAVSAgQ00yICAgICAgICAgICAgICAgMTg5MC44MiAgICAgICAgMTQ4MyAgICAgICAgIDcwOSAgICAgICAgMSAgIDEuMjc1ICAgICAgICAgIDAgc2VjLgp0AFUgIENNMitGb3JjZSAgICAgICAgIDk0NC4wNDEgICAgICAgICA4NTkgICAgICAgICA3MjEgICAgICAgIDEgICAxLjA5OSAgICAgICAgICAwIHNlYy4KdABVICBQICAgICAgICAgICAgICAgICA3MzMuMjUxICAgICAgICAgNjk5ICAgICAgICAgNjU2ICAgICAgICAxICAgMS4wNDkgICAgICAgICAgMCBzZWMuCnQAVSAgR1AgICAgICAgICAgICAgICAgOTEyLjk1NSAgICAgICAgIDc4NSAgICAgICAgIDcyNSAgICAgICAgMSAgIDEuMTYzICAgICAgICAgIDAgc2VjLgp0AFUgIEdQK0ZvcmNlICAgICAgICAgICA5MzMuNzUgICAgICAgICA4MzAgICAgICAgICA3MjAgICAgICAgIDEgICAxLjEyNSAgICAgICAgICAwIHNlYy4KdABVICBUUyAgICAgICAgICAgICAgICA4NjAuNDcyICAgICAgICAxMjU4ICAgICAgICAgNjQ1ICAgICAgICAxICAgMC42ODQgICAgICAgICAgMCBzZWMuCnQAVSAgVFMrRm9yY2UgICAgICAgICAgNDY4LjY2NiAgICAgICAgIDU5NCAgICAgICAgIDU4OSAgICAgICAgMSAgIDAuNzg5ICAgICAgICAgIDAgc2VjLgp0ADpNZXRhLWhldXJpc3RpYzogc2VsZWN0aW5nIG1ldGhvZCBUT1YyIHdpdGggc2NvcmU6IDM5My41OTcKdAAiVGltZSB0byBjb21wdXRlIHZhcmlhYmxlIG9yZGVyOiAwCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09IFNUQVJUIEZJUklORyBSVUxFUyBFTkNPRElORyA9PT09PT09PT09PT09PT09PT09PT09PT09CnQALEVuY29kZWQgNjAgdHJhbnNpdGlvbiBpbiAxIHByaW9yaXR5IGdyb3Vwcy4KdAAaVGltZSB0byBidWlsZCBhbGwgTlNGczogMAp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PSBSRUFDSEFCSUxJVFkgU0VUIEdFTkVSQVRJT04gPT09PT09PT09PT09PT09PT09PT09PT09PQp0ABVTcGxpdDogU3BsaXRTdWJ0cmFjdAp0ABZSUyBnZW5lcmF0aW9uIHRpbWU6IDAKdAAdQ29tcHV0aW5nIHZhcmlhYmxlIGJvdW5kcy4uLgp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gTUVNT1JZID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0ACggVG90YWwgTWVtb3J5IFVzZWQ6ICAgICAgIDExMzQwIEtCeXRlcy4KdAABCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gQ1RMIEVWQUxVQVRJT04gPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAABCnQAJlByb2Nlc3Npbmc6IEUgRiAoUXBpZDIgPSAyKSAgLT4gIGJvb2wKdAAMRXZhbDogUXBpZDIKdAAUICAgICAgMC4wMDAwMDAgc2VjLgp0ABJFdmFsOiAoUXBpZDIgPSAyKQp0AB8gICAgICAwLjAwMDAwMCBzZWMuICBjYXJkID0gNDUKdAAWRXZhbDogRSBGIChRcGlkMiA9IDIpCnQAMiAgICAgIDQ5IHN0ZXBzOiAgICAgICAwLjA5MzAwMCBzZWMuICBjYXJkID0gMjA0NTMKdAAWLS0tIEVGKCNRcGlkMj09MikgLS0tCnQAGUZvcm11bGEgbmFtZTogTUVBU1VSRTAgIAp0ABYJRXZhbHVhdGlvbjogdHJ1ZSAgICAKdAAkCVNhdC1zZXQgZ2VuZXJhdGlvbiB0aW1lOiAwLjA5MyBzZWMKdAAcCUV2YWx1YXRpb24gdGltZTogMC4wOTMgc2VjCnQAAQp0ABRHZW5lcmF0ZWQgd2l0bmVzczogCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PSBUcmFjZSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KdAAxSW5pdGlhbCBzdGF0ZSBpczogUDcoMSksIFAxMCgxKSwgRG9uZSgxKSwgVFMxKDMpCnQAK0luaXRpYWwgc3RhdGUgc2F0aXNmaWVzOiBFIEYgKFFwaWQyID0gMikuIAp0AAEKdAAiMTogUDcoMSksIFAxMCgxKSwgRG9uZSgxKSwgVFMxKDMpCnQAKyAgU3RhdGUgMS4gZG9lcyBub3Qgc2F0aXNmeTogKFFwaWQyID0gMikuIAp0AAEKdAAsMjogUDEwKDEpLCBQMygxKSwgRG9uZSgxKSwgVFMxKDMpLCBRcGlkMSgyKQp0ACsgIFN0YXRlIDIuIGRvZXMgbm90IHNhdGlzZnk6IChRcGlkMiA9IDIpLiAKdAABCnQAOzM6IFAxMCgxKSwgSXNJblEoMSksIGlzU3dpdDgoMSksIERvbmUoMSksIFRTMSgzKSwgUXBpZDEoMikKdAArICBTdGF0ZSAzLiBkb2VzIG5vdCBzYXRpc2Z5OiAoUXBpZDIgPSAyKS4gCnQAAQp0ADs0OiBQMTAoMSksIElzSW5RKDEpLCBJblByb2coMSksIFB1cGlkKDEpLCBUUzEoMyksIFFwaWQxKDIpCnQAKyAgU3RhdGUgNC4gZG9lcyBub3Qgc2F0aXNmeTogKFFwaWQyID0gMikuIAp0AAEKdAA9NTogUDEwKDEpLCBJc0luUSgxKSwgSW5Qcm9nKDEpLCBQdXNoVFM4KDEpLCBUUzEoMyksIFFwaWQyKDIpCnQAJCAgU3RhdGUgNS4gc2F0aXNmaWVzOiAoUXBpZDIgPSAyKS4gCnQAAQp0AAEKdABQPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IENUTCBNRU1PUlkgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQp0AB4gUlMgbm9kZXM6ICAgICAgICAgICAgICAgIDIzNgp0AEQgRm9yZXN0KFJTKSBub2RlczogICAgICAgIDc5NTcwIGFjdGl2ZXMsIDc5NTcwIHBlYWssIDAgY29tcGFjdGlvbnMuCnQAQSBGb3Jlc3QoUlMpIHNpemU6ICAgICAgICAgMjIzNzEzMCBCeXRlcyBub3csIDIyMzcxMzAgQnl0ZXMgcGVhay4KdAAeIFBvdGVudGlhbCBSRyBub2RlczogICAgICA2MjkKdABCIEZvcmVzdChSRykgbm9kZXM6ICAgICAgICAzMTM0IGFjdGl2ZXMsIDQzMDUgcGVhaywgMCBjb21wYWN0aW9ucy4KdAA/IEZvcmVzdChSRykgc2l6ZTogICAgICAgICAxMTA3MjAgQnl0ZXMgbm93LCAxNTA5NjAgQnl0ZXMgcGVhay4KdAA8IEZvcmVzdChSRytyZWFsKSBub2RlczogICAxIGFjdGl2ZXMsIDYgcGVhaywgMCBjb21wYWN0aW9ucy4KdAA4IEZvcmVzdChSRytyZWFsKSBzaXplOiAgICAzNSBCeXRlcyBub3csIDE3NCBCeXRlcyBwZWFrLgp0AAEKdAAET2suCnQAAQp0AFA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gVElNRSA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CnQAJSBWYXJpYWJsZSBvcmRlciBUaW1lOiAwLjAwMCAgICAgc2VjLgp0ACUgUlMgR2VuZXJhdGlvbiBUaW1lOiAgMC4wMDAgICAgIHNlYy4KdAAlIFRvdGFsIFJTIFRpbWU6ICAgICAgIDAuMDAwICAgICBzZWMuCnQAJSBTdGF0aXN0aWNzIFRpbWU6ICAgICAwLjAwMCAgICAgc2VjLgp0ACUgQ1RMIFRpbWU6ICAgICAgICAgICAgMC4xMDkgICAgIHNlYy4KdAAlIFRvdGFsIFRpbWU6ICAgICAgICAgIDAuMTA5ICAgICBzZWMuCnQAUD09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KcQB+ACB4c3EAfgAAdwQAAACsc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAXEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4ArnEAfgCucQB+AK5xAH4Arng</document-log>
+  </resource-list>
 </project>
