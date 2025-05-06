@@ -1,0 +1,2 @@
+% MEASURE0
+AF(#TS1 >= #TS2)

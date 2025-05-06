@@ -1,0 +1,2 @@
+% MEASURE0
+AF (AG(#P2 == 8))
